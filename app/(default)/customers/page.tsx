@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Customers - Simple",
+  title: "Customers - Bluehouse",
   description: "Page description",
 };
 
@@ -13,7 +13,7 @@ export default function Customers() {
       <Hero />
       <WallOfLove />
       <Cta
-        heading="Create your next project with Simple"
+        heading="Create your next project with Bluehouse"
         buttonText="Start Free Trial"
         buttonLink="#0"
       />

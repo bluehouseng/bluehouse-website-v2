@@ -21,7 +21,7 @@ export default function PricingTables() {
             <div className="mx-auto max-w-3xl">
               <p className="text-lg text-gray-700">
                 No matter how many team members you have - our pricing is
-                simple, transparent and adapts to the size of your company.
+                Bluehouse, transparent and adapts to the size of your company.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function PricingTables() {
                     <span className="pl-1 text-sm text-gray-500">/month</span>
                   </div>
                   <div className="grow text-sm text-gray-700">
-                    For relatively simple, static sites and landing pages.
+                    For relatively Bluehouse, static sites and landing pages.
                   </div>
                 </div>
                 <ul className="grow space-y-2 text-sm text-gray-500">

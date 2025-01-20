@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Apps - Simple",
+  title: "Apps - Bluehouse",
   description: "Page description",
 };
 
@@ -13,7 +13,7 @@ export default function Apps() {
       <Hero />
       <AppList />
       <Cta
-        heading="Create your next project with Simple"
+        heading="Create your next project with Bluehouse"
         buttonText="Start Free Trial"
         buttonLink="#0"
       />

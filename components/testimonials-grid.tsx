@@ -26,7 +26,7 @@ export default function TestimonialsGrid() {
       username: "@rodri_spn",
       date: "Apr 12, 2027",
       content:
-        "Simple has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
+        "Bluehouse has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
       channel: "Twitter",
     },
     {
@@ -44,7 +44,7 @@ export default function TestimonialsGrid() {
       username: "@michjack",
       date: "Jan 15, 2027",
       content:
-        "Simple lives up to its name in every way. It's incredibly easy to use yet powerful enough to handle all my tasks effortlessly. It's become an essential part of my daily routine.",
+        "Bluehouselives up to its name in every way. It's incredibly easy to use yet powerful enough to handle all my tasks effortlessly. It's become an essential part of my daily routine.",
       channel: "Twitter",
     },
     {
@@ -53,7 +53,7 @@ export default function TestimonialsGrid() {
       username: "@mike0point7",
       date: "Dec 02, 2026",
       content:
-        "I've been using Simple for over a year now, and it has transformed the way I work. It's intuitive, efficient, and has all the features I need to stay productive.",
+        "I've been using Bluehousefor over a year now, and it has transformed the way I work. It's intuitive, efficient, and has all the features I need to stay productive.",
       channel: "Twitter",
     },
     {
@@ -62,7 +62,7 @@ export default function TestimonialsGrid() {
       username: "@sararodriguez",
       date: "Nov 11, 2026",
       content:
-        "Simple has made a significant impact on my business. It has helped me streamline my workflow, improve my productivity, and grow my brand. I highly recommend it to anyone looking to do the same.",
+        "Bluehouse has made a significant impact on my business. It has helped me streamline my workflow, improve my productivity, and grow my brand. I highly recommend it to anyone looking to do the same.",
       channel: "Twitter",
     },
     {
@@ -71,7 +71,7 @@ export default function TestimonialsGrid() {
       username: "@lovingme_",
       date: "Oct 23, 2026",
       content:
-        "I've been using Simple for a few months now, and I can't imagine my life without it. It has simplified my work process, increased my efficiency, and helped me achieve my goals faster.",
+        "I've been using Bluehousefor a few months now, and I can't imagine my life without it. It has simplified my work process, increased my efficiency, and helped me achieve my goals faster.",
       channel: "Twitter",
     },
     {
@@ -80,7 +80,7 @@ export default function TestimonialsGrid() {
       username: "@kavigirl99",
       date: "Sep 30, 2026",
       content:
-        "Simple has been a game-changer for me. It has helped me stay organized, manage my tasks more efficiently, and improve my overall productivity. I can't recommend it enough!",
+        "Bluehouse has been a game-changer for me. It has helped me stay organized, manage my tasks more efficiently, and improve my overall productivity. I can't recommend it enough!",
       channel: "Twitter",
     },
     {
@@ -89,7 +89,7 @@ export default function TestimonialsGrid() {
       username: "@dante1987",
       date: "Aug 17, 2026",
       content:
-        "I've been using Simple for a while now, and it has transformed the way I work. It's intuitive, efficient, and has all the features I need to stay productive.",
+        "I've been using Bluehousefor a while now, and it has transformed the way I work. It's intuitive, efficient, and has all the features I need to stay productive.",
       channel: "Twitter",
     },
   ];
@@ -106,7 +106,7 @@ export default function TestimonialsGrid() {
         <div className="py-12 md:py-20">
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <h2 className="text-3xl font-bold md:text-4xl">
-              Top brands grow with Simple
+              Top brands grow with Bluehouse
             </h2>
           </div>
           {/* Logos */}

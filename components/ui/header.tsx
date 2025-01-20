@@ -46,18 +46,18 @@ export default function Header() {
                   href="/documentation"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
-                  Docs
+                  About Us
                 </Link>
               </li>
               {/* 1st level: hover */}
-              <Dropdown title="Extra">
+              <Dropdown title="Events">
                 {/* 2nd level: hover */}
                 <li>
                   <Link
                     href="/support"
                     className="flex rounded-lg px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Support center
+                    Tech Fest
                   </Link>
                 </li>
                 <li>
@@ -65,7 +65,7 @@ export default function Header() {
                     href="/apps"
                     className="flex rounded-lg px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Apps
+                    Tech & Tea
                   </Link>
                 </li>
               </Dropdown>

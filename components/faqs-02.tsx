@@ -3,9 +3,9 @@ import Accordion from "@/components/accordion";
 export default function Faqs() {
   const faqs01 = [
     {
-      question: "Getting started with Simple",
+      question: "Getting started with Bluehouse",
       answer:
-        "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
+        "Bluehouse is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Bluehouse is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
     },
     {
       question: "Promotional and free plan trials",
@@ -33,7 +33,7 @@ export default function Faqs() {
     {
       question: "Change with my paid plan",
       answer:
-        "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
+        "Bluehouse is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Bluehouse is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
     },
     {
       question: "Cancel my subscription",
@@ -61,7 +61,7 @@ export default function Faqs() {
     {
       question: "How to change my password",
       answer:
-        "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
+        "Bluehouse is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Bluehouse is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
     },
     {
       question: "How to change my email address",
