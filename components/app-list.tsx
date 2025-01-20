@@ -26,7 +26,7 @@ export default function AppList() {
     {
       name: "Google Drive",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg01,
       link: "#0",
       badge: true,
@@ -34,14 +34,14 @@ export default function AppList() {
     {
       name: "Linear",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg02,
       link: "#0",
     },
     {
       name: "Framer",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg03,
       link: "#0",
       badge: true,
@@ -49,14 +49,14 @@ export default function AppList() {
     {
       name: "Retool",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg04,
       link: "#0",
     },
     {
       name: "Webflow",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg05,
       link: "#0",
       badge: true,
@@ -64,21 +64,21 @@ export default function AppList() {
     {
       name: "Syrus Inc.",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg06,
       link: "#0",
     },
     {
       name: "Decipad",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg07,
       link: "#0",
     },
     {
       name: "Zapier",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg08,
       link: "#0",
       badge: true,
@@ -86,7 +86,7 @@ export default function AppList() {
     {
       name: "Bonsai",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg09,
       link: "#0",
       badge: true,
@@ -94,7 +94,7 @@ export default function AppList() {
     {
       name: "GitHub",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg10,
       link: "#0",
       badge: true,
@@ -102,14 +102,14 @@ export default function AppList() {
     {
       name: "Poppins",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg11,
       link: "#0",
     },
     {
       name: "Jotform",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg12,
       link: "#0",
     },
@@ -119,7 +119,7 @@ export default function AppList() {
     {
       name: "Miro",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg13,
       link: "#0",
       badge: true,
@@ -127,21 +127,21 @@ export default function AppList() {
     {
       name: "WeTransfer",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg14,
       link: "#0",
     },
     {
       name: "Hotjar",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg15,
       link: "#0",
     },
     {
       name: "GitLab",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg16,
       link: "#0",
       badge: true,
@@ -149,7 +149,7 @@ export default function AppList() {
     {
       name: "Coda",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg17,
       link: "#0",
       badge: true,
@@ -157,7 +157,7 @@ export default function AppList() {
     {
       name: "Airtable",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg18,
       link: "#0",
     },
@@ -167,21 +167,21 @@ export default function AppList() {
     {
       name: "Klarna",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg19,
       link: "#0",
     },
     {
       name: "Trustpilot",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg20,
       link: "#0",
     },
     {
       name: "YouTube",
       description:
-        "Simple simplifies the process of building sites, landing pages, and any apps.",
+        "Bluehousesimplifies the process of building sites, landing pages, and any apps.",
       image: IntegrationImg21,
       link: "#0",
     },

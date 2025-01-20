@@ -34,7 +34,7 @@ const testimonials = [
     username: "@peterlowex",
     date: "May 19, 2027",
     content:
-      "Simple has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
+      "Bluehouse has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
     channel: "Twitter",
   },
   {
@@ -43,7 +43,7 @@ const testimonials = [
     username: "@rodri_spn",
     date: "May 19, 2027",
     content:
-      "As a busy professional, Simple has been a lifesaver. It streamlines my workflow, allowing me to focus on what truly matters. Plus, its minimalist design is a breath of fresh air in a cluttered digital world.",
+      "As a busy professional, Bluehouse has been a lifesaver. It streamlines my workflow, allowing me to focus on what truly matters. Plus, its minimalist design is a breath of fresh air in a cluttered digital world.",
     channel: "Twitter",
   },
   {
@@ -61,7 +61,7 @@ const testimonials = [
     username: "@michjack",
     date: "Apr 12, 2027",
     content:
-      "I've struggled to find a website builder that suits my needs until I found Simple. Its clean design and user-friendly features make staying organized a breeze. I highly recommend it.",
+      "I've struggled to find a website builder that suits my needs until I found Bluehouse. Its clean design and user-friendly features make staying organized a breeze. I highly recommend it.",
     channel: "Twitter",
   },
   {
@@ -69,7 +69,7 @@ const testimonials = [
     name: "Mike Bryan",
     username: "@mike0point7",
     date: "Mar 10, 2027",
-    content: "Simple's mind-blowing AI Site Builder: Crash Course 🚀",
+    content: "Bluehouse's mind-blowing AI Site Builder: Crash Course 🚀",
     videoThumb: TestimonialVideoThumb01,
     videoUrl: "#0",
     channel: "YouTube",
@@ -89,7 +89,7 @@ const testimonials = [
     username: "@lovingme_",
     date: "Feb 08, 2027",
     content:
-      "Simple has simplified my life in more ways than one. From managing my clients to keeping track of deadlines, it's become my go-to tool for staying on top of everything. I couldn't imagine managing without it!",
+      "Bluehouse has simplified my life in more ways than one. From managing my clients to keeping track of deadlines, it's become my go-to tool for staying on top of everything. I couldn't imagine managing without it!",
     channel: "Twitter",
   },
   {
@@ -107,7 +107,7 @@ const testimonials = [
     username: "@danteluzzi",
     date: "Jan 12, 2027",
     content:
-      "I've never been a fan of complicated website builders, which is why Simple is perfect for me. Its minimalist design and straightforward functionality make staying organized feel like second nature.",
+      "I've never been a fan of complicated website builders, which is why Bluehouse is perfect for me. Its minimalist design and straightforward functionality make staying organized feel like second nature.",
     channel: "Twitter",
   },
   {
@@ -152,7 +152,7 @@ const testimonials = [
     username: "@jeff_br",
     date: "Dec 02, 2026",
     content:
-      "Simple has simplified my life in more ways than one. From managing my clients to keeping track of deadlines, it's become my go-to tool for staying on top of everything. I couldn't imagine managing without it!",
+      "Bluehouse has simplified my life in more ways than one. From managing my clients to keeping track of deadlines, it's become my go-to tool for staying on top of everything. I couldn't imagine managing without it!",
     channel: "Twitter",
   },
   {
@@ -160,7 +160,7 @@ const testimonials = [
     name: "Kate Stevanovic",
     username: "@hey_im_kate",
     date: "Mar 10, 2027",
-    content: "Simple's mind-blowing AI Site Builder: Crash Course 🚀",
+    content: "Bluehouse's mind-blowing AI Site Builder: Crash Course 🚀",
     videoThumb: TestimonialVideoThumb02,
     videoUrl: "#0",
     channel: "YouTube",

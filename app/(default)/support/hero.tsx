@@ -15,7 +15,7 @@ export default function Hero() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p className="text-lg text-gray-700">
-                Need support or have a question about Simple? We're here to
+                Need support or have a question about Bluehouse? We're here to
                 help.
               </p>
             </div>

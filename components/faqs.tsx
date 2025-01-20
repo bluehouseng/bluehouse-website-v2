@@ -3,9 +3,9 @@ import Accordion from "@/components/accordion";
 export default function Faqs() {
   const faqs = [
     {
-      question: "How is Simple different from Complex?",
+      question: "How is Bluehousedifferent from Complex?",
       answer:
-        "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
+        "Bluehouse is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Bluehouse is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
     },
     {
       question: "Can I cancel my plan at any time?",
@@ -19,7 +19,7 @@ export default function Faqs() {
         "Yes, but you'll still pay the remainder of the term for the plan you signed up for.",
     },
     {
-      question: "What kind of support does Simple provide?",
+      question: "What kind of support does Bluehouseprovide?",
       answer:
         "Support is available 24/7 via email, chat, and phone. We're here to help you with any questions or concerns you may have.",
     },
@@ -29,14 +29,14 @@ export default function Faqs() {
         "Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content.",
     },
     {
-      question: "How much traffic can Simple hosting handle?",
+      question: "How much traffic can Bluehousehosting handle?",
       answer:
         "Our hosting plans are designed to handle high traffic volumes, so you can rest assured that your site will perform well under pressure.",
     },
     {
-      question: "Are Simple websites SEO-friendly?",
+      question: "Are Bluehousewebsites SEO-friendly?",
       answer:
-        "Yes! Simple websites are designed with SEO in mind, so you can easily optimize your site for search engines.",
+        "Yes! Bluehousewebsites are designed with SEO in mind, so you can easily optimize your site for search engines.",
     },
   ];
 

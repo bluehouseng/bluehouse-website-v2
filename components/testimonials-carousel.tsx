@@ -21,7 +21,7 @@ export default function TestimonialsCarousel() {
       username: "@rodri_spn",
       date: "Apr 12, 2027",
       content:
-        "Simple has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
+        "Bluehouse has revolutionized the way I manage my work. Its intuitive interface and seamless functionality make staying organized effortless. I can't imagine my life without it.",
       channel: "Twitter",
     },
     {
@@ -39,7 +39,7 @@ export default function TestimonialsCarousel() {
       username: "@michjack",
       date: "Jan 15, 2027",
       content:
-        "Simple lives up to its name in every way. It's incredibly easy to use yet powerful enough to handle all my tasks effortlessly. It's become an essential part of my daily routine.",
+        "Bluehouselives up to its name in every way. It's incredibly easy to use yet powerful enough to handle all my tasks effortlessly. It's become an essential part of my daily routine.",
       channel: "Twitter",
     },
   ];
@@ -50,7 +50,7 @@ export default function TestimonialsCarousel() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold md:text-4xl">
-              Top startups love Simple
+              Top startups love Bluehouse
             </h2>
           </div>
         </div>
