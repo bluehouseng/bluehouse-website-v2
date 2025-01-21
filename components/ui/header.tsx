@@ -27,10 +27,18 @@ export default function Header() {
               </li>
               <li className="px-3 py-1">
                 <Link
+                  href="/pricing"
+                  className="flex items-center text-gray-700 transition hover:text-gray-900"
+                >
+                  Products/Services
+                </Link>
+              </li>
+              <li className="px-3 py-1">
+                <Link
                   href="/customers"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
-                  Customers
+                  Students
                 </Link>
               </li>
               <li className="px-3 py-1">
@@ -49,6 +57,14 @@ export default function Header() {
                   About Us
                 </Link>
               </li>
+              <li className="px-3 py-1">
+                <Link
+                  href="/documentation"
+                  className="flex items-center text-gray-700 transition hover:text-gray-900"
+                >
+                  Contact Us
+                </Link>
+              </li>
               {/* 1st level: hover */}
               <Dropdown title="Events">
                 {/* 2nd level: hover */}
@@ -57,7 +73,7 @@ export default function Header() {
                     href="/support"
                     className="flex rounded-lg px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Tech Fest
+                    Upcoming Events
                   </Link>
                 </li>
                 <li>
@@ -65,7 +81,7 @@ export default function Header() {
                     href="/apps"
                     className="flex rounded-lg px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Tech & Tea
+                    Past Events Highlights
                   </Link>
                 </li>
               </Dropdown>
