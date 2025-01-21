@@ -17,14 +17,7 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop menu links */}
             <ul className="flex grow flex-wrap items-center justify-center gap-4 text-sm lg:gap-8">
-              <li className="px-3 py-1">
-                <Link
-                  href="/pricing"
-                  className="flex items-center text-gray-700 transition hover:text-gray-900"
-                >
-                  Pricing
-                </Link>
-              </li>
+            
               <li className="px-3 py-1">
                 <Link
                   href="/pricing"
@@ -63,6 +56,14 @@ export default function Header() {
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Contact Us
+                </Link>
+              </li>
+              <li className="px-3 py-1">
+                <Link
+                  href="/pricing"
+                  className="flex items-center text-gray-700 transition hover:text-gray-900"
+                >
+                  Pricing
                 </Link>
               </li>
               {/* 1st level: hover */}
