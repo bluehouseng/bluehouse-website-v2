@@ -624,7 +624,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est reiciendis amet maiores reprehenderit illum. Impedit ipsum, cum velit possimus cumque nesciunt fugit earum ducimus maiores, dolores fugiat, suscipit eius officiis!</div>
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto bg-gray-900/35 text-white text-center" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est reiciendis amet maiores reprehenderit illum. Impedit ipsum, cum velit possimus cumque nesciunt fugit earum ducimus maiores, dolores fugiat, suscipit eius officiis!</div>
                   </Transition>
                 </TabPanel>
 
