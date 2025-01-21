@@ -1,10 +1,10 @@
 import Image from "next/image";
 import PlanetImg from "@/public/images/planet.png";
 import PlanetOverlayImg from "@/public/images/planet-overlay.svg";
-import PlanetTagImg01 from "@/public/images/planet-tag-01.png";
-import PlanetTagImg02 from "@/public/images/planet-tag-02.png";
-import PlanetTagImg03 from "@/public/images/planet-tag-03.png";
-import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
+// import PlanetTagImg01 from "@/public/images/planet-tag-01.png";
+// import PlanetTagImg02 from "@/public/images/planet-tag-02.png";
+// import PlanetTagImg03 from "@/public/images/planet-tag-03.png";
+// import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
 
 export default function FeaturesPlanet() {
   return (
@@ -37,34 +37,21 @@ export default function FeaturesPlanet() {
                     alt="Planet decoration"
                   />
                   <div>
-                    <Image
-                      className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg01}
-                      width={253}
-                      height={56}
-                      alt="Tag 01"
-                    />
-                    <Image
-                      className="absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-30 transition-opacity duration-500"
-                      src={PlanetTagImg02}
-                      width={241}
-                      height={56}
-                      alt="Tag 02"
-                    />
-                    <Image
-                      className="absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-25 transition-opacity duration-500"
-                      src={PlanetTagImg03}
-                      width={243}
-                      height={56}
-                      alt="Tag 03"
-                    />
-                    <Image
-                      className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg04}
-                      width={251}
-                      height={56}
-                      alt="Tag 04"
-                    />
+                    <h4 className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_2s_both]  opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10" >
+                      Upcoming Events
+                      </h4>
+                   
+                    <h4
+                      className="absolute -left-0 bottom-4 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10"
+                    >
+                      Event CTA
+                    </h4>
+                    <h4
+                      className="absolute bottom-35 right-0 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10"
+
+                    >
+                      Past Events 
+                    </h4>
                   </div>
                 </div>
               </div>
