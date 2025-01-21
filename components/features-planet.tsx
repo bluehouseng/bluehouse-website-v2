@@ -19,10 +19,11 @@ export default function FeaturesPlanet() {
             </h2>
           </div>
           {/* Planet */}
-        <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
+ <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
   <div className="text-center">
-    {/* Static Planet Image */}
+    {/* Planet Image with Spinning Texts */}
     <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.500),transparent)]">
+      {/* Static Planet Image */}
       <Image
         className="rounded-full bg-gray-900"
         src={PlanetImg}
@@ -30,6 +31,29 @@ export default function FeaturesPlanet() {
         height={400}
         alt="Planet"
       />
+
+      {/* Spinning Texts */}
+      <div className="absolute inset-0 flex items-center justify-center animate-[spin_10s_linear_infinite]">
+        <div className="relative w-[500px] h-[500px]">
+          <h4
+            className="absolute left-1/2 top-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+          >
+            Tech Fest 2024 (800+ participants)
+          </h4>
+          <h4
+            className="absolute left-1/2 bottom-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+          >
+            Partnerships (e.g Tech Synergy)
+          </h4>
+          <h4
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+          >
+            50 kids trained at the Summer Camp
+          </h4>
+        </div>
+      </div>
+
+      {/* Planet Decoration */}
       <div className="pointer-events-none" aria-hidden="true">
         <Image
           className="absolute -right-64 -top-20 z-10 max-w-none"
@@ -39,26 +63,6 @@ export default function FeaturesPlanet() {
           alt="Planet decoration"
         />
       </div>
-    </div>
-
-    {/* Spinning Texts */}
-    <div className="relative w-[500px] h-[500px] mx-auto animate-[spin_10s_linear_infinite]">
-      <h4
-        className="absolute left-1/2 top-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
-      >
-       Tech Fest 2024 (800+ participants)
-      </h4>
-      <h4
-        className="absolute left-1/2 bottom-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
-      >
-    Partnerships (e.g Tech Synergy)
-      </h4>
-      <h4
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
-      >
-        50 kids trained at the Summer Camp
-      </h4>
-     
     </div>
   </div>
 </div>
