@@ -38,19 +38,19 @@ export default function FeaturesPlanet() {
                   />
                   <div>
                     <h4 className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_2s_both]  opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10" >
-                      Upcoming Events
+                  Tech Fest 2024
                       </h4>
                    
                     <h4
                       className="absolute -left-0 bottom-4 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10"
                     >
-                      Event CTA
+                     Partnerships
                     </h4>
                     <h4
                       className="absolute bottom-35 right-0 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10"
 
                     >
-                      Past Events 
+                   Summer Camp
                     </h4>
                   </div>
                 </div>
