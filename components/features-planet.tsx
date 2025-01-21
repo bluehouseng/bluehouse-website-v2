@@ -18,45 +18,50 @@ export default function FeaturesPlanet() {
             </h2>
           </div>
           {/* Planet */}
-          <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
-            <div className="text-center">
-              <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.500),transparent)]">
-                <Image
-                  className="rounded-full bg-gray-900"
-                  src={PlanetImg}
-                  width={400}
-                  height={400}
-                  alt="Planet"
-                />
-                <div className="pointer-events-none" aria-hidden="true">
-                  <Image
-                    className="absolute -right-64 -top-20 z-10 max-w-none"
-                    src={PlanetOverlayImg}
-                    width={789}
-                    height={755}
-                    alt="Planet decoration"
-                  />
-                  <div>
-                    <h4 className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_2s_both]  opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10" >
-                  Tech Fest 2024
-                      </h4>
-                   
-                    <h4
-                      className="absolute -left-0 bottom-4 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10"
-                    >
-                     Partnerships
-                    </h4>
-                    <h4
-                      className="absolute bottom-35 right-0 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-100 text-white  duration-700 border-solid border-transparent bg-slate-300 rounded-md p-3  bg-opacity-10"
+        <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
+  <div className="text-center">
+    {/* Static Planet Image */}
+    <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.500),transparent)]">
+      <Image
+        className="rounded-full bg-gray-900"
+        src={PlanetImg}
+        width={400}
+        height={400}
+        alt="Planet"
+      />
+      <div className="pointer-events-none" aria-hidden="true">
+        <Image
+          className="absolute -right-64 -top-20 z-10 max-w-none"
+          src={PlanetOverlayImg}
+          width={789}
+          height={755}
+          alt="Planet decoration"
+        />
+      </div>
+    </div>
 
-                    >
-                   Summer Camp
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* Spinning Texts */}
+    <div className="relative w-[500px] h-[500px] mx-auto animate-[spin_10s_linear_infinite]">
+      <h4
+        className="absolute left-1/2 top-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+      >
+       Tech Fest 2024 (800+ participants)
+      </h4>
+      <h4
+        className="absolute left-1/2 bottom-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+      >
+    Partnerships (e.g Tech Synergy)
+      </h4>
+      <h4
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+      >
+        50 kids trained at the Summer Camp
+      </h4>
+     
+    </div>
+  </div>
+</div>
+
           {/* Grid */}
           <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 [&>*]:relative [&>*]:p-6 [&>*]:before:absolute [&>*]:before:bg-gray-800 [&>*]:before:[block-size:100vh] [&>*]:before:[inline-size:1px] [&>*]:before:[inset-block-start:0] [&>*]:before:[inset-inline-start:-1px] [&>*]:after:absolute [&>*]:after:bg-gray-800 [&>*]:after:[block-size:1px] [&>*]:after:[inline-size:100vw] [&>*]:after:[inset-block-start:-1px] [&>*]:after:[inset-inline-start:0] md:[&>*]:p-10">
             <article>
