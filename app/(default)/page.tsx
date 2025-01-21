@@ -18,9 +18,9 @@ export default function Home() {
       <BusinessCategories />
      
       <FeaturesPlanet />
-      <Features />
+      {/* <Features /> */}
       <LargeTestimonial />
-      <TestimonialsCarousel />
+      {/* <TestimonialsCarousel /> */}
       <Cta />
     </>
   );

@@ -46,7 +46,7 @@ export default function LargeTestimonial() {
               disableOnInteraction: false,
             }}
             loop={true}
-            speed={2000}  
+            speed={2500}  
             modules={[Autoplay, Navigation, Pagination]} 
             className="mt-6"
             pagination={{
