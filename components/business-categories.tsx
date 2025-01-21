@@ -21,6 +21,9 @@ export default function BusinessCategories() {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Core Offerings</h2>
+        </div>
         <div>
           <TabGroup selectedIndex={selectedTab} onChange={setSelectedTab}>
             {/* Buttons */}
@@ -38,7 +41,7 @@ export default function BusinessCategories() {
                     >
                       <path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z" />
                     </svg>
-                    <span>Startups</span>
+                    <span>Tech Consultancy</span>
                   </button>
                 </Tab>
                 <Tab as={Fragment}>
@@ -53,7 +56,7 @@ export default function BusinessCategories() {
                     >
                       <path d="M5.936.278A7.983 7.983 0 0 1 8 0a8 8 0 1 1-8 8c0-.722.104-1.413.278-2.064a1 1 0 1 1 1.932.516A5.99 5.99 0 0 0 2 8a6 6 0 1 0 6-6c-.53 0-1.045.076-1.548.21A1 1 0 1 1 5.936.278Zm.132 7.204A2.003 2.003 0 0 0 8 10a2 2 0 1 0-.518-3.932L3.707 2.293a1 1 0 0 0-1.414 1.414l3.775 3.775Z" />
                     </svg>
-                    <span>Web Apps</span>
+                    <span>Training & Mentorship Programs</span>
                   </button>
                 </Tab>
                 <Tab as={Fragment}>
@@ -68,7 +71,7 @@ export default function BusinessCategories() {
                     >
                       <path d="M3 2a1 1 0 0 0-2 0v12a1 1 0 1 0 2 0V2Zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm4 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm5-13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm4 0a1 1 0 1 0-2 0v12a1 1 0 1 0 2 0V2Z" />
                     </svg>
-                    <span>eCommerce</span>
+                    <span>Software Solutions</span>
                   </button>
                 </Tab>
                 <Tab as={Fragment}>
@@ -83,7 +86,7 @@ export default function BusinessCategories() {
                     >
                       <path d="M.06 10.003a1 1 0 0 1 1.947.455c-.019.08.01.152.078.19l5.83 3.333c.052.03.115.03.168 0l5.83-3.333a.163.163 0 0 0 .078-.188 1 1 0 1 1 1.947-.459 2.161 2.161 0 0 1-1.032 2.384l-5.83 3.331a2.168 2.168 0 0 1-2.154 0l-5.83-3.331A2.162 2.162 0 0 1 .06 10.003Zm7.855-7.981-5.83 3.332a.17.17 0 0 0 0 .295l5.828 3.33a.172.172 0 0 0 .17.002l5.83-3.333a.17.17 0 0 0 0-.294L8.084 2.023a.172.172 0 0 0-.17-.001h.001ZM9.075.285l5.83 3.332c1.458.833 1.458 2.935 0 3.768l-5.83 3.333c-.667.38-1.485.38-2.153-.001l-5.83-3.332c-1.457-.833-1.457-2.935 0-3.767L6.924.285a2.173 2.173 0 0 1 2.15 0h.001Z" />
                     </svg>
-                    <span>Enterprise</span>
+                    <span>International Growth Support</span>
                   </button>
                 </Tab>
               </TabList>
