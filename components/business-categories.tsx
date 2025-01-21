@@ -94,6 +94,7 @@ export default function BusinessCategories() {
 
             {/* Tab panels */}
             <TabPanels className="relative flex h-[324px] items-center justify-center">
+
               {/* Small blue dots */}
               <div className="absolute -z-10">
                 <svg
@@ -197,6 +198,7 @@ export default function BusinessCategories() {
                   />
                 </svg>
               </div>
+              
               {/* Blue glow */}
               <div className="absolute -z-10">
                 <svg
@@ -250,7 +252,7 @@ export default function BusinessCategories() {
               <div className="absolute inset-x-[300px] top-1/2 -z-10 h-px -rotate-[20deg] bg-gradient-to-r from-transparent via-gray-200 to-transparent mix-blend-multiply"></div>
               {/* Vertical lines */}
               <div className="absolute inset-y-0 left-1/2 -z-10 w-px -translate-x-[216px] bg-gradient-to-b from-gray-200 to-transparent mix-blend-multiply"></div>
-              <div className="absolute inset-y-0 left-1/2 -z-10 w-px translate-x-[216px] bg-gradient-to-t from-gray-200 to-transparent mix-blend-multiply"></div>
+              <div className="absolute inset-y-0 left-1/2 -z-10 w-px translate-x-[216px] bg-gradient-to-t from-gray-200 to-transparent mix-blend-multiply"></div> */}
               {/* Logos */}
               <div className="absolute before:absolute before:-inset-3 before:animate-[spin_3s_linear_infinite] before:rounded-full before:border before:border-transparent before:[background:conic-gradient(from_180deg,transparent,theme(colors.blue.500))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
                 <div className="animate-[breath_8s_ease-in-out_infinite_both]">
@@ -276,7 +278,7 @@ export default function BusinessCategories() {
                     appear={true}
                   >
                     <>
-                      <div className="absolute -translate-x-[136px]">
+                      <div className="absolute z-0 -translate-x-[136px]">
                         <div className="animate-[breath_7s_ease-in-out_3s_infinite_both]">
                           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                             <Image
@@ -381,6 +383,10 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
+
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni velit amet perspiciatis doloremque rerum laborum neque quisquam aliquam asperiores necessitatibus delectus tempora totam porro, expedita quia vitae omnis quos dolore.
+                    </div>
                   </Transition>
                 </TabPanel>
 
@@ -393,7 +399,7 @@ export default function BusinessCategories() {
                     appear={true}
                   >
                     <>
-                      <div className="absolute -translate-x-[136px]">
+                      <div className="absolute z-0 -translate-x-[136px]">
                         <div className="animate-[breath_7s_ease-in-out_3s_infinite_both]">
                           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                             <Image
@@ -498,6 +504,9 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit esse facilis in, maiores cupiditate voluptates magni illum fugiat, atque non omnis quo iusto saepe velit nesciunt maxime, tempore corrupti.
+                    </div>
                   </Transition>
                 </TabPanel>
                 <TabPanel as={Fragment} static={true}>
@@ -510,7 +519,7 @@ export default function BusinessCategories() {
                     appear={true}
                   >
                     <>
-                      <div className="absolute -translate-x-[136px]">
+                      <div className="absolute z-0 -translate-x-[136px]">
                         <div className="animate-[breath_7s_ease-in-out_3s_infinite_both]">
                           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                             <Image
@@ -615,6 +624,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est reiciendis amet maiores reprehenderit illum. Impedit ipsum, cum velit possimus cumque nesciunt fugit earum ducimus maiores, dolores fugiat, suscipit eius officiis!</div>
                   </Transition>
                 </TabPanel>
 
@@ -627,7 +637,7 @@ export default function BusinessCategories() {
                     appear={true}
                   >
                     <>
-                      <div className="absolute -translate-x-[136px]">
+                      <div className="absolute z-0 -translate-x-[136px]">
                         <div className="animate-[breath_7s_ease-in-out_3s_infinite_both]">
                           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                             <Image
@@ -732,6 +742,9 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo dicta incidunt maxime. Sit eaque veniam expedita quaerat, ex et, doloribus blanditiis repudiandae ipsum debitis rerum aut temporibus quo? Ex?
+                    </div>
                   </Transition>
                 </TabPanel>
               </div>
