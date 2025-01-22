@@ -5,7 +5,7 @@ import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
 
 const EventGallery = () => {
-  // Define valid keys for activeTab
+  
   const [activeTab, setActiveTab] = useState<"techfest2024" | "summerCamp" | "partnership">(
     "techfest2024"
   );
@@ -17,10 +17,16 @@ const EventGallery = () => {
   } = {
     techfest2024: [
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 1" },
-      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 2" },
+      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
+      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
+      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 1" },
+      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
     ],
     summerCamp: [
+      { src: "/images/summer1.jpg", text: "Summer Camp 1" },
+      { src: "/images/summer2.jpg", text: "Summer Camp 2" },
+      { src: "/images/summer3.jpg", text: "Summer Camp 3" },
       { src: "/images/summer1.jpg", text: "Summer Camp 1" },
       { src: "/images/summer2.jpg", text: "Summer Camp 2" },
       { src: "/images/summer3.jpg", text: "Summer Camp 3" },
@@ -37,12 +43,12 @@ const EventGallery = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 ">
       <div className="text-center">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">Achievements at a Glance</h2>
       </div>
-      <div className="h-screen p-8">
-        {/* Tabs */}
+      <div className="p-8">
+        
         <div className="flex justify-center mb-6">
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
@@ -50,7 +56,11 @@ const EventGallery = () => {
           >
             <Image className="max-w-none" src={Stripes} alt="Stripes" />
           </div>
-          {["techfest2024", "summerCamp", "partnership"].map((tab) => (
+          {[
+            "techfest2024",
+            "summerCamp",
+            "partnership",
+          ].map((tab) => (
             <button
               key={tab}
               onClick={() => handleTabClick(tab as "techfest2024" | "summerCamp" | "partnership")}
@@ -67,7 +77,26 @@ const EventGallery = () => {
           ))}
         </div>
 
-        {/* Images */}
+
+        <div className="mb-8 text-center">
+          {activeTab === "techfest2024" && (
+            <p className="text-lg text-gray-700">
+              Explore our incredible TechFest 2024, featuring innovation, collaboration, and groundbreaking technology.
+            </p>
+          )}
+          {activeTab === "summerCamp" && (
+            <p className="text-lg text-gray-700">
+              Experience the excitement of our Summer Camp, a perfect blend of fun and learning for all ages.
+            </p>
+          )}
+          {activeTab === "partnership" && (
+            <p className="text-lg text-gray-700">
+              Celebrating successful partnerships that drive growth, innovation, and community impact.
+            </p>
+          )}
+        </div>
+
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
           {eventImages[activeTab].map((image, index) => (
             <div
@@ -93,6 +122,16 @@ const EventGallery = () => {
 };
 
 export default EventGallery;
+
+
+
+
+
+
+
+
+
+
 
 
 
