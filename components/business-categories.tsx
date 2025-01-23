@@ -273,7 +273,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 0}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -384,7 +384,7 @@ export default function BusinessCategories() {
                       </div>
                     </>
 
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto  bg-gray-900/35 text-white text-center">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni velit amet perspiciatis doloremque rerum laborum neque quisquam aliquam asperiores necessitatibus delectus tempora totam porro, expedita quia vitae omnis quos dolore.
                     </div>
                   </Transition>
@@ -394,7 +394,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 1}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -504,7 +504,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto  bg-gray-900/35 text-white text-center">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit esse facilis in, maiores cupiditate voluptates magni illum fugiat, atque non omnis quo iusto saepe velit nesciunt maxime, tempore corrupti.
                     </div>
                   </Transition>
@@ -514,7 +514,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 2}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -632,7 +632,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 3}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -742,7 +742,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto  bg-gray-900/35 text-white text-center">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo dicta incidunt maxime. Sit eaque veniam expedita quaerat, ex et, doloribus blanditiis repudiandae ipsum debitis rerum aut temporibus quo? Ex?
                     </div>
                   </Transition>
