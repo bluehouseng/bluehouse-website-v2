@@ -235,7 +235,10 @@ export default function motify() {
 
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-32">
+      <div className="text-center">
+        <h2 className="mb-4 text-3xl font-bold md:text-4xl">Testimonials</h2>
+      </div>
         <div className="pb-12 md:pb-20">
           {/* Testimonials grid */}
           <div

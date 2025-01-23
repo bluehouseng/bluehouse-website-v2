@@ -93,7 +93,7 @@ export default function BusinessCategories() {
             </div>
 
             {/* Tab panels */}
-            <TabPanels className="relative flex h-[324px] items-center justify-center">
+            <TabPanels className="relative flex mt-16  items-center justify-center ">
 
               {/* Small blue dots */}
               <div className="absolute -z-10">
