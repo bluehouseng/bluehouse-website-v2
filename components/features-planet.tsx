@@ -16,6 +16,9 @@ const EventGallery = () => {
     partnership: { src: string; text: string }[];
   } = {
     techfest2024: [
+      { src: "/images/jtf/jtf-2.jpg", text: "Registration Table" },
+      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
+      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 1" },
       { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
@@ -43,11 +46,11 @@ const EventGallery = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 ">
+    <div className="container mx-auto p-4 mt-16">
       <div className="text-center">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">Achievements at a Glance</h2>
       </div>
-      <div className="p-8">
+      <div className="">
         
         <div className="flex justify-center mb-6">
           <div
@@ -80,8 +83,8 @@ const EventGallery = () => {
 
         <div className="mb-8 text-center">
           {activeTab === "techfest2024" && (
-            <p className="text-lg text-gray-700">
-              Explore our incredible TechFest 2024, featuring innovation, collaboration, and groundbreaking technology.
+            <p className="text-sm text-gray-700 ">
+              Explore our incredible TechFest 2024, featuring innovation, collaboration, <br /> and groundbreaking technology.
             </p>
           )}
           {activeTab === "summerCamp" && (
