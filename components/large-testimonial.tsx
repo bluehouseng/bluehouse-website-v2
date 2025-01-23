@@ -1,6 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper"; 
+import Link from 'next/link';
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
@@ -89,9 +90,10 @@ export default function LargeTestimonial() {
                       {testimonial.role}
                     </a>
                   </div>
-                  <a className="text-blue-500 text-sm" href="#0">
+                      
+                  <Link href="/testimonials" className="text-blue-500 text-sm">
                     More
-                  </a>
+                  </Link>
                 </div>
               </SwiperSlide>
             ))}
