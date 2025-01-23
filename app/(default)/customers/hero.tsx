@@ -1,8 +1,12 @@
 import PageIllustration from "@/components/page-illustration";
+import Image from 'next/image';
+import CYF_1039_1 from '@/public/images/CYF_1039_1.jpg';
+
 
 export default function Hero() {
   return (
     <section className="relative">
+         <Image src={CYF_1039_1} alt="Description of image" className="h-screen w-screen" />
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Main content */}
