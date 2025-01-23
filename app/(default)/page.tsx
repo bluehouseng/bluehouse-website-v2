@@ -11,12 +11,12 @@ import Features from "@/components/features-home";
 import TestimonialsCarousel from "@/components/testimonials-carousel";
 import Cta from "@/components/cta";
 
+
 export default function Home() {
   return (
     <>
       <Hero />
       <BusinessCategories />
-     
       <FeaturesPlanet />
       {/* <Features /> */}
       <LargeTestimonial />
