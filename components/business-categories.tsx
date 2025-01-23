@@ -385,7 +385,10 @@ export default function BusinessCategories() {
                     </>
 
                     <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto  bg-gray-900/35 text-white text-center">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni velit amet perspiciatis doloremque rerum laborum neque quisquam aliquam asperiores necessitatibus delectus tempora totam porro, expedita quia vitae omnis quos dolore.
+                    Tech consultancy is at the heart of our offerings, delivering tailored solutions to drive innovation and growth. 
+                     empower organizations by analyzing challenges, optimizing processes, and implementing cutting-edge technologies. 
+                     Our expertise ensures clients achieve their goals, from digital transformation to strategic planning, fostering 
+                     success in a rapidly evolving tech landscape.
                     </div>
                   </Transition>
                 </TabPanel>
@@ -505,7 +508,12 @@ export default function BusinessCategories() {
                       </div>
                     </>
                     <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto  bg-gray-900/35 text-white text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit esse facilis in, maiores cupiditate voluptates magni illum fugiat, atque non omnis quo iusto saepe velit nesciunt maxime, tempore corrupti.
+                    Our mentorship and training programs are at the core of our mission to empower and inspire individuals.
+                     Through our mentorship program, participants connect with industry experts for personalized guidance,
+                      career insights, and professional growth. Complementing this, our training programs deliver hands-on, 
+                      practical learning experiences, equipping individuals with the skills needed to thrive in today’s dynamic
+                       tech landscape. Together, these initiatives bridge knowledge gaps, foster innovation, and prepare the next
+                        generation of tech leaders for success.
                     </div>
                   </Transition>
                 </TabPanel>
@@ -743,7 +751,10 @@ export default function BusinessCategories() {
                       </div>
                     </>
                     <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto  bg-gray-900/35 text-white text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo dicta incidunt maxime. Sit eaque veniam expedita quaerat, ex et, doloribus blanditiis repudiandae ipsum debitis rerum aut temporibus quo? Ex?
+                    Our focus on internal growth and support drives our commitment to excellence and sustainability. We prioritize
+                     fostering a culture of continuous learning, collaboration, and innovation within our team. By investing in 
+                     professional development, providing robust resources, and encouraging teamwork, we ensure a thriving, 
+                     motivated workforce ready to tackle challenges and achieve shared success.
                     </div>
                   </Transition>
                 </TabPanel>
