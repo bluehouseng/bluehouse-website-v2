@@ -92,7 +92,7 @@ export default function HeroHome() {
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
-                    Learn More{" "}
+                    Have a Project?{" "}
                       <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
                         -&gt;
                       </span>
