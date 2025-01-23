@@ -33,7 +33,7 @@ export default function FeaturesPlanet() {
       />
 
       {/* Spinning Texts */}
-      <div className="absolute inset-0 flex items-center justify-center animate-[spin_10s_linear_infinite]">
+      <div className="absolute inset-0 flex items-center justify-center animate-[spin_30s_linear_infinite]">
         <div className="relative w-[500px] h-[500px]">
           <h4
             className="absolute left-1/2 top-0 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
@@ -46,7 +46,7 @@ export default function FeaturesPlanet() {
             Partnerships (e.g Tech Synergy)
           </h4>
           <h4
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
+            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 text-white bg-slate-300 bg-opacity-10 rounded-md p-3 text-sm"
           >
             50 kids trained at the Summer Camp
           </h4>
