@@ -27,12 +27,12 @@ const EventGallery = () => {
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
     ],
     summerCamp: [
-      { src: "/images/summer1.jpg", text: "Summer Camp 1" },
-      { src: "/images/summer2.jpg", text: "Summer Camp 2" },
-      { src: "/images/summer3.jpg", text: "Summer Camp 3" },
-      { src: "/images/summer1.jpg", text: "Summer Camp 1" },
-      { src: "/images/summer2.jpg", text: "Summer Camp 2" },
-      { src: "/images/summer3.jpg", text: "Summer Camp 3" },
+      { src: "/images/summertraining/training10.jpg", text: "Summer Camp 1" },
+      { src: "/images/summertraining/training5.jpg", text: "Summer Camp 2" },
+      { src: "/images/summertraining/training7.jpg", text: "Summer Camp 3" },
+      { src: "/images/summertraining/training3.jpg", text: "Summer Camp 1" },
+      { src: "/images/summertraining/training4.jpg", text: "Summer Camp 2" },
+      { src: "/images/summertraining/training8.jpg", text: "Summer Camp 3" },
     ],
     partnership: [
       { src: "/images/partner1.jpg", text: "Partnership 1" },
