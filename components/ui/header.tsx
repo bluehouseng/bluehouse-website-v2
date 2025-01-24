@@ -44,7 +44,7 @@ export default function Header() {
               </li>
               <li className="px-3 py-1">
                 <Link
-                  href="/documentation"
+                  href="/about"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   About Us
@@ -52,7 +52,7 @@ export default function Header() {
               </li>
               <li className="px-3 py-1">
                 <Link
-                  href="/documentation"
+                  href="/contact"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Contact Us
