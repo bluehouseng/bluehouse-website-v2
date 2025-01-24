@@ -6,12 +6,12 @@ import Stripes from "@/public/images/stripes-dark.svg";
 
 const EventGallery = () => {
   const [activeTab, setActiveTab] = useState<
-    "techfest2024" | "summerCamp" | "partnership"
+    "techfest2024" | "summerTraining" | "partnership"
   >("techfest2024");
 
   const eventImages: {
     techfest2024: { src: string; text: string }[];
-    summerCamp: { src: string; text: string }[];
+    summerTraining: { src: string; text: string }[];
     partnership: { src: string; text: string }[];
   } = {
     techfest2024: [
@@ -21,15 +21,12 @@ const EventGallery = () => {
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 1" },
       { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
       { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
-      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 1" },
-      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
-      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
     ],
-    summerCamp: [
+    summerTraining: [
       { src: "/images/summertraining/training10.jpg", text: "Summer Camp 1" },
       { src: "/images/summertraining/training5.jpg", text: "Summer Camp 2" },
       { src: "/images/summertraining/training7.jpg", text: "Summer Camp 3" },
-      { src: "/images/summertraining/training3.jpg", text: "Summer Camp 1" },
+      { src: "/images/summertraining/training3.jpg", text: "Summer Camp 4" },
       { src: "/images/summertraining/training4.jpg", text: "Summer Camp 2" },
       { src: "/images/summertraining/training8.jpg", text: "Summer Camp 3" },
     ],
@@ -41,7 +38,7 @@ const EventGallery = () => {
   };
 
   const handleTabClick = (
-    tab: "techfest2024" | "summerCamp" | "partnership"
+    tab: "techfest2024" | "summerTraining" | "partnership"
   ) => {
     setActiveTab(tab);
   };
@@ -61,12 +58,12 @@ const EventGallery = () => {
           >
             <Image className="max-w-none" src={Stripes} alt="Stripes" />
           </div>
-          {["techfest2024", "summerCamp", "partnership"].map((tab) => (
+          {["techfest2024", "summerTraining", "partnership"].map((tab) => (
             <button
               key={tab}
               onClick={() =>
                 handleTabClick(
-                  tab as "techfest2024" | "summerCamp" | "partnership"
+                  tab as "techfest2024" | "summerTraining" | "partnership"
                 )
               }
               className={`px-4 py-2 mx-2 text-sm font-medium ${
@@ -76,7 +73,7 @@ const EventGallery = () => {
               } rounded-lg hover:bg-blue-400 hover:text-white`}
             >
               {tab === "techfest2024" && "TechFest 2024"}
-              {tab === "summerCamp" && "Summer Camp"}
+              {tab === "summerTraining" && "Summer Training"}
               {tab === "partnership" && "Partnership"}
             </button>
           ))}
@@ -84,7 +81,7 @@ const EventGallery = () => {
 
         <div className="mb-8 text-center">
           {activeTab === "techfest2024" && (
-            <p className="text-sm text-gray-700  ">
+            <p className="text-sm text-gray-700">
               TechFest 2024 was an extraordinary milestone, drawing over 800
               attendees to celebrate innovation, <br />
               collaboration, and groundbreaking technology. Our team
@@ -97,13 +94,13 @@ const EventGallery = () => {
               transformative progress.
             </p>
           )}
-          {activeTab === "summerCamp" && (
-            <p className="text-sm text-gray-700 ">
-              One of my proudest achievements was organizing and leading a Tech
-              Summer Camp, designed to <br /> inspire and educate young minds. I
-              created a program blending coding, robotics, and app design <br />{" "}
-              with engaging activities that sparked curiosity and creativity. It
-              empowered children to embrace <br />
+          {activeTab === "summerTraining" && (
+            <p className="text-sm text-gray-700">
+              One of our proudest achievements was organizing and leading a Tech
+              Summer Training, designed to <br /> inspire and educate young
+              minds. We created a program blending coding, robotics, and app
+              design <br /> with engaging activities that sparked curiosity and
+              creativity. It empowered participants to embrace <br />
               technology while building critical skills and lasting confidence.
             </p>
           )}
@@ -149,6 +146,14 @@ const EventGallery = () => {
 };
 
 export default EventGallery;
+
+
+
+
+
+
+
+
 
 
 
