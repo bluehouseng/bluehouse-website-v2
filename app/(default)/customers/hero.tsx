@@ -1,9 +1,40 @@
+"use client";
+import { useState, useEffect } from 'react';
 import PageIllustration from "@/components/page-illustration";
 import Image from 'next/image';
 import CYF_1039_1 from '@/public/images/CYF_1039_1.jpg';
+// Import images from the tech-tea folder
+import techTea1 from '@/public/images/tech-tea/CYF_2904.jpg';
+import techTea2 from '@/public/images/tech-tea/CYF_2909.jpg';
+import techTea3 from '@/public/images/tech-tea/CYF_2913.jpg';
+import techTea4 from '@/public/images/tech-tea/CYF_2918.jpg';
+import techTea5 from '@/public/images/tech-tea/CYF_2920.jpg';
+
+// Create an array of image objects
+const techTeaImages = [
+  { src: techTea1, alt: 'Tech Tea Image 1' },
+  { src: techTea2, alt: 'Tech Tea Image 2' },
+  { src: techTea3, alt: 'Tech Tea Image 3' },
+  { src: techTea4, alt: 'Tech Tea Image 4' },
+  { src: techTea5, alt: 'Tech Tea Image 5' },
+];
 
 
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaImages.length);
+      if(currentImageIndex > techTeaImages.length - 1) {
+        setCurrentImageIndex(0);
+
+      }
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative">
          <div className="relative h-screen w-full">
@@ -18,25 +49,40 @@ export default function Hero() {
         </div>
       </div>
 
-          <div className="bg-gray-200 py-8">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mt-9 mb-8">Welcome to Our Community</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Box 1</h3>
-              <p className="text-gray-700">Content for box 1.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Box 2</h3>
-              <p className="text-gray-700">Content for box 2.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Box 3</h3>
-              <p className="text-gray-700">Content for box 3.</p>
-            </div>
-          </div>
+         <div className="bg-gray-200 py-8">
+  <div className="container mx-auto px-4">
+    <h2 className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
+      Welcome to Our Community
+    </h2>
+    <h2 className="text-2xl md:text-2xl font-bold text-center px-4 mt-9">Programs Overview</h2>
+    <div className="flex gap-4">
+      <div className="relative h-96 w-full mt-8">
+        <Image
+          src={techTeaImages[currentImageIndex].src}
+          alt={techTeaImages[currentImageIndex].alt}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h2 className="text-white text-4xl md:text-6xl font-bold">Tech and Teach</h2>
         </div>
       </div>
+      <div className="relative h-96 w-full mt-8">
+        <Image
+          src={techTeaImages[currentImageIndex].src}
+          alt={techTeaImages[currentImageIndex].alt}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h2 className="text-white text-4xl md:text-6xl font-bold">Your Experience</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Main content */}
