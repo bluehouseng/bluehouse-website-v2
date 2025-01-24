@@ -51,7 +51,7 @@ export default function Sidebar({ docs }: { docs: any[] }) {
         unmount={false}
         as="aside"
         id="sidebar"
-        className="w-[268px] [border-image:linear-gradient(to_bottom,theme(colors.slate.200),theme(colors.slate.300),transparent)1] max-md:fixed max-md:inset-y-0 max-md:left-0 max-md:z-50 max-md:h-screen max-md:bg-gray-50 md:!block md:shrink-0 md:border-r md:!opacity-100 transform ease-out data-[enter]:data-[closed]:-translate-x-full data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-100"
+        className="w-[268px] [border-image:linear-gradient(to_bottom,theme(colors.slate.200),theme(colors.slate.300),transparent)1] max-md:fixed max-md:inset-y-0 max-md:left-0 max-md:z-50 max-md:h-screen max-md:bg-gray-50 md:!block md:shrink-0 md:border-r md:!opacity-100 transform ease-out data-[en"
       >
         <div className="no-scrollbar sticky top-24 overflow-y-auto px-8 py-4 max-md:fixed max-md:inset-y-0 max-md:w-[268px] md:py-2">
           {/* Docs nav */}

@@ -5,10 +5,9 @@ import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
 
 const EventGallery = () => {
-  
-  const [activeTab, setActiveTab] = useState<"techfest2024" | "summerCamp" | "partnership">(
-    "techfest2024"
-  );
+  const [activeTab, setActiveTab] = useState<
+    "techfest2024" | "summerCamp" | "partnership"
+  >("techfest2024");
 
   const eventImages: {
     techfest2024: { src: string; text: string }[];
@@ -41,17 +40,20 @@ const EventGallery = () => {
     ],
   };
 
-  const handleTabClick = (tab: "techfest2024" | "summerCamp" | "partnership") => {
+  const handleTabClick = (
+    tab: "techfest2024" | "summerCamp" | "partnership"
+  ) => {
     setActiveTab(tab);
   };
 
   return (
     <div className="container mx-auto p-4 mt-32">
       <div className="text-center">
-        <h2 className="mb-4 text-3xl font-bold md:text-4xl">Achievements at a Glance</h2>
+        <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+          Achievements at a Glance
+        </h2>
       </div>
       <div className="">
-        
         <div className="flex justify-center mb-6">
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
@@ -59,14 +61,14 @@ const EventGallery = () => {
           >
             <Image className="max-w-none" src={Stripes} alt="Stripes" />
           </div>
-          {[
-            "techfest2024",
-            "summerCamp",
-            "partnership",
-          ].map((tab) => (
+          {["techfest2024", "summerCamp", "partnership"].map((tab) => (
             <button
               key={tab}
-              onClick={() => handleTabClick(tab as "techfest2024" | "summerCamp" | "partnership")}
+              onClick={() =>
+                handleTabClick(
+                  tab as "techfest2024" | "summerCamp" | "partnership"
+                )
+              }
               className={`px-4 py-2 mx-2 text-sm font-medium ${
                 activeTab === tab
                   ? "bg-blue-500 text-white"
@@ -80,26 +82,48 @@ const EventGallery = () => {
           ))}
         </div>
 
-
         <div className="mb-8 text-center">
           {activeTab === "techfest2024" && (
-            <p className="text-sm text-gray-700 ">
-              Explore our incredible TechFest 2024, featuring innovation, collaboration, <br /> and groundbreaking technology.
+            <p className="text-sm text-gray-700  ">
+              TechFest 2024 was an extraordinary milestone, drawing over 800
+              attendees to celebrate innovation, <br />
+              collaboration, and groundbreaking technology. Our team
+              orchestrated a dynamic event showcasing <br />
+              cutting-edge advancements, inspiring discussions, and powerful
+              networking opportunities. <br />
+              This remarkable gathering united visionaries and industry leaders,
+              igniting ideas and fostering <br />
+              connections that will shape the future of technology and drive
+              transformative progress.
             </p>
           )}
           {activeTab === "summerCamp" && (
-            <p className="text-lg text-gray-700">
-              Experience the excitement of our Summer Camp, a perfect blend of fun and learning for all ages.
+            <p className="text-sm text-gray-700 ">
+              One of my proudest achievements was organizing and leading a Tech
+              Summer Camp, designed to <br /> inspire and educate young minds. I
+              created a program blending coding, robotics, and app design <br />{" "}
+              with engaging activities that sparked curiosity and creativity. It
+              empowered children to embrace <br />
+              technology while building critical skills and lasting confidence.
             </p>
           )}
           {activeTab === "partnership" && (
-            <p className="text-lg text-gray-700">
-              Celebrating successful partnerships that drive growth, innovation, and community impact.
+            <p className="text-sm text-gray-700">
+              We proudly celebrate our successful partnerships, especially with
+              TechSynergy, which have been pivotal
+              <br /> in driving growth, innovation, and community impact. This
+              collaboration has provided invaluable opportunities <br /> for our
+              students, offering internships with leading companies in the
+              United Kingdom and remote
+              <br />
+              job placements with UK-based organizations. Together, we’re
+              empowering the next <br />
+              generation to thrive in a globally connected, tech-driven
+              workforce.
             </p>
           )}
         </div>
 
-      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
           {eventImages[activeTab].map((image, index) => (
             <div
@@ -125,298 +149,6 @@ const EventGallery = () => {
 };
 
 export default EventGallery;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// "use client";
-
-// import { useState } from "react";
-// import Image from "next/image";
-// import Stripes from "@/public/images/stripes-dark.svg";
-
-// const EventGallery = () => {
-//   // Define valid keys for activeTab
-//   const [activeTab, setActiveTab] = useState<"tech" | "summerCamp" | "partnership">("tech");
-
-//   const eventImages: {
-//     tech: { src: string; text: string }[];
-//     summerCamp: { src: string; text: string }[];
-//     partnership: { src: string; text: string }[];
-//   } = {
-//     tech: [
-//       { src: "/images/tech1.jpg", text: "Tech Event 1" },
-//       { src: "/images/tech2.jpg", text: "Tech Event 2" },
-//       { src: "/images/tech3.jpg", text: "Tech Event 3" },
-//     ],
-//     summerCamp: [
-//       { src: "/images/summer1.jpg", text: "Summer Camp 1" },
-//       { src: "/images/summer2.jpg", text: "Summer Camp 2" },
-//       { src: "/images/summer3.jpg", text: "Summer Camp 3" },
-//     ],
-//     partnership: [
-//       { src: "/images/partner1.jpg", text: "Partnership 1" },
-//       { src: "/images/partner2.jpg", text: "Partnership 2" },
-//       { src: "/images/partner3.jpg", text: "Partnership 3" },
-//     ],
-//   };
-
-//   const handleTabClick = (tab: "tech" | "summerCamp" | "partnership") => {
-//     setActiveTab(tab);
-//   };
-
-//   return (
-//     <div className="container mx-auto p-4   ">
-//        <div className="text-center">
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Achievements at a Glance</h2>
-//         </div>
-//         <div className="h-screen  p-8 "> 
-//         <div className="flex justify-center mb-6">
-//         <div
-//           className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-//           aria-hidden="true"
-//         >
-//           <Image className="max-w-none" src={Stripes} alt="Stripes" />
-//         </div>
-//         {["tech", "summerCamp", "partnership"].map((tab) => (
-//           <button
-//             key={tab}
-//             onClick={() => handleTabClick(tab as "tech" | "summerCamp" | "partnership")}
-//             className={`px-4 py-2 mx-2 text-sm font-medium ${
-//               activeTab === tab
-//                 ? "bg-blue-500 text-white"
-//                 : "bg-gray-200 text-gray-700"
-//             } rounded-lg hover:bg-blue-400 hover:text-white`}
-//           >
-//             {tab === "tech" && "Tech"}
-//             {tab === "summerCamp" && "Summer Camp"}
-//             {tab === "partnership" && "Partnership"}
-//           </button>
-//         ))}
-//       </div>
-
-//       {/* Images */}
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
-//         {eventImages[activeTab].map((image, index) => (
-//           <div
-//             key={index}
-//             className="relative group overflow-hidden rounded-lg shadow-lg w-full h-full"
-//           >
-//             <Image
-//               src={image.src}
-//               alt={image.text}
-//               width={500}
-//               height={300}
-//               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-//             />
-//             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-//               <p className="text-white text-center text-lg">{image.text}</p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//         </div>
-//       {/* Tabs */}
-      
-//     </div>
-//   );
-// };
-
-// export default EventGallery;
-
-
-
-
-
-
-
-
-
-
-// "use client"
-// import { SetStateAction, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from "react";
-// import Image from "next/image";
-// import Stripes from "@/public/images/stripes-dark.svg";
-// import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
-// const EventGallery = () => {
-//   const [activeTab, setActiveTab] = useState("tech");
-
-//   const eventImages = {
-//     tech: [
-//       { src: "/images/tech1.jpg", text: "Tech Event 1" },
-//       { src: "/images/tech2.jpg", text: "Tech Event 2" },
-//       { src: "/images/tech3.jpg", text: "Tech Event 3" },
-//     ],
-//     summerCamp: [
-//       { src: "/images/summer1.jpg", text: "Summer Camp 1" },
-//       { src: "/images/summer2.jpg", text: "Summer Camp 2" },
-//       { src: "/images/summer3.jpg", text: "Summer Camp 3" },
-//     ],
-//     partnership: [
-//       { src: "/images/partner1.jpg", text: "Partnership 1" },
-//       { src: "/images/partner2.jpg", text: "Partnership 2" },
-//       { src: "/images/partner3.jpg", text: "Partnership 3" },
-//     ],
-//   };
-
-//   const handleTabClick = (tab: SetStateAction<string>) => {
-//     setActiveTab(tab);
-//   };
-
-//   return (
-//     <div className="container mx-auto p-4  h-screen">
-//       {/* Tabs */}
-//       <div className="flex justify-center mb-6">
-//         <div
-//           className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-//           aria-hidden="true"
-//         >
-//           <Image className="max-w-none" src={Stripes} alt="Stripes" />
-//         </div>
-//         {["tech", "summerCamp", "partnership"].map((tab) => (
-//           <button
-//             key={tab}
-//             onClick={() => handleTabClick(tab)}
-//             className={`px-4 py-2 mx-2 text-sm font-medium ${
-//               activeTab === tab
-//                 ? "bg-blue-500 text-white"
-//                 : "bg-gray-200 text-gray-700"
-//             } rounded-lg hover:bg-blue-400 hover:text-white`}
-//           >
-//             {tab === "tech" && "Tech"}
-//             {tab === "summerCamp" && "Summer Camp"}
-//             {tab === "partnership" && "Partnership"}
-//           </button>
-//         ))}
-//       </div>
-
-//       {/* Images */}
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-[calc(100%-80px)]">
-//         {eventImages[activeTab].map((image: { src: string | StaticImport; text: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: Key | null | undefined) => (
-//           <div
-//             key={index}
-//             className="relative overflow-hidden rounded-lg shadow-lg group h-full"
-//           >
-//             <Image
-//               src={image.src}
-//               alt={`${activeTab} event ${index + 1}`}
-//               fill
-//               className="w-full h-full object-cover"
-//             />
-//             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-//               <p className="text-white text-lg font-medium">{image.text}</p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EventGallery;
-
-
-
-
-
-
-
-// "use client"
-// import { useState } from "react";
-// import Image from "next/image";
-// import Stripes from "@/public/images/stripes-dark.svg";
-
-// const EventGallery = () => {
-//   const [activeTab, setActiveTab] = useState("tech");
-
-//   const eventImages = {
-//     tech: [
-//       "/images/tech1.jpg",
-//       "/images/tech2.jpg",
-//       "/images/tech3.jpg",
-//     ],
-//     summerCamp: [
-//       "/images/summer1.jpg",
-//       "/images/summer2.jpg",
-//       "/images/summer3.jpg",
-//     ],
-//     partnership: [
-//       "/images/partner1.jpg",
-//       "/images/partner2.jpg",
-//       "/images/partner3.jpg",
-//     ],
-//   };
-
-//   const handleTabClick = (tab) => {
-//     setActiveTab(tab);
-//   };
-
-//   return (
-//     <div className="container mx-auto p-4 bg-gray-900 h-screen">
-
-//       {/* Tabs */}
-//       <div className="flex justify-center mb-6">
-//       <div
-//             className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-//             aria-hidden="true"
-//           >
-//             <Image className="max-w-none" src={Stripes} alt="Stripes" />
-//           </div>
-//         {["tech", "summerCamp", "partnership"].map((tab) => (
-//           <button
-//             key={tab}
-//             onClick={() => handleTabClick(tab)}
-//             className={`px-4 py-2 mx-2 text-sm font-medium ${
-//               activeTab === tab
-//                 ? "bg-blue-500 text-white"
-//                 : "bg-gray-200 text-gray-700"
-//             } rounded-lg hover:bg-blue-400 hover:text-white`}
-//           >
-//             {tab === "tech" && "Tech"}
-//             {tab === "summerCamp" && "Summer Camp"}
-//             {tab === "partnership" && "Partnership"}
-//           </button>
-//         ))}
-//       </div>
-
-//       {/* Images */}
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-//         {eventImages[activeTab].map((image, index) => (
-//           <div
-//             key={index}
-//             className="overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-transform"
-//           >
-//             <Image
-//               src={image}
-//               alt={`${activeTab} event ${index + 1}`}
-//               width={500}
-//               height={300}
-//               className="w-full h-48 object-cover"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EventGallery;
-
 
 
 
@@ -612,8 +344,3 @@ export default EventGallery;
 //     </section>
 //   );
 // }
-
-
-
-
-
