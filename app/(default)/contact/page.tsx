@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faGlobe, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContactPage() {
   return (
@@ -78,6 +78,9 @@ export default function ContactPage() {
   </a>
   <a href="https://www.linkedin.com/company/bluehousetechnologies" target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faLinkedin} className="text-blue-600 hover:text-blue-800 w-5" />
+  </a>
+  <a href="https://www.instagram.com/bluehousetechnologies" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faInstagram} className="text-blue-600 hover:text-blue-800 w-5" />
   </a>
 </div>
 
