@@ -93,7 +93,7 @@ export default function BusinessCategories() {
             </div>
 
             {/* Tab panels */}
-            <TabPanels className="relative flex mt-16  items-center justify-center ">
+            <TabPanels className="relative flex   items-center justify-center ">
 
               {/* Small blue dots */}
               <div className="absolute -z-10">
@@ -632,7 +632,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80  flex justify-center items-center mx-auto bg-gray-900/45 text-white text-center" >
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80  flex justify-center items-center mx-auto bg-gray-900/45 text-white text-center text-sm" >
                     Our software solutions are designed to transform ideas into innovative, efficient, and scalable digital products. From custom software development 
                     to enterprise applications, we craft user-centric solutions tailored to specific needs. By leveraging cutting-edge technologies and industry best
                      practices, we deliver robust, reliable, and seamless systems that drive productivity and empower success in a tech-driven world.
