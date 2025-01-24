@@ -13,7 +13,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Form and Info */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto px-6  lg:ml-28 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Contact Form */}
         <div>
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
@@ -44,8 +44,8 @@ export default function ContactPage() {
         </div>
 
         {/* Get in Touch */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Get In Touch</h2>
+        <div className='ml-10'>
+          <h2 className="text-2xl sm:text- font-semibold mb-4 ">Get In Touch</h2>
           <p className="text-sm text-gray-600 mb-6">
             If you have any questions or concerns, feel free to reach out to us.
           </p>
