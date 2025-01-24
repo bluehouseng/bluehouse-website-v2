@@ -23,7 +23,7 @@ export default function About() {
       </div>
       <div className="flex flex-col -space-x-32 z-10 md:flex-row items-center px-4 md:px-16 mt-10">
         {/* Left Side: Text */}
-        <div className="flex-1 bg-slate-200 h-[600px] md:h-[500px] -z-10 rounded-3xl p-8 md:p-20">
+        <div className="flex-1 bg-gray-900/25 h-[500px] md:h-[495px] -z-10 rounded-md p-8 md:p-20">
           <h1 className="text-3xl h-24 font-semibold  mb-8 w-full">
             Innovating the Future Through Collaboration and Technology
           </h1>
@@ -42,7 +42,7 @@ export default function About() {
             alt="Descriptive Alt Text"
             width={600}
             height={500}
-            className="rounded-lg"
+            className="rounded-md"
           />
         </div>
       </div>
