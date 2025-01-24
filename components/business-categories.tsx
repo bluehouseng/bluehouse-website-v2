@@ -4,7 +4,7 @@ import { useRef, useState, Fragment } from "react";
 import Image from "next/image";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
-import Logo01 from "@/public/images/logo-01.svg";
+import Logo01 from "@/public/images/bluehouse-logo.png";
 import Logo02 from "@/public/images/logo-02.svg";
 import Logo03 from "@/public/images/logo-03.svg";
 import Logo04 from "@/public/images/logo-04.svg";
@@ -260,8 +260,8 @@ export default function BusinessCategories() {
                     <Image
                       className="relative"
                       src={Logo01}
-                      width={32}
-                      height={32}
+                      width={150}
+                      height={150}
                       alt="Logo 01"
                     />
                   </div>
