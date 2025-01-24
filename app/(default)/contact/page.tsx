@@ -93,7 +93,6 @@ export default function ContactPage() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5141.710484826903!2d8.874437704411308!3d9.88415169936531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105373c079f53a81%3A0xf2615aa9896c9a77!2sBluehouse%20Technologies!5e0!3m2!1sen!2sng!4v1737722155263!5m2!1sen!2snghttps://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5141.710484826903!2d8.874437704411308!3d9.88415169936531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x105373c079f53a81%3A0xf2615aa9896c9a77!2sBluehouse%20Technologies%2C%20No.%2010%20Akila%20Machunga%20Street%2C%20Jos%20930105%2C%20Plateau!3m2!1d9.8839905!2d8.8776209!5e0!3m2!1sen!2sng!4v1737722270854!5m2!1sen!2sng"
           className="w-full h-72"
           style={{ border: 0 }}
-          allowFullScreen=""
           loading="lazy"
         ></iframe>
       </div>
