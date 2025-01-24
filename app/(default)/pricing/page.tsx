@@ -16,7 +16,9 @@ export default function Pricing() {
       <ComparePlans />
       <TestimonialsGrid />
       <Faqs />
+      
       <Cta
+      
         className="overflow-hidden"
         heading="Create your next project with Bluehouse"
         buttonText="Start Free Trial"

@@ -93,7 +93,7 @@ export default function BusinessCategories() {
             </div>
 
             {/* Tab panels */}
-            <TabPanels className="relative flex h-[324px] items-center justify-center">
+            <TabPanels className="relative flex   items-center justify-center ">
 
               {/* Small blue dots */}
               <div className="absolute -z-10">
@@ -273,7 +273,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 0}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -384,8 +384,11 @@ export default function BusinessCategories() {
                       </div>
                     </>
 
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni velit amet perspiciatis doloremque rerum laborum neque quisquam aliquam asperiores necessitatibus delectus tempora totam porro, expedita quia vitae omnis quos dolore.
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto  flex justify-center items-center bg-gray-900/45 text-white text-center text-sm">
+                    Tech consultancy is at the heart of our offerings, delivering tailored solutions to drive innovation and growth. 
+                     empower organizations by analyzing challenges, optimizing processes, and implementing cutting-edge technologies. 
+                     Our expertise ensures clients achieve their goals, from digital transformation to strategic planning, fostering 
+                     success in a rapidly evolving tech landscape.
                     </div>
                   </Transition>
                 </TabPanel>
@@ -394,7 +397,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 1}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -504,8 +507,13 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit esse facilis in, maiores cupiditate voluptates magni illum fugiat, atque non omnis quo iusto saepe velit nesciunt maxime, tempore corrupti.
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto flex justify-center items-center  bg-gray-900/45 text-white text-center text-sm">
+                    Our mentorship and training programs are at the core of our mission to empower and inspire individuals.
+                     Through our mentorship program, participants connect with industry experts for personalized guidance,
+                      career insights, and professional growth. Complementing this, our training programs deliver hands-on, 
+                      practical learning experiences, equipping individuals with the skills needed to thrive in today’s dynamic
+                       tech landscape. Together, these initiatives bridge knowledge gaps, foster innovation, and prepare the next
+                        generation of tech leaders for success.
                     </div>
                   </Transition>
                 </TabPanel>
@@ -514,7 +522,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 2}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -624,7 +632,11 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto bg-gray-900/35 text-white text-center" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est reiciendis amet maiores reprehenderit illum. Impedit ipsum, cum velit possimus cumque nesciunt fugit earum ducimus maiores, dolores fugiat, suscipit eius officiis!</div>
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80  flex justify-center items-center mx-auto bg-gray-900/45 text-white text-center text-sm" >
+                    Our software solutions are designed to transform ideas into innovative, efficient, and scalable digital products. From custom software development 
+                    to enterprise applications, we craft user-centric solutions tailored to specific needs. By leveraging cutting-edge technologies and industry best
+                     practices, we deliver robust, reliable, and seamless systems that drive productivity and empower success in a tech-driven world.
+                    </div>
                   </Transition>
                 </TabPanel>
 
@@ -632,7 +644,7 @@ export default function BusinessCategories() {
                   <Transition
                     as="div"
                     show={selectedTab === 3}
-                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-700 data-[leave]:duration-300`}
+                    className={`w-full h-full flex items-center justify-center transform transition ease-[cubic-bezier(0.38,0,0.32,1)] data-[closed]:absolute data-[enter]:data-[closed]:scale-90 data-[leave]:data-[closed]:scale-125 data-[closed]:opacity-0 data-[enter]:duration-1000 data-[leave]:duration-1000`}
                     unmount={false}
                     appear={true}
                   >
@@ -742,8 +754,11 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo dicta incidunt maxime. Sit eaque veniam expedita quaerat, ex et, doloribus blanditiis repudiandae ipsum debitis rerum aut temporibus quo? Ex?
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto flex justify-center items-center bg-gray-900/45 text-white text-center text-sm">
+                    Our focus on internal growth and support drives our commitment to excellence and sustainability. We prioritize
+                     fostering a culture of continuous learning, collaboration, and innovation within our team. By investing in 
+                     professional development, providing robust resources, and encouraging teamwork, we ensure a thriving, 
+                     motivated workforce ready to tackle challenges and achieve shared success.
                     </div>
                   </Transition>
                 </TabPanel>

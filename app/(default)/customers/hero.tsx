@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from 'react';
 import PageIllustration from "@/components/page-illustration";
 import Image from 'next/image';
@@ -9,6 +10,11 @@ import techTea2 from '@/public/images/tech-tea/CYF_2909.jpg';
 import techTea3 from '@/public/images/tech-tea/CYF_2913.jpg';
 import techTea4 from '@/public/images/tech-tea/CYF_2918.jpg';
 import techTea5 from '@/public/images/tech-tea/CYF_2920.jpg';
+import techTea6 from '@/public/images/tech-tea/CYF_2911.jpg';
+import techTea7 from '@/public/images/tech-tea/CYF_2915.jpg';
+import techTea8 from '@/public/images/tech-tea/CYF_3037.jpg';
+import techTea9 from '@/public/images/tech-tea/CYF_2916.jpg';
+import techTea10 from '@/public/images/tech-tea/CYF_2912.jpg';
 
 // Create an array of image objects
 const techTeaImages = [
@@ -19,17 +25,29 @@ const techTeaImages = [
   { src: techTea5, alt: 'Tech Tea Image 5' },
 ];
 
+const techTeaImagess = [
+  { src: techTea6, alt: 'Tech Tea Image 6' },
+  { src: techTea7, alt: 'Tech Tea Image 7' },
+  { src: techTea8, alt: 'Tech Tea Image 8' },
+  { src: techTea9, alt: 'Tech Tea Image 9' },
+  { src: techTea10, alt: 'Tech Tea Image 10' },
+];
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndexx, setCurrentImageIndexx] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaImages.length);
-      if(currentImageIndex > techTeaImages.length - 1) {
-        setCurrentImageIndex(0);
+    }, 3000); // Change image every 3 seconds
 
-      }
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndexx((prevIndex) => (prevIndex + 1) % techTeaImagess.length);
     }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
@@ -37,9 +55,9 @@ export default function Hero() {
 
   return (
     <section className="relative">
-         <div className="relative h-screen w-full">
+      <div className="relative h-screen w-full">
         <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
-         <div className="absolute inset-0 flex items-center justify-center flex-col">
+        <div className="absolute inset-0 flex items-center justify-center flex-col">
           <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
@@ -49,40 +67,41 @@ export default function Hero() {
         </div>
       </div>
 
-         <div className="bg-gray-200 py-8">
-  <div className="container mx-auto px-4">
-    <h2 className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
-      Welcome to Our Community
-    </h2>
-    <h2 className="text-2xl md:text-2xl font-bold text-center px-4 mt-9">Programs Overview</h2>
-    <div className="flex gap-4">
-      <div className="relative h-96 w-full mt-8">
-        <Image
-          src={techTeaImages[currentImageIndex].src}
-          alt={techTeaImages[currentImageIndex].alt}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-white text-4xl md:text-6xl font-bold">Tech and Teach</h2>
+      <div className="bg-gray-200 py-8">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
+            Welcome to Our Community
+          </h2>
+          <h2 className="text-2xl md:text-2xl font-bold text-center px-4 mt-9">Programs Overview</h2>
+          <div className="flex gap-4">
+            <div className="relative h-96 w-full mt-8">
+              <Image
+                src={techTeaImages[currentImageIndex].src}
+                alt={techTeaImages[currentImageIndex].alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h2 className="text-white text-4xl md:text-6xl font-bold">Tech and Teach</h2>
+              </div>
+            </div>
+            <div className="relative h-96 w-full mt-8">
+              <Image
+                src={techTeaImagess[currentImageIndexx].src}
+                alt={techTeaImagess[currentImageIndexx].alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h2 className="text-white text-4xl md:text-6xl font-bold">Your Experience</h2>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="relative h-96 w-full mt-8">
-        <Image
-          src={techTeaImages[currentImageIndex].src}
-          alt={techTeaImages[currentImageIndex].alt}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-white text-4xl md:text-6xl font-bold">Your Experience</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Main content */}
