@@ -384,7 +384,7 @@ export default function BusinessCategories() {
                       </div>
                     </>
 
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto  flex justify-center items-center bg-gray-900/65 text-white text-center text-sm">
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto  flex justify-center items-center bg-gray-900/45 text-white text-center text-sm">
                     Tech consultancy is at the heart of our offerings, delivering tailored solutions to drive innovation and growth. 
                      empower organizations by analyzing challenges, optimizing processes, and implementing cutting-edge technologies. 
                      Our expertise ensures clients achieve their goals, from digital transformation to strategic planning, fostering 
@@ -507,7 +507,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto flex justify-center items-center  bg-gray-900/35 text-white text-center text-sm">
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto flex justify-center items-center  bg-gray-900/45 text-white text-center text-sm">
                     Our mentorship and training programs are at the core of our mission to empower and inspire individuals.
                      Through our mentorship program, participants connect with industry experts for personalized guidance,
                       career insights, and professional growth. Complementing this, our training programs deliver hands-on, 
@@ -632,7 +632,11 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-3xl mx-auto bg-gray-900/35 text-white text-center" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est reiciendis amet maiores reprehenderit illum. Impedit ipsum, cum velit possimus cumque nesciunt fugit earum ducimus maiores, dolores fugiat, suscipit eius officiis!</div>
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80  flex justify-center items-center mx-auto bg-gray-900/45 text-white text-center" >
+                    Our software solutions are designed to transform ideas into innovative, efficient, and scalable digital products. From custom software development 
+                    to enterprise applications, we craft user-centric solutions tailored to specific needs. By leveraging cutting-edge technologies and industry best
+                     practices, we deliver robust, reliable, and seamless systems that drive productivity and empower success in a tech-driven world.
+                    </div>
                   </Transition>
                 </TabPanel>
 
@@ -750,7 +754,7 @@ export default function BusinessCategories() {
                         </div>
                       </div>
                     </>
-                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto flex justify-center items-center bg-gray-900/35 text-white text-center text-sm">
+                    <div className=" z-10 p-6 rounded-lg shadow-lg max-w-2xl h-80 mx-auto flex justify-center items-center bg-gray-900/45 text-white text-center text-sm">
                     Our focus on internal growth and support drives our commitment to excellence and sustainability. We prioritize
                      fostering a culture of continuous learning, collaboration, and innovation within our team. By investing in 
                      professional development, providing robust resources, and encouraging teamwork, we ensure a thriving, 
