@@ -7,17 +7,17 @@ export default function About() {
       <h2 className="text-5xl cursor-pointer font-semibold mb-4 flex justify-center">
         About Us
       </h2>
-      <div className="mt-8 items-center px-4 md:px-16">
-        <p className="text-xl font-light flex justify-center p-8 leading-relaxed">
+      <div className="mt-8 items-center px-4 md:px-16 ">
+        <p className="text-xl text-center font-light flex justify-center p-8 leading-relaxed ">
           At Bluehouse, innovation is driven by collaboration, diversity, and a
-          commitment to excellence. <br />
+          commitment to excellence. 
           The company emphasizes fostering a creative workplace where ideas
-          flourish, and employees <br /> are empowered to make meaningful
-          contributions. Bluehouse has made significant strides in helping{" "}
-          <br /> businesses adopt modern technologies, streamline operations,
-          and achieve their goals. Its commitment to <br />
+          flourish, and employees  are empowered to make meaningful
+          contributions. Bluehouse has made significant strides in helping
+           businesses adopt modern technologies, streamline operations,
+          and achieve their goals. Its commitment to 
           sustainability and forward-thinking technology positions it as a
-          company of the <br />
+          company of the 
           future.
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function About() {
           <h1 className="text-3xl h-24 font-semibold  mb-8 w-full">
             Innovating the Future Through Collaboration and Technology
           </h1>
-          <p className="font-semibold text-xl leading-relaxed w-[590px]">
+          <p className="font-semibold  leading-relaxed w-[450px]">
             Bluehouse fosters an environment where ideas flourish, diversity is
             celebrated, and meaningful contributions are made. Positioned as a
             company of the future, Bluehouse is shaping industries and creating
@@ -36,7 +36,7 @@ export default function About() {
         </div>
 
         {/* Right Side: Image */}
-        <div className="flex-1 flex justify-centern pt-24 absolute right-0 md:relative md:top-0 md:">
+        <div className="flex-1 flex justify-centern pt-32 absolute right-0 md:relative md:top-0 md:">
           <Image
             src={aboutImage}
             alt="Descriptive Alt Text"
