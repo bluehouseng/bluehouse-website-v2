@@ -36,7 +36,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaData.length);
-    }, 5000); // Change image every 5 seconds
+    }, 8000); // Change image every 8 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -57,10 +57,9 @@ export default function Hero() {
 
       <div className="bg-gray-200 py-8">
         <div className="container mx-auto px-4">
-          <h2 className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
-            Welcome to Our Community
+          <h2 className="mb-20 mt-20 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
+            Programs Overview
           </h2>
-          <h2 className="text-2xl md:text-2xl font-bold text-center px-4 mt-9">Programs Overview</h2>
           <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
             <div className="relative h-96 w-full md:w-1/2">
               <Image
@@ -68,7 +67,7 @@ export default function Hero() {
                 alt={techTeaData[currentImageIndex].alt}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-lg shadow-lg transition-opacity duration-1000 ease-in-out"
+                className="rounded-sm shadow-lg transition-opacity duration-1000 ease-in-out"
               />
             </div>
             <div className="w-full md:w-1/2 ml-20">
