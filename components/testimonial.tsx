@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
+
 export default function Testimonial({
   testimonial,
   cloned = false,
@@ -24,6 +25,7 @@ export default function Testimonial({
     switch (channel) {
       case "Twitter":
         return (
+          
           <svg
             className="fill-current"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,6 +33,7 @@ export default function Testimonial({
             height="15"
             fill="none"
           >
+            
             <path
               fillRule="evenodd"
               d="M16.928 14.054H11.99L8.125 9.162l-4.427 4.892H1.243L6.98 7.712.928.054H5.99L9.487 4.53 13.53.054h2.454l-5.358 5.932 6.303 8.068Zm-4.26-1.421h1.36L5.251 1.4H3.793l8.875 11.232Z"
@@ -46,6 +49,7 @@ export default function Testimonial({
             height="16"
             fill="none"
           >
+            
             <path d="M15.68 6.546H8.044v3.273h4.328c-.692 2.182-2.4 2.909-4.363 2.909a4.728 4.728 0 1 1 3.035-8.346l2.378-2.265A8 8 0 1 0 8.01 16.001c4.411 0 8.4-2.909 7.671-9.455Z"></path>
           </svg>
         );
@@ -68,8 +72,9 @@ export default function Testimonial({
 
   return (
     <article
-      className={`relative flex flex-col rounded-2xl bg-white/70 p-5 shadow-lg shadow-black/[0.03] before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100),theme(colors.gray.200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] md:odd:-rotate-1 md:even:rotate-1 ${className}`}
+    className={`relative flex flex-col rounded-2xl bg-white/70 p-5 shadow-lg shadow-black/[0.03] before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100),theme(colors.gray.200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] md:odd:-rotate-1 md:even:rotate-1 ${className}`}
     >
+
       <header className="mb-4 flex items-center gap-3">
         <Image
           className="shrink-0 rounded-full"

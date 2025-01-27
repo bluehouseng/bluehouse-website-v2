@@ -1,5 +1,6 @@
 "use client";
 
+
 import useMasonry from "@/utils/useMasonry";
 import Testimonial from "@/components/testimonial";
 import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
@@ -26,6 +27,7 @@ import TestimonialImg21 from "@/public/images/testimonial-21.jpg";
 import TestimonialImg22 from "@/public/images/testimonial-22.jpg";
 import TestimonialVideoThumb01 from "@/public/images/video-testimonial-01.jpg";
 import TestimonialVideoThumb02 from "@/public/images/video-testimonial-02.jpg";
+// import Image from "next/image";
 
 const testimonials = [
   {

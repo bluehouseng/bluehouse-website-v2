@@ -8,9 +8,9 @@ export default function Faqs() {
         "Bluehouse is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Bluehouse is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.",
     },
     {
-      question: "Promotional and free plan trials",
+      question: "Feature 2025 initiatives like Campus Tours and webinars.",
       answer:
-        "Yes, but you'll still pay the remainder of the term for the plan you signed up for.",
+        "Feature 2025 initiatives like Campus Tours and webinars.",
     },
     {
       question: "I'm unable to verify my account",
