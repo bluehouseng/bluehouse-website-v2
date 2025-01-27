@@ -12,7 +12,6 @@ import partners2 from "@/public/images/partiners/partners2.png";
 
 
 
-import partners11 from "@/public/images/partiners/partners11..png";
 
 
 
@@ -30,7 +29,7 @@ import edge from "@/public/images/partiners/edge.png"
 
 import microsoft1 from "@/public/images/partiners/microsoft1.png"
 
-const partnerImages = [ partners1, partners2,  aws,  plexo, partners11,  edge, microsoft1,  techsynegy, axiahub,  clockchain, ask, ];
+const partnerImages = [ partners1, partners2,  aws,  plexo,   edge, microsoft1,  techsynegy, axiahub,  clockchain, ask, ];
 
 export default function Partners() {
   const controls = useAnimationControls();
