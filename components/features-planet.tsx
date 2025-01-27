@@ -15,12 +15,12 @@ const EventGallery = () => {
     partnership: { src: string; text: string }[];
   } = {
     techfest2024: [
-      { src: "/images/jtf/jtf-2.jpg", text: "Registration Table" },
+      { src: "/images/jtf/jtf-17.jpg", text: "Registration Table" },
       { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
-      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
-      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 1" },
-      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
-      { src: "/images/jtf/jtf-2.jpg", text: "Tech Event 3" },
+      { src: "/images/jtf/jtf-56.jpg", text: "Tech Event 3" },
+      { src: "/images/jtf/jtf-44.jpg", text: "Tech Event 1" },
+      { src: "/images/jtf/jtf-40.jpg", text: "Tech Event 2" },
+      { src: "/images/jtf/jtf-51.jpg", text: "Tech Event 3" },
     ],
     summerTraining: [
       { src: "/images/summertraining/training10.jpg", text: "Summer Camp 1" },

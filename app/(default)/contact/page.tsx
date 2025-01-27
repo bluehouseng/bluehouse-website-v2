@@ -52,19 +52,19 @@ export default function ContactPage() {
           <ul className="space-y-4 mt-10">
             <li className="flex items-center space-x-4">
               <FontAwesomeIcon icon={faPhone} className="text-blue-600 w-5" />
-              <span>+123-234-1234</span>
+              <span><a href="tel:+2348069672917">+234-806-967-2917</a></span>
             </li>
             <li className="flex items-center space-x-4">
               <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 w-5" />
-              <span>hello@bluehouse.com</span>
+              <span><a href="mailto:contact@bluehouse.com ">contact@bluehouseng.com</a></span>
             </li>
             <li className="flex items-center space-x-4">
               <FontAwesomeIcon icon={faGlobe} className="text-blue-600 w-5" />
-              <span>www.bluehouse.com</span>
+              <span><a href="http://www.bluehouseng.com">www.bluehouseng.com</a></span>
             </li>
             <li className="flex items-center space-x-4">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-blue-600 w-5" />
-              <span>No. 10 Akila Machunga Street, Jos 930105, Plateau</span>
+              <span><address><a href="https://maps.app.goo.gl/bSbMBpQmisWCHMRt5">No. 10 Akila Machunga Street, Jos 930105, Plateau</a></address></span>
             </li>
           </ul>
          {/* Follow Us On */}
