@@ -50,7 +50,9 @@ export default function Hero() {
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
           <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-10">
-            Learn More
+            <a href="https://www.bluelearn.africa/" target="_blank" rel="noopener noreferrer">
+              Learn More
+            </a>
           </button>
         </div>
       </div>
