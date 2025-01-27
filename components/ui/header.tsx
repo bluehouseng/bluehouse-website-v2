@@ -19,12 +19,12 @@ export default function Header() {
             <ul className="flex grow flex-wrap items-center justify-center gap-4 text-sm lg:gap-8">
             
               <li className="px-3 py-1">
-                <Link
+                {/* <Link
                   href="/pricing"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Products/Services
-                </Link>
+                </Link> */}
               </li>
               <li className="px-3 py-1">
                 <Link
@@ -35,12 +35,12 @@ export default function Header() {
                 </Link>
               </li>
               <li className="px-3 py-1">
-                <Link
+                {/* <Link
                   href="/blog"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Blog
-                </Link>
+                </Link> */}
               </li>
               <li className="px-3 py-1">
                 <Link
@@ -59,12 +59,12 @@ export default function Header() {
                 </Link>
               </li>
               <li className="px-3 py-1">
-                <Link
+                {/* <Link
                   href="/pricing"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Pricing
-                </Link>
+                </Link> */}
               </li>
               {/* 1st level: hover */}
               <Dropdown title="Events">
