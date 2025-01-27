@@ -49,11 +49,18 @@ export default function Hero() {
           <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
-          <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-10">
-            <a href="https://www.bluelearn.africa/" target="_blank" rel="noopener noreferrer">
-              Learn More
-            </a>
-          </button>
+            <div className="flex space-x-4 mt-10">
+              <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+                <a href="https://www.bluelearn.africa/" target="_blank" rel="noopener noreferrer">
+                  Learn More
+                </a>
+              </button>
+              <button className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700">
+                <a href="https://www.bluelearn.africa/contact" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
+              </button>
+            </div>
         </div>
       </div>
 
