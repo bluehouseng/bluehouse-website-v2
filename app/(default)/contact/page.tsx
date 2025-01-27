@@ -49,7 +49,7 @@ export default function ContactPage() {
           <p className="text-sm text-gray-600 mb-6">
             If you have any questions or concerns, feel free to reach out to us.
           </p>
-          <ul className="space-y-4">
+          <ul className="space-y-4 mt-10">
             <li className="flex items-center space-x-4">
               <FontAwesomeIcon icon={faPhone} className="text-blue-600 w-5" />
               <span>+123-234-1234</span>
