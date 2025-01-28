@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import PageIllustration from "@/components/page-illustration";
 import Image from 'next/image';
 import CYF_1039_1 from '@/public/images/CYF_1039_1.jpg';
+import Bluehouse2 from "@/public/images/bluehouse-logo.png";
 // Import images from the tech-tea folder
 import techTea1 from '@/public/images/tech-tea/CYF_2904.jpg';
 import techTea2 from '@/public/images/tech-tea/CYF_2909.jpg';
@@ -45,8 +46,15 @@ export default function Hero() {
     <section className="relative">
       <div className="relative h-screen w-full">
         <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
-        <div className="absolute inset-0 flex items-center justify-center flex-col">
-          <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
+        <div className="absolute inset-0 flex items-center justify-center flex-col ">
+                <Image
+                  className="box-content rounded-full border-2 border-gray-50 w-36"
+                  src={Bluehouse2}
+                  width={32}
+                  height={32}
+                  alt="Bluehouse logo"
+                />
+          <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4 mb-10 ">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
           {/* <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-10">

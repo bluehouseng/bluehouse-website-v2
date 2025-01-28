@@ -64,7 +64,7 @@ export default function ContactPage() {
             </li>
             <li className="flex items-center space-x-4">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-blue-600 w-5" />
-              <span><address><a href="https://maps.app.goo.gl/bSbMBpQmisWCHMRt5">No. 10 Akila Machunga Street, Jos 930105, Plateau</a></address></span>
+              <a href="https://maps.app.goo.gl/bSbMBpQmisWCHMRt5"><span><address>No. 10 Akila Machunga Street, Jos 930105, Plateau</address></span></a>
             </li>
           </ul>
          {/* Follow Us On */}
