@@ -1,7 +1,7 @@
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
 import Avatar01 from "@/public/images/avatar-01.jpg";
-import Avatar02 from "@/public/images/avatar-02.jpg";
+import Bluehouse2 from "@/public/images/bluehouse-logo.png";
 import Avatar03 from "@/public/images/avatar-03.jpg";
 import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
@@ -13,22 +13,22 @@ export default function HeroHome() {
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+        <div className="pb-12 pt-32 md:pb-20 md:pt-20">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
             <div
               className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
               data-aos="zoom-y-out"
             >
-              {/* <div className="-mx-0.5 flex justify-center -space-x-3">
+              <div className="-mx-0.5 flex justify-center -space-x-3">
                 <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar01}
+                  className="box-content rounded-full border-2 border-gray-50 w-36"
+                  src={Bluehouse2}
                   width={32}
                   height={32}
-                  alt="Avatar 01"
+                  alt="Bluehouse logo"
                 />
-                <Image
+                {/* <Image
                   className="box-content rounded-full border-2 border-gray-50"
                   src={Avatar02}
                   width={32}
@@ -62,8 +62,8 @@ export default function HeroHome() {
                   width={32}
                   height={32}
                   alt="Avatar 05"
-                />
-              </div> */}
+                /> */}
+              </div>
             </div>
             <h1
               className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
