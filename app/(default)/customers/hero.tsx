@@ -82,12 +82,14 @@ export default function Hero() {
                     </span>
                   
                   </Link>
-                  <a
+                  <Link
+                  href="https://forms.gle/14znUV5fWGwrWFG58" 
+                  passHref
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#0"
+                  
                   >
                   Join Our Programs
-                  </a>
+                  </Link>
                 </div>
               </div>
         </div>
