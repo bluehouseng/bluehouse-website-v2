@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import PageIllustration from "@/components/page-illustration";
 import Image from 'next/image';
@@ -55,6 +55,7 @@ export default function Hero() {
           <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
+<<<<<<< HEAD
             <div className="flex space-x-4 mt-10">
               <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
                 <a href="https://www.bluelearn.africa/" target="_blank" rel="noopener noreferrer">
@@ -67,6 +68,41 @@ export default function Hero() {
                 </a>
               </button>
             </div>
+=======
+          {/* <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-10">
+            Learn More
+          </button> */}
+
+<div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
+                <div
+                  className="relative mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+                  data-aos="zoom-y-out"
+                  data-aos-delay={450}
+                >
+                  <Link
+      href="https://www.bluelearn.africa/" 
+      passHref
+      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    
+    >
+                
+                    <span className="relative inline-flex items-center">
+                    Click to join{" "}
+                      <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
+                        -&gt;
+                      </span>
+                    </span>
+                  
+                  </Link>
+                  <a
+                    className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
+                    href="#0"
+                  >
+                  Join Our Programs
+                  </a>
+                </div>
+              </div>
+>>>>>>> 2d8e4c249a059869d26b219b2197da319c766516
         </div>
       </div>
 
