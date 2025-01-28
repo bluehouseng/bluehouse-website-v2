@@ -36,82 +36,43 @@ export default function Hero() {
   const handleToggle = (index: number) => {
     setSelectedProgramIndex(selectedProgramIndex === index ? null : index);
   };
-// export default function Hero() {
-//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaData.length);
-//     }, 8000); // Change image every 8 seconds
-
-//     return () => clearInterval(interval);
-//   }, []);
-
+   
   return (
     <section className="relative">
+      {/* Hero Section */}
       <div className="relative h-screen w-full">
-        <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
-        <div className="absolute inset-0 flex items-center justify-center flex-col">
+        <Image
+          src={CYF_1039_1}
+          alt="Inspiring opportunities"
+          layout="fill"
+          objectFit="cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
-<<<<<<< HEAD
-            <div className="flex space-x-4 mt-10">
-              <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
-                <a href="https://www.bluelearn.africa/" target="_blank" rel="noopener noreferrer">
-                  Learn More
-                </a>
-              </button>
-              <button className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700">
-                <a href="#0" target="_blank" rel="noopener noreferrer">
-                  Contact Us
-                </a>
-              </button>
-            </div>
-=======
-          {/* <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-10">
-            Learn More
-          </button> */}
-
-<div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
-                <div
-                  className="relative mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
-                  data-aos="zoom-y-out"
-                  data-aos-delay={450}
-                >
-                  <Link
-      href="https://www.bluelearn.africa/" 
-      passHref
-      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                    
-    >
-                
-                    <span className="relative inline-flex items-center">
-                    Click to join{" "}
-                      <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                        -&gt;
-                      </span>
-                    </span>
-                  
-                  </Link>
-                  <a
-                    className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#0"
-                  >
-                  Join Our Programs
-                  </a>
-                </div>
-              </div>
->>>>>>> 2d8e4c249a059869d26b219b2197da319c766516
+          <div className="flex space-x-4 mt-10">
+            <Link
+              href="https://www.bluelearn.africa/"
+              passHref
+              className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+            >
+              Learn More
+            </Link>
+            <a
+              href="#0"
+              className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </div>
 
-<section className="relative">
+      {/* Programs Overview Section */}
       <div className="bg-gray-200 py-8">
         <div className="container mx-auto px-4">
-          <h2 className="mb-20 text-5xl font-bold text-center">
-            Programs Overview
-          </h2>
+          <h2 className="mb-20 text-5xl font-bold text-center">Programs Overview</h2>
           <div className="flex flex-col space-y-4">
             {techTeaData.map((program, index) => (
               <div key={index} className="border-b border-gray-300">
@@ -132,9 +93,7 @@ export default function Hero() {
                         className="rounded-sm shadow-lg"
                       />
                     </div>
-                    <p className="text-gray-700 text-lg md:w-2/3">
-                      {program.text}
-                    </p>
+                    <p className="text-gray-700 text-lg md:w-2/3">{program.text}</p>
                   </div>
                 )}
               </div>
@@ -142,8 +101,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
-  );
+
       {/*<div className="bg-gray-200 py-8">
         <div className="container mx-auto px-4">
           <h2 className="mb-20 mt-20 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
@@ -167,32 +125,27 @@ export default function Hero() {
         </div>
       </div>*/}
 
+      {/* Additional Section */}
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Main content */}
         <div className="mx-auto max-w-3xl pb-12 pt-32 md:pb-20 md:pt-40">
-          {/* Section header */}
           <div className="pb-10 text-center">
-            <h1 className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl">
-              Our wall of love
+            <h1 className="mb-6 border-y text-5xl font-bold md:text-6xl">
+              Our Wall of Love
             </h1>
-            <div className="mx-auto max-w-3xl">
-              <p className="mb-8 text-lg text-gray-700">
-                Read and listen to what our customers are saying about Bluehouse.
-              </p>
-              <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-                <a
-                  className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                  href="#0"
-                >
-                  <span className="relative inline-flex items-center">
-                    Share Your Testimonial{" "}
-                    <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                      -&gt;
-                    </span>
-                  </span>
-                </a>
-              </div>
+            <p className="mb-8 text-lg text-gray-700">
+              Read and listen to what our customers are saying about Bluehouse.
+            </p>
+            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
+              <a
+                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                href="#0"
+              >
+                Share Your Testimonial{" "}
+                <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
+                  -&gt;
+                </span>
+              </a>
             </div>
           </div>
         </div>
