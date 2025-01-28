@@ -18,14 +18,20 @@ export default function Header() {
             {/* Desktop menu links */}
             <ul className="flex grow flex-wrap items-center justify-center gap-4 text-sm lg:gap-8">
             
-              <li className="px-3 py-1">
-                {/* <Link
+              {/* <li className="px-3 py-1">
+                <Link
                   href="/pricing"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Products/Services
-                </Link> */}
-              </li>
+                </Link>
+              </li> */}
+              <Link
+                  href="/courses"
+                  className="flex items-center text-gray-700 transition hover:text-gray-900"
+                >
+                  Courses
+                </Link>
               <li className="px-3 py-1">
                 <Link
                   href="/customers"
