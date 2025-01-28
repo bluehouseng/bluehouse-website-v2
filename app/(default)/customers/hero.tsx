@@ -31,15 +31,21 @@ const techTeaData = [
 ];
 
 export default function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedProgramIndex, setSelectedProgramIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaData.length);
-    }, 8000); // Change image every 8 seconds
+  const handleToggle = (index: number) => {
+    setSelectedProgramIndex(selectedProgramIndex === index ? null : index);
+  };
+// export default function Hero() {
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    return () => clearInterval(interval);
-  }, []);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaData.length);
+//     }, 8000); // Change image every 8 seconds
+
+//     return () => clearInterval(interval);
+//   }, []);
 
   return (
     <section className="relative">
@@ -56,7 +62,7 @@ export default function Hero() {
                 </a>
               </button>
               <button className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700">
-                <a href="https://www.bluelearn.africa/contact" target="_blank" rel="noopener noreferrer">
+                <a href="#0" target="_blank" rel="noopener noreferrer">
                   Contact Us
                 </a>
               </button>
@@ -64,7 +70,45 @@ export default function Hero() {
         </div>
       </div>
 
+<section className="relative">
       <div className="bg-gray-200 py-8">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-20 text-5xl font-bold text-center">
+            Programs Overview
+          </h2>
+          <div className="flex flex-col space-y-4">
+            {techTeaData.map((program, index) => (
+              <div key={index} className="border-b border-gray-300">
+                <button
+                  className="w-full text-left text-2xl font-semibold text-blue-600 hover:underline focus:outline-none"
+                  onClick={() => handleToggle(index)}
+                >
+                  {program.alt}
+                </button>
+                {selectedProgramIndex === index && (
+                  <div className="mt-4 flex flex-col md:flex-row items-center gap-6">
+                    <div className="relative w-full md:w-1/3 h-64">
+                      <Image
+                        src={program.src}
+                        alt={program.alt}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-sm shadow-lg"
+                      />
+                    </div>
+                    <p className="text-gray-700 text-lg md:w-2/3">
+                      {program.text}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+      {/*<div className="bg-gray-200 py-8">
         <div className="container mx-auto px-4">
           <h2 className="mb-20 mt-20 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
             Programs Overview
@@ -85,7 +129,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
 
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
