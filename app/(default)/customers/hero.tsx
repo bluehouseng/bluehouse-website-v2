@@ -146,13 +146,15 @@ export default function Hero() {
 
       <div className="bg-white py-16 ">
         <div className="container mx-auto text-center">
-          <div className="flex justify-center items-center space-x-12 mx-64 shadow-2xl   text-gray-800 py-5  font-semibold ">
-            <div>
-              <p className="text-3xl font-bold">
-                <Counter end={1000} />
+          <div className='flex justify-center items-center  '>
+          <div className='bg-slate-400 shadow-2xl   text-white py-5 p-6 font-extrabold rounded-s-xl' >
+              <p className=" font-bold ">
+                SOME NUMBERS
               </p>
-              <p className="text-[15px]">Total Number of students</p>
+              <p className=" font-bold text-3xl ">What We  did so</p>
             </div>
+          <div className="flex justify-center items-center space-x-12 rounded-e-lg shadow-2xl   text-gray-800 py-5  p-6 font-semibold ">
+           
             <div>
               <p className="text-3xl font-bold">
                 <Counter end={1000} />
@@ -169,9 +171,11 @@ export default function Hero() {
               <p className="text-3xl font-bold">
                 <Counter end={400} />
               </p>
-              <p className="text-[15px]">Certificates</p>
+              <p className="text-[15px]">Certificates issued</p>
             </div>
           </div>
+          </div>
+       
 
           <h2 className="mt-12 text-4xl font-bold">Empowering the Next Generation in Tech</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
