@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
+import Link from "next/link";
 
 export default function Cta() {
   return (
@@ -28,9 +29,12 @@ export default function Cta() {
             There’s so much to explore! Learn more about our programs, services and products and how we can help you succeed.
             </h2>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <a
+              <Link
+              href="https://www.bluelearn.africa/"
+              target="_blank"
+              rel="noopener noreferrer"
                 className="btn group mb-4 w-full bg-gradient-to-t from-blue-400 to-blue-600 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="#0"
+                
               >
                 <span className="relative inline-flex items-center">
                 Connect with Us{" "}
@@ -38,7 +42,7 @@ export default function Cta() {
                     -&gt;
                   </span>
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

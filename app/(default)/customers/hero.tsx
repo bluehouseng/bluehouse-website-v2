@@ -142,11 +142,11 @@ export default function Hero() {
       <div className="bg-white py-16">
         <div className="container mx-auto text-center">
           <div className="flex justify-center items-center flex-wrap">
-            <div className="bg-slate-400 shadow-2xl text-white py-5 p-6 font-extrabold rounded-s-xl ">
+            <div className="bg-slate-400 shadow-2xl text-white py-5 p-6 font-extrabold ">
               <p className="font-bold">SOME NUMBERS</p>
               <p className="font-bold text-3xl">What We did so far</p>
             </div>
-            <div className="flex justify-center items-center space-x-12 rounded-e-lg shadow-2xl text-gray-800 py-5 p-6 font-semibold">
+            <div className="flex justify-center items-center space-x-12 shadow-2xl text-gray-800 py-5 p-6 font-semibold">
               <div>
                 <p className="text-3xl font-bold">
                   <Counter end={1000} />
