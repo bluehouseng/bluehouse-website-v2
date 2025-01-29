@@ -68,9 +68,38 @@ export default function CoursesPage() {
         <p className="text-gray-600 max-w-2xl mx-auto mb-6">
           Join thousands of innovators and tech leaders in shaping the digital landscape of tomorrow.
         </p>
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700">
-          Explore Courses
-        </button>
+       
+        <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
+  <div
+    className="relative mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+    data-aos="zoom-y-out"
+    data-aos-delay={450}
+  >
+    <a
+      href="https://www.bluelearn.africa/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+    >
+      <span className="relative inline-flex items-center">
+        Explore more
+        <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
+          -&gt;
+        </span>
+      </span>
+    </a>
+    <a
+      href="https://forms.gle/14znUV5fWGwrWFG58"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
+    >
+      Join Our Programs
+    </a>
+  </div>
+</div>
+
+
       </div>
     </div>
   );
