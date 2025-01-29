@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
 import Avatar01 from "@/public/images/avatar-01.jpg";
 import Bluehouse2 from "@/public/images/bluehouse-logo.png";
@@ -88,12 +87,9 @@ export default function HeroHome() {
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
-                  <Link
-                  href="https://forms.gle/jukVa9Sc3FARAYkp6"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  <a
                     className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                    
+                    href="#0"
                   >
                     <span className="relative inline-flex items-center">
                     Have a Project?{" "}
@@ -101,20 +97,13 @@ export default function HeroHome() {
                         -&gt;
                       </span>
                     </span>
-                  </Link>
-                  <Link
-                  href="https://forms.gle/14znUV5fWGwrWFG58"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  </a>
+                  <a
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
- core-offerings
-                    
-
                     href="https://www.bluelearn.africa/"
-
                   >
                   Join Our Programs
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
