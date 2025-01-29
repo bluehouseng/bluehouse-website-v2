@@ -48,7 +48,7 @@ export default function Hero() {
         <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
         <div className="absolute inset-0 flex items-center justify-center flex-col ">
                 <Image
-                  className="box-content rounded-full border-2 border-gray-50 w-36"
+                  className="box-content rounded-full border-2  border-gray-50 w-36"
                   src={Bluehouse2}
                   width={32}
                   height={32}
