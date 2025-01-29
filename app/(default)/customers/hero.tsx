@@ -1,9 +1,10 @@
 "use client";
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import PageIllustration from "@/components/page-illustration";
 import Image from 'next/image';
 import CYF_1039_1 from '@/public/images/CYF_1039_1.jpg';
+import Bluehouse2 from "@/public/images/bluehouse-logo.png";
 // Import images from the tech-tea folder
 import techTea1 from '@/public/images/tech-tea/CYF_2904.jpg';
 import techTea2 from '@/public/images/tech-tea/CYF_2909.jpg';
@@ -29,6 +30,56 @@ const techTeaData = [
   { src: techTea9, alt: 'PYTHON PROGRAM', text: 'Our Python program offers comprehensive training in one of the world’s most versatile programming languages. From foundational concepts to advanced applications like web development, data analysis, and automation, participants gain hands-on experience through real-world projects. Master Python with expert guidance and unlock endless opportunities in tech and beyond.' },
   { src: techTea10, alt: 'VIDEO EDITING PROGRAM', text: "Our Video Editing program equips participants with the skills to create professional-quality content. Learn editing techniques, motion graphics, and storytelling using industry-standard tools like Adobe Premiere Pro and After Effects. Through hands-on projects and expert guidance, you'll master the art of video production and bring creative visions to life." },
 ];
+
+// Counter component to count numbers when they come into view
+interface CounterProps {
+  end: number;
+}
+
+const Counter: React.FC<CounterProps> = ({ end }) => {
+  const [count, setCount] = useState(0);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        let start = 0;
+        const duration = 2000;
+        const increment = end / (duration / 16);
+
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= end) {
+            setCount(end);
+            clearInterval(timer);
+          } else {
+            setCount(Math.ceil(start));
+          }
+        }, 16);
+
+        return () => clearInterval(timer);
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  if (counterRef.current) {
+    observer.observe(counterRef.current);
+  }
+
+  return () => {
+    if (counterRef.current) {
+      observer.unobserve(counterRef.current);
+    }
+  };
+}, [end]);
+
+
+  return <span ref={counterRef}>{count}+</span>;
+};
+
 
 export default function Hero() {
   const [selectedProgramIndex, setSelectedProgramIndex] = useState<number | null>(null);
