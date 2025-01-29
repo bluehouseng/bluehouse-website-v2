@@ -40,14 +40,14 @@ export default function Header() {
                   Students
                 </Link>
               </li>
-              <li className="px-3 py-1">
-                {/* <Link
+              {/* <li className="px-3 py-1">
+                <Link
                   href="/blog"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Blog
-                </Link> */}
-              </li>
+                </Link>
+              </li> */}
               <li className="px-3 py-1">
                 <Link
                   href="/about"
@@ -64,14 +64,14 @@ export default function Header() {
                   Contact Us
                 </Link>
               </li>
-              <li className="px-3 py-1">
-                {/* <Link
+              {/* <li className="px-3 py-1">
+                <Link
                   href="/pricing"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Pricing
-                </Link> */}
-              </li>
+                </Link>
+              </li> */}
               {/* 1st level: hover */}
               <Dropdown title="Events">
                 {/* 2nd level: hover */}
