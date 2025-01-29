@@ -7,21 +7,22 @@ import Stripes from "@/public/images/stripes-dark.svg";
 
 const EventGallery = () => {
   const [activeTab, setActiveTab] = useState<
-    "techfest2024" | "summerTraining" | "partnership"
-  >("techfest2024");
+    "training" | "summerTraining" | "techfest2024"
+  >("training");
 
   const eventImages: {
-    techfest2024: { src: string; text: string }[];
+    training: { src: string; text: string }[];
     summerTraining: { src: string; text: string }[];
-    partnership: { src: string; text: string }[];
+    techfest2024: { src: string; text: string }[];
   } = {
-    techfest2024: [
-      { src: "/images/jtf/jtf-17.jpg", text: "Registration Table" },
-      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
-      { src: "/images/jtf/jtf-56.jpg", text: "Tech Event 3" },
-      { src: "/images/jtf/jtf-44.jpg", text: "Tech Event 1" },
-      { src: "/images/jtf/jtf-40.jpg", text: "Tech Event 2" },
-      { src: "/images/jtf/jtf-51.jpg", text: "Tech Event 3" },
+    training: [
+      { src: "/images/summertraining/training2.jpg", text: "Training 1" },
+      { src: "/images/summertraining/training9.jpg", text: "Training 2" },
+      { src: "/images/summertraining/training3.jpg", text: "Training 3" },
+      { src: "/images/summertraining/training13.jpg", text: "Training 2" },
+      { src: "/images/summertraining/training8.jpg", text: "Training 3" },
+      { src: "/images/summertraining/training1.jpg", text: "Training 2" },
+      
     ],
     summerTraining: [
       { src: "/images/summertraining/training10.jpg", text: "Summer Camp 1" },
@@ -31,15 +32,18 @@ const EventGallery = () => {
       { src: "/images/summertraining/training4.jpg", text: "Summer Camp 2" },
       { src: "/images/summertraining/training8.jpg", text: "Summer Camp 3" },
     ],
-    partnership: [
-      { src: "/images/partner1.jpg", text: "Partnership 1" },
-      { src: "/images/partner2.jpg", text: "Partnership 2" },
-      { src: "/images/partner3.jpg", text: "Partnership 3" },
+    techfest2024: [
+      { src: "/images/jtf/jtf-17.jpg", text: "Registration Table" },
+      { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
+      { src: "/images/jtf/jtf-56.jpg", text: "Tech Event 3" },
+      { src: "/images/jtf/jtf-44.jpg", text: "Tech Event 1" },
+      { src: "/images/jtf/jtf-40.jpg", text: "Tech Event 2" },
+      { src: "/images/jtf/jtf-51.jpg", text: "Tech Event 3" },
     ],
   };
 
   const handleTabClick = (
-    tab: "techfest2024" | "summerTraining" | "partnership"
+    tab: "training" | "summerTraining" | "techfest2024"
   ) => {
     setActiveTab(tab);
   };
@@ -59,12 +63,12 @@ const EventGallery = () => {
           >
             <Image className="max-w-none" src={Stripes} alt="Stripes" />
           </div>
-          {["techfest2024", "summerTraining", "partnership"].map((tab) => (
+          {["training", "summerTraining", "techfest2024"].map((tab) => (
             <button
               key={tab}
               onClick={() =>
                 handleTabClick(
-                  tab as "techfest2024" | "summerTraining" | "partnership"
+                  tab as "training" | "summerTraining" | "techfest2024"
                 )
               }
               className={`px-4 py-2 mx-2 text-sm font-medium ${
@@ -73,9 +77,9 @@ const EventGallery = () => {
                   : "bg-white shadow-md text-gray-700"
               } rounded-lg hover:bg-blue-400 hover:text-white`}
             >
-              {tab === "techfest2024" && "TechFest 2024"}
+              {tab === "training" && "Training"}
               {tab === "summerTraining" && "Summer Training"}
-              {tab === "partnership" && "Partnership"}
+              {tab === "techfest2024" && "TechFest 2024"}
             </button>
           ))}
         </div>
@@ -87,44 +91,38 @@ const EventGallery = () => {
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 4 }}
         >
-          <div className="mb-8 text-center">
-            {activeTab === "techfest2024" && (
+          <div className="mb-8 text-center mx-64">
+            {activeTab === "training" && (
               <p className="text-sm text-gray-700">
-                TechFest 2024 was an extraordinary milestone, drawing over 800
-                attendees to celebrate innovation, <br />
-                collaboration, and groundbreaking technology. Our team
-                orchestrated a dynamic event showcasing <br />
-                cutting-edge advancements, inspiring discussions, and powerful
-                networking opportunities. <br />
-                This remarkable gathering united visionaries and industry leaders,
-                igniting ideas and fostering <br />
-                connections that will shape the future of technology and drive
-                transformative progress.
+                We proudly celebrate our successful training programs,
+                equipping individuals with essential skills and fostering
+                career growth.Our initiatives have provided invaluable
+                learning experiences, preparing students for job placements 
+                and entrepreneurial success in the ever-evolving tech
+                landscape.
               </p>
             )}
             {activeTab === "summerTraining" && (
               <p className="text-sm text-gray-700">
-                One of our proudest achievements was organizing and leading a Tech
-                Summer Training, designed to <br /> inspire and educate young
+                One of our proudest achievements was organizing and leading a
+                Tech Summer Training,  designed to inspire and educate young 
                 minds. We created a program blending coding, robotics, and app
-                design <br /> with engaging activities that sparked curiosity and
-                creativity. It empowered participants to embrace <br />
-                technology while building critical skills and lasting confidence.
+                design with engaging activities that sparked curiosity and
+                creativity. It empowered participants to embrace technology
+                while building critical skills and lasting confidence.
               </p>
             )}
-            {activeTab === "partnership" && (
+            {activeTab === "techfest2024" && (
+              
               <p className="text-sm text-gray-700">
-                We proudly celebrate our successful partnerships, especially with
-                TechSynergy, which have been pivotal
-                <br /> in driving growth, innovation, and community impact. This
-                collaboration has provided invaluable opportunities <br /> for our
-                students, offering internships with leading companies in the
-                United Kingdom and remote
-                <br />
-                job placements with UK-based organizations. Together, we’re
-                empowering the next <br />
-                generation to thrive in a globally connected, tech-driven
-                workforce.
+                TechFest 2024 was an extraordinary milestone, drawing over 800
+                attendees to celebrate innovation, collaboration,  and
+                groundbreaking technology . Our team orchestrated a dynamic
+                event showcasing cutting-edge  advancements, inspiring 
+                discussions, and powerful networking opportunities.  This
+                remarkable gathering  united visionaries and industry leaders,
+                igniting ideas and fostering connections that will shape the 
+                future of technology and drive transformative progress.
               </p>
             )}
           </div>
@@ -136,7 +134,7 @@ const EventGallery = () => {
                 className="relative group overflow-hidden rounded-lg shadow-lg w-full h-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: index * 1}}
+                transition={{ duration: 1, delay: index * 1 }}
               >
                 <Image
                   src={image.src}
@@ -158,19 +156,4 @@ const EventGallery = () => {
 };
 
 export default EventGallery;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
