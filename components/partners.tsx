@@ -69,7 +69,7 @@ export default function Partners() {
           {[...partnerImages, ...partnerImages].map((src, index) => (
             <div
               key={index}
-              className="flex items-center before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:[background:linear-gradient(to_right,theme(colors.gray.200),theme(colors.gray.300),theme(colors.gray.400))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] rounded-xl mx-4 flex-shrink-0 px-8 my-6 grayscale hover:grayscale-0"
+              className="flex items-center before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:[background:linear-gradient(to_right,theme(colors.gray.200),theme(colors.gray.300),theme(colors.gray.400))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] rounded-xl mx-4 flex-shrink-0 px-8 my-6  hover:grayscale-0"
             >
               <Image
                 src={src}
