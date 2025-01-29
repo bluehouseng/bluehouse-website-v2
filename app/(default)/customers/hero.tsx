@@ -112,7 +112,7 @@ export default function Hero() {
               data-aos="zoom-y-out"
               data-aos-delay={450}
             >
-              <a
+              <Link
                 href="https://www.bluelearn.africa/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -124,15 +124,15 @@ export default function Hero() {
                     -&gt;
                   </span>
                 </span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://forms.gle/14znUV5fWGwrWFG58"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
               >
                 Join Our Programs
-              </a>
+              </Link>
             </div>
           </div>
         </div>

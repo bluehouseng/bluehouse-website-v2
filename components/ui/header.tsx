@@ -97,17 +97,18 @@ export default function Header() {
 
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3">
-            <li>
+            {/* <li>
               <Link
                 href="/signin"
                 className="btn-sm bg-white text-gray-800 shadow hover:bg-gray-50"
               >
                 Login
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
-                href="/signup"
+                href="https://bluelearn.africa/"
+                target="_blank"
                 className="btn-sm bg-blue-600 text-gray-200 shadow hover:bg-blue-400"
               >
                 Register
