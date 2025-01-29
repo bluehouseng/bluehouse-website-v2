@@ -107,11 +107,7 @@ export default function HeroHome() {
                   target="_blank"
                   rel="noopener noreferrer"
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
- core-offerings
                     
-
-                    href="https://www.bluelearn.africa/"
-
                   >
                   Join Our Programs
                   </Link>
