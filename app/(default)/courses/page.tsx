@@ -11,6 +11,8 @@ import DigitalMarketing from '@/public/images/DigitalMarketing.jpg';
 import ProductManagement from '@/public/images/ProductManagement.jpg';
 import DeveloperRelations from '@/public/images/DeveloperRelations.png';
 import TechnicalWriting from '@/public/images/TechnicalWriting.jpg';
+import UIUX from '@/public/images/UIUX.jpg';
+import CommunityManagement from '@/public/images/CommunityManagement.jpg';
 
 const courses = [
   { title: 'Frontend Development', icon: <FaCode />, image: Frontend, description: 'Build interactive and visually stunning websites with modern tools and frameworks like React and Vue.' },
@@ -22,7 +24,9 @@ const courses = [
   { title: 'Product Management', icon: <FaTasks />, image: ProductManagement, description: 'Lead product development from concept to launch, balancing user needs, business goals, and technical requirements.' },
   { title: 'Digital Marketing', icon: <FaBullhorn />, image: DigitalMarketing, description: 'Master online marketing strategies such as SEO, content marketing, and social media campaigns to drive traffic and engagement.' },
   { title: 'Developer Relations', icon: <FaUsers />, image: DeveloperRelations, description: 'Build and nurture relationships with developer communities, advocating for products and fostering a thriving ecosystem.' },
-  { title: 'Technical Writing', icon: <FaFileAlt />, image: TechnicalWriting, description: 'Create clear, concise documentation for complex systems, helping users and developers understand the technologies at play.' },
+  { title: 'Technical Writing', icon: <FaFileAlt />, image: TechnicalWriting, description: 'Craft compelling and well-structured technical documentation using modern tools and frameworks like Markdown, Docusaurus, and MkDocs.' },
+  { title: 'UIUX', icon: <FaFileAlt />, image: UIUX, description: 'Create seamless and visually engaging user experiences with modern design tools like Figma, Adobe XD, and Framer, ensuring both aesthetics and functionality.' },
+  { title: 'Community Management', icon: <FaFileAlt />, image: CommunityManagement, description: 'Foster engaged and thriving online communities using modern tools and platforms like Discord, Slack, and Discourse.' },
 ];
 
 export default function CoursesPage() {
