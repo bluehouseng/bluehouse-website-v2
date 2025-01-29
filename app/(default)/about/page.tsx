@@ -18,9 +18,9 @@ export default function About() {
           forward-thinking technology positions it as a company of the future.
         </p>
       </div>
-      <div className="flex flex-col-reverse md:flex-row md:items-center px-4 md:px-16  space-y-8 md:space-y-0">
+      <div className="flex -space-x-32 flex-col-reverse md:flex-row md:items-center px-4 md:px-16  space-y-8 md:space-y-0">
   {/* Text Section */}
-  <div className="flex-1 bg-gray-900/25 mb-8 h-auto md:h-[495px] rounded-md p-8 md:p-20">
+  <div className="flex-1  bg-gray-900/25 mb-8 h-auto md:h-[495px] rounded-md p-8 md:p-20 md:w-1/2">
     <h1 className="text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
       Innovating the Future Through Collaboration and Technology
     </h1>
@@ -33,7 +33,7 @@ export default function About() {
   </div>
 
   {/* Image Section */}
-  <div className="flex-1 flex justify-center md:justify-end md:pt-32">
+  <div className="flex-1 flex justify-center md:justify-end md:pt-24 md:w-1/2">
     <Image
       src={aboutImage}
       alt="Descriptive Alt Text"
