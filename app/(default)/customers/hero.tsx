@@ -41,45 +41,43 @@ const Counter: React.FC<CounterProps> = ({ end }) => {
   const counterRef = useRef(null);
 
   useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        let start = 0;
-        const duration = 2000;
-        const increment = end / (duration / 16);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          let start = 0;
+          const duration = 2000;
+          const increment = end / (duration / 16);
 
-        const timer = setInterval(() => {
-          start += increment;
-          if (start >= end) {
-            setCount(end);
-            clearInterval(timer);
-          } else {
-            setCount(Math.ceil(start));
-          }
-        }, 16);
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= end) {
+              setCount(end);
+              clearInterval(timer);
+            } else {
+              setCount(Math.ceil(start));
+            }
+          }, 16);
 
-        return () => clearInterval(timer);
-      }
-    },
-    { threshold: 0.5 }
-  );
+          return () => clearInterval(timer);
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-  if (counterRef.current) {
-    observer.observe(counterRef.current);
-  }
-
-  return () => {
     if (counterRef.current) {
-      observer.unobserve(counterRef.current);
+      observer.observe(counterRef.current);
     }
-  };
-}, [end]);
 
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, [end]);
 
   return <span ref={counterRef}>{count}+</span>;
 };
-
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -96,20 +94,17 @@ export default function Hero() {
     <section className="relative">
       <div className="relative h-screen w-full">
         <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
-        <div className="absolute inset-0 flex items-center justify-center flex-col ">
-                <Image
-                  className="box-content rounded-full  border-gray-50 w-36"
-                  src={Bluehouse2}
-                  width={32}
-                  height={32}
-                  alt="Bluehouse logo"
-                />
-          <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4 mb-10 ">
+        <div className="absolute inset-0 flex items-center justify-center flex-col">
+          <Image
+            className="box-content rounded-full border-gray-50 w-36"
+            src={Bluehouse2}
+            width={32}
+            height={32}
+            alt="Bluehouse logo"
+          />
+          <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4 mb-10">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
-          {/* <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-10">
-            Learn More
-          </button> */}
 
           <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
             <div
@@ -140,64 +135,58 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
         </div>
       </div>
 
-      <div className="bg-white py-16 ">
+      {/* Stats Section */}
+      <div className="bg-white py-16">
         <div className="container mx-auto text-center">
-          <div className='flex justify-center items-center  '>
-          <div className='bg-slate-400 shadow-2xl   text-white py-5 p-6 font-extrabold rounded-s-xl' >
-              <p className=" font-bold ">
-                SOME NUMBERS
-              </p>
-              <p className=" font-bold text-3xl ">What We  did so</p>
+          <div className="flex justify-center items-center flex-wrap">
+            <div className="bg-slate-400 shadow-2xl text-white py-5 p-6 font-extrabold rounded-s-xl ">
+              <p className="font-bold">SOME NUMBERS</p>
+              <p className="font-bold text-3xl">What We did so far</p>
             </div>
-          <div className="flex justify-center items-center space-x-12 rounded-e-lg shadow-2xl   text-gray-800 py-5  p-6 font-semibold ">
-           
-            <div>
-              <p className="text-3xl font-bold">
-                <Counter end={1000} />
-              </p>
-              <p className="text-[15px]">Total Number of students</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">
-                <Counter end={500} />
-              </p>
-              <p className="text-[15px]">Graduated Students</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">
-                <Counter end={400} />
-              </p>
-              <p className="text-[15px]">Certificates issued</p>
+            <div className="flex justify-center items-center space-x-12 rounded-e-lg shadow-2xl text-gray-800 py-5 p-6 font-semibold">
+              <div>
+                <p className="text-3xl font-bold">
+                  <Counter end={1000} />
+                </p>
+                <p className="text-[15px]">Total Number of students</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold">
+                  <Counter end={500} />
+                </p>
+                <p className="text-[15px]">Graduated Students</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold">
+                  <Counter end={400} />
+                </p>
+                <p className="text-[15px]">Certificates issued</p>
+              </div>
             </div>
           </div>
-          </div>
-       
 
           <h2 className="mt-12 text-4xl font-bold">Empowering the Next Generation in Tech</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="bg-gray-100 p-6 rounded-lg shadow">
               <h3 className="text-2xl font-bold mb-2">Hands-on Learning</h3>
               <p>Engage in real-world tech projects, hackathons, and coding challenges to build your expertise.</p>
-              
             </div>
             <div className="bg-gray-100 p-6 rounded-lg shadow">
               <h3 className="text-2xl font-bold mb-2">Mentorship & Networking</h3>
               <p>Connect with industry leaders and gain insights into cutting-edge technology trends and careers.</p>
-              
             </div>
             <div className="bg-gray-100 p-6 rounded-lg shadow">
               <h3 className="text-2xl font-bold mb-2">Internship Opportunities</h3>
               <p>Get access to exclusive internships and job placements at top tech companies.</p>
-              
             </div>
           </div>
         </div>
       </div>
 
+      {/* Programs Overview */}
       <div className="bg-gray-200 py-8">
         <div className="container mx-auto px-4">
           <h2 className="mb-20 mt-20 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl text-center flex justify-center">
