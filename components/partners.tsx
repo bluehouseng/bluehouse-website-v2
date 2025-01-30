@@ -1,21 +1,13 @@
-
-
-
-
-
 "use client";
-
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
 import partners1 from "@/public/images/partiners/partners1.png";
 import partners2 from "@/public/images/partiners/partners2.png";
 import techsynegy from "@/public/images/partiners/techsynegy.png";
 import axiahub from "@/public/images/partiners/axiahub.png";
 import clockchain from "@/public/images/partiners/clockchain.png";
 import ask from "@/public/images/partiners/ask.png";
-
 import aws from "@/public/images/partiners/aws.png";
 import microsoft1 from "@/public/images/partiners/microsoft1.png";
 import iwf from "@/public/images/partiners/iwf.png";
@@ -25,7 +17,6 @@ const partnerImages = [
   partners2,
   aws,
 
-  
   microsoft1,
   techsynegy,
   axiahub,
@@ -39,8 +30,8 @@ export default function Partners() {
 
   useEffect(() => {
     const updateContainerWidth = () => {
-      const imgWidth = 300; 
-      const margin = 48; 
+      const imgWidth = 300;
+      const margin = 48;
       return partnerImages.length * (imgWidth + margin);
     };
     setContainerWidth(updateContainerWidth());
@@ -52,7 +43,6 @@ export default function Partners() {
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Partners</h2>
       </div>
       <div className="flex flex-row justify-center items-center relative overflow-hidden">
-      
         <motion.div
           className="flex"
           animate={{ x: [0, -containerWidth] }}
@@ -60,7 +50,7 @@ export default function Partners() {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 100, 
+              duration: 100,
               ease: "linear",
             },
           }}
