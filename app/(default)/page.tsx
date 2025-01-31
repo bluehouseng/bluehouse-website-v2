@@ -20,7 +20,7 @@ export default function Home() {
       <BusinessCategories />
       <FeaturesPlanet />
       {/* <Features /> */}
-      <LargeTestimonial />
+      {/* <LargeTestimonial /> */}
       {/* <TestimonialsCarousel /> */}
       <Cta />
     </>
