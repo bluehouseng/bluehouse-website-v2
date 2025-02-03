@@ -90,41 +90,41 @@ const EventGallery = () => {
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 4 }}
         >
-          <div className="mb-8 text-center mx-64">
-            {activeTab === "training" && (
-              <p className="text-sm text-gray-700">
-                We proudly celebrate our successful training programs,
-                equipping individuals with essential skills and fostering
-                career growth.Our initiatives have provided invaluable
-                learning experiences, preparing students for job placements 
-                and entrepreneurial success in the ever-evolving tech
-                landscape.
-              </p>
-            )}
-            {activeTab === "summerTraining" && (
-              <p className="text-sm text-gray-700">
-                One of our proudest achievements was organizing and leading a
-                Tech Summer Training,  designed to inspire and educate young 
-                minds. We created a program blending coding, robotics, and app
-                design with engaging activities that sparked curiosity and
-                creativity. It empowered participants to embrace technology
-                while building critical skills and lasting confidence.
-              </p>
-            )}
-            {activeTab === "techfest2024" && (
-              
-              <p className="text-sm text-gray-700">
-                TechFest 2024 was an extraordinary milestone, drawing over 800
-                attendees to celebrate innovation, collaboration,  and
-                groundbreaking technology . Our team orchestrated a dynamic
-                event showcasing cutting-edge  advancements, inspiring 
-                discussions, and powerful networking opportunities.  This
-                remarkable gathering  united visionaries and industry leaders,
-                igniting ideas and fostering connections that will shape the 
-                future of technology and drive transformative progress.
-              </p>
-            )}
-          </div>
+         
+          <div className="mb-8 text-center mx-4 sm:mx-16 md:mx-32 lg:mx-64">
+  {activeTab === "training" && (
+    <p className="text-sm text-gray-700">
+      We proudly celebrate our successful training programs,
+      equipping individuals with essential skills and fostering
+      career growth. Our initiatives have provided invaluable
+      learning experiences, preparing students for job placements 
+      and entrepreneurial success in the ever-evolving tech
+      landscape.
+    </p>
+  )}
+  {activeTab === "summerTraining" && (
+    <p className="text-sm text-gray-700">
+      One of our proudest achievements was organizing and leading a
+      Tech Summer Training, designed to inspire and educate young 
+      minds. We created a program blending coding, robotics, and app
+      design with engaging activities that sparked curiosity and
+      creativity. It empowered participants to embrace technology
+      while building critical skills and lasting confidence.
+    </p>
+  )}
+  {activeTab === "techfest2024" && (
+    <p className="text-sm text-gray-700">
+      TechFest 2024 was an extraordinary milestone, drawing over 800
+      attendees to celebrate innovation, collaboration, and
+      groundbreaking technology. Our team orchestrated a dynamic
+      event showcasing cutting-edge advancements, inspiring 
+      discussions, and powerful networking opportunities. This
+      remarkable gathering united visionaries and industry leaders,
+      igniting ideas and fostering connections that will shape the 
+      future of technology and drive transformative progress.
+    </p>
+  )}
+</div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full">
             {eventImages[activeTab].map((image, index) => (
