@@ -39,7 +39,7 @@ export default function Partners() {
 
   return (
     <div>
-      <div className="text-center">
+      <div className="text-center ">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Partners</h2>
       </div>
       <div className="flex flex-row justify-center items-center relative overflow-hidden">

@@ -15,7 +15,7 @@ import Partners from '@/components/partners';
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero  />
       <Partners />
       <BusinessCategories />
       <FeaturesPlanet />

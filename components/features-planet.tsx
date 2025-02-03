@@ -48,7 +48,7 @@ const EventGallery = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mt-32">
+    <div className="container mx-auto p-4 mt-32 overflow-x-hidden ">
       <div className="text-center">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">
           Achievements at a Glance
@@ -91,7 +91,7 @@ const EventGallery = () => {
           transition={{ duration: 4 }}
         >
          
-          <div className="mb-8 text-center mx-4 sm:mx-16 md:mx-32 lg:mx-64">
+          <div className="mb-8 text-center mx-4 sm:mx-16 md:mx-32 lg:mx-64  overflow-x-hidden">
   {activeTab === "training" && (
     <p className="text-sm text-gray-700">
       We proudly celebrate our successful training programs,
@@ -155,4 +155,9 @@ const EventGallery = () => {
 };
 
 export default EventGallery;
+
+
+
+
+
 

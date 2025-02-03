@@ -10,7 +10,7 @@ import Avatar06 from '@/public/images/avatar-06.jpg';
 
 export default function HeroHome() {
   return (
-    <section className='relative'>
+
       <PageIllustration />
       <div className='mx-auto max-w-6xl px-4 sm:px-6'>
         {/* Hero content */}
