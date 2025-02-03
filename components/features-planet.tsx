@@ -48,7 +48,7 @@ const EventGallery = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mt-32 overflow-x-hidden ">
+    <div className="container mx-auto p-4 mt-32">
       <div className="text-center">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">
           Achievements at a Glance
