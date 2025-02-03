@@ -106,7 +106,7 @@ export default function Header() {
             </li> */}
             <li>
               <Link
-                href='https://bluelearn.africa/'
+                href='https://forms.gle/14znUV5fWGwrWFG58'
                 target='_blank'
                 className='btn-sm bg-blue-600 text-gray-200 shadow hover:bg-blue-400'
               >
