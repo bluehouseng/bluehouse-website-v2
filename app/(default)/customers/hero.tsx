@@ -5,7 +5,6 @@ import PageIllustration from "@/components/page-illustration";
 import Image from 'next/image';
 import CYF_1039_1 from '@/public/images/CYF_1039_1.jpg';
 import Bluehouse2 from "@/public/images/bluehouse-logo.png";
-// Import images from the tech-tea folder
 import techTea1 from '@/public/images/tech-tea/CYF_2904.jpg';
 import techTea2 from '@/public/images/tech-tea/CYF_2909.jpg';
 import techTea3 from '@/public/images/tech-tea/CYF_2913.jpg';
@@ -17,7 +16,6 @@ import techTea8 from '@/public/images/tech-tea/CYF_3037.jpg';
 import techTea9 from '@/public/images/tech-tea/CYF_2916.jpg';
 import techTea10 from '@/public/images/tech-tea/CYF_2912.jpg';
 
-// Create an array of image objects with corresponding text
 const techTeaData = [
   { src: techTea1, alt: 'GRAPHIC DESIGN PROGRAM', text: "Our Graphic Design program empowers creative minds to craft stunning visuals and impactful designs. Learn essential tools like Adobe Photoshop and Illustrator, master design principles, and work on real-world projects. With expert mentorship, you'll develop the skills to create compelling branding, digital art, and visual content for any platform." },
   { src: techTea2, alt: 'FRONT-END DEVELOPMENT', text: 'We train learners by offering interactive courses, workshops, mentorship, hands-on projects, certifications, and real-world problem-solving opportunities, fostering practical skills.' },
@@ -31,7 +29,7 @@ const techTeaData = [
   { src: techTea10, alt: 'VIDEO EDITING PROGRAM', text: "Our Video Editing program equips participants with the skills to create professional-quality content. Learn editing techniques, motion graphics, and storytelling using industry-standard tools like Adobe Premiere Pro and After Effects. Through hands-on projects and expert guidance, you'll master the art of video production and bring creative visions to life." },
 ];
 
-// Counter component to count numbers when they come into view
+
 interface CounterProps {
   end: number;
 }
@@ -85,7 +83,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % techTeaData.length);
-    }, 8000); // Change image every 8 seconds
+    }, 8000); 
 
     return () => clearInterval(interval);
   }, []);
