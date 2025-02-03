@@ -91,7 +91,7 @@ const EventGallery = () => {
           transition={{ duration: 4 }}
         >
          
-          <div className="mb-8 text-center mx-4 sm:mx-16 md:mx-32 lg:mx-64  overflow-x-hidden">
+          <div className="mb-8 text-center mx-4 sm:mx-16 md:mx-32 lg:mx-64  ">
   {activeTab === "training" && (
     <p className="text-sm text-gray-700">
       We proudly celebrate our successful training programs,
