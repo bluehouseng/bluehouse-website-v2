@@ -11,8 +11,8 @@ import Avatar06 from '@/public/images/avatar-06.jpg';
 export default function HeroHome() {
   return (
     <section>
-      <PageIllustration />
-      <div className='mx-auto max-w-6xl px-4 sm:px-6  '>
+      {/* <PageIllustration /> */}
+      <div className='mx-auto max-w-6xl px-4 sm:px-6 '>
         {/* Hero content */}
         <div className='pb-12 pt-32 md:pb-20 md:pt-20'>
           {/* Section header */}
