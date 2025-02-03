@@ -106,6 +106,7 @@ export default function Hero() {
           <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4 mb-10">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
+<<<<<<< HEAD
 
           <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
             <div
@@ -135,6 +136,15 @@ export default function Hero() {
                 Join Our Programs
               </a>
             </div>
+=======
+          <div className="flex space-x-4 mt-10">
+            <Link href="https://www.bluelearn.africa/" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+              Learn More
+            </Link>
+            <a href="https://forms.gle/14znUV5fWGwrWFG58" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700">
+              Join Our Programs
+            </a>
+>>>>>>> 4a40469 (Revert "links")
           </div>
         </div>
       </div>
