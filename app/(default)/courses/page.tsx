@@ -48,7 +48,7 @@ export default function CoursesPage() {
 
       {/* Courses Grid */}
       <div className="container mx-auto py-16 px-6">
-        <h2 className="text-center text-3xl font-semibold mb-8">Innovate the Web</h2>
+        <h2 className="text-center text-3xl font-semibold mb-8">Innovate for the Web</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Our expert-led courses help you master the latest technologies in software development, data science, cybersecurity, and digital innovation.
         </p>
