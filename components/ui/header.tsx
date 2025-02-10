@@ -31,14 +31,14 @@ export default function Header() {
               >
                 Courses
               </Link>
-              {/* <li className="px-3 py-1">
+              <li className="px-3 py-1">
                 <Link
                   href="/customers"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >
                   Students
                 </Link>
-              </li> */}
+              </li>
               {/* <li className="px-3 py-1">
                 <Link
                   href="/blog"
