@@ -89,11 +89,11 @@ export default function MobileMenu() {
           <ul className="p-2 text-sm">
             <li>
               <Link
-                href="/pricing"
+                href="/courses"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
-                Pricing
+                Courses
               </Link>
             </li>
             <li>
@@ -102,28 +102,28 @@ export default function MobileMenu() {
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
-                Studets
+                Students
               </Link>
             </li>
             <li>
               <Link
-                href="/blog"
+                href="/about"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
-                Blog
+              About Us
               </Link>
             </li>
             <li>
               <Link
-                href="/documentation"
+                href="/contact"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
                 onClick={() => setMobileNavOpen(false)}
               >
-                Docs
+                Contact Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/support"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
@@ -131,8 +131,8 @@ export default function MobileMenu() {
               >
                 Support center
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link
                 href="/apps"
                 className="flex rounded-lg px-2 py-1.5 text-gray-700 hover:bg-gray-100"
@@ -140,7 +140,7 @@ export default function MobileMenu() {
               >
                 Apps
               </Link>
-            </li>
+            </li> */}
           </ul>
         </Transition>
       </div>
