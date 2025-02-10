@@ -38,7 +38,7 @@ export default function About() {
       src={aboutImage}
       alt="Descriptive Alt Text"
       width={530}
-      height={750}
+      height={800}
       className="rounded-md shadow-lg"
     />
   </div>
