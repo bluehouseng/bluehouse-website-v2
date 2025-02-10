@@ -12,7 +12,7 @@ export default function HeroHome() {
   return (
     <section>
       {/* <PageIllustration /> */}
-      <div className='mx-auto max-w-6xl px-4 sm:px-6 '>
+      <div className='mx-auto max-w-6xl px-4 sm:px-6  '>
         {/* Hero content */}
         <div className='pb-12 pt-32 md:pb-20 md:pt-20'>
           {/* Section header */}
@@ -21,7 +21,7 @@ export default function HeroHome() {
               className='mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]'
               data-aos='zoom-y-out'
             >
-              <div className='-mx-0.5 flex justify-center -space-x-3 md:mt-6'>
+              {/* <div className='-mx-0.5 flex justify-center -space-x-3 md:mt-6'>
                 <Image
                   className='box-content rounded-full border-2 border-gray-50 w-36'
                   src={Bluehouse2}
@@ -29,10 +29,10 @@ export default function HeroHome() {
                   height={32}
                   alt='Bluehouse logo'
                 />
-              </div>
+              </div> */}
             </div>
             <h1
-              className='mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl'
+              className=' border-y text-5xl md:mt-24 font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl'
               data-aos='zoom-y-out'
               data-aos-delay={150}
             >
