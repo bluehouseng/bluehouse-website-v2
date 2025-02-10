@@ -93,13 +93,13 @@ export default function Hero() {
       <div className="relative h-screen w-full">
         <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
         <div className="absolute inset-0 flex items-center justify-center flex-col">
-          <Image
+          {/* <Image
             className="box-content rounded-full border-gray-50 w-36"
             src={Bluehouse2}
             width={32}
             height={32}
             alt="Bluehouse logo"
-          />
+          /> */}
           <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4 mb-10">
             Attract and inspire future students by showcasing opportunities for growth.
           </h1>
