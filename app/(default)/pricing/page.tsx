@@ -20,7 +20,7 @@ export default function Pricing() {
       <Cta
       
         className="overflow-hidden"
-        heading="Create your next project with Bluehouse"
+        heading="Create your next projectBluehouse"
         buttonText="Start Free Trial"
         buttonLink="#0"
       />

@@ -91,7 +91,26 @@ export default function Hero() {
   return (
     <section className="relative">
       <div className="relative h-screen w-full">
-        <Image src={CYF_1039_1} alt="Description of image" layout="fill" objectFit="cover" />
+      {/* <Image 
+  src={CYF_1039_1} 
+  alt="Description of image" 
+  layout="fill" 
+  objectFit="cover" 
+  className="opacity-75"
+/> */}
+
+<div className="relative w-full h-full">
+  <Image 
+    src={CYF_1039_1} 
+    alt="Description of image" 
+    layout="fill" 
+    objectFit="cover" 
+    className=""
+  />
+  <div className="absolute inset-0 bg-black/60 bg-opacity-65"></div>
+</div>
+
+
         <div className="absolute inset-0 flex items-center justify-center flex-col">
           {/* <Image
             className="box-content rounded-full border-gray-50 w-36"
