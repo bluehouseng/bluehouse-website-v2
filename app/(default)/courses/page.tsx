@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaCode, FaServer, FaChartLine, FaDatabase, FaShieldAlt, FaPaintBrush, FaBullhorn, FaTasks, FaUsers, FaFileAlt } from 'react-icons/fa';
+import { FaCode, FaServer, FaChartLine, FaDatabase, FaShieldAlt, FaPaintBrush, FaBullhorn, FaTasks, FaUsers, FaFileAlt, FaUsersCog, FaPencilRuler } from 'react-icons/fa';
 import Backend from '@/public/images/backend.jpeg';
 import Frontend from '@/public/images/frontend.jpeg';
 import Datascience from '@/public/images/datascience.jpg';
@@ -25,8 +25,8 @@ const courses = [
   { title: 'Digital Marketing', icon: <FaBullhorn />, image: DigitalMarketing, description: 'Master online marketing strategies such as SEO, content marketing, and social media campaigns to drive traffic and engagement.' },
   { title: 'Developer Relations', icon: <FaUsers />, image: DeveloperRelations, description: 'Build and nurture relationships with developer communities, advocating for products and fostering a thriving ecosystem.' },
   { title: 'Technical Writing', icon: <FaFileAlt />, image: TechnicalWriting, description: 'Craft compelling and well-structured technical documentation using modern tools and frameworks like Markdown, Docusaurus, and MkDocs.' },
-  { title: 'UIUX', icon: <FaFileAlt />, image: UIUX, description: 'Create seamless and visually engaging user experiences with modern design tools like Figma, Adobe XD, and Framer, ensuring both aesthetics and functionality.' },
-  { title: 'Community Management', icon: <FaFileAlt />, image: CommunityManagement, description: 'Foster engaged and thriving online communities using modern tools and platforms like Discord, Slack, and Discourse.' },
+  { title: 'UIUX', icon: <FaPencilRuler/>, image: UIUX, description: 'Create seamless and visually engaging user experiences with modern design tools like Figma, Adobe XD, and Framer, ensuring both aesthetics and functionality.' },
+  { title: 'Community Management', icon: <FaUsersCog/>, image: CommunityManagement, description: 'Foster engaged and thriving online communities using modern tools and platforms like Discord, Slack, and Discourse.' },
 ];
 
 export default function CoursesPage() {
