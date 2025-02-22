@@ -160,4 +160,111 @@ export default EventGallery;
 
 
 
+// "use client";
+// import { useState } from "react";
+// import Image from "next/image";
+// import { motion } from "framer-motion";
+// import Stripes from "@/public/images/stripes-dark.svg";
+
+// const EventGallery = () => {
+//   const [activeTab, setActiveTab] = useState<"training" | "summerTraining" | "techfest2024">("training");
+
+//   const eventImages = {
+//     training: [
+//       { src: "/images/summertraining/training2.jpg", text: "Training 1" },
+//       { src: "/images/summertraining/training9.jpg", text: "Training 2" },
+//       { src: "/images/summertraining/training3.jpg", text: "Training 3" },
+//       { src: "/images/summertraining/training13.jpg", text: "Training 2" },
+//       { src: "/images/summertraining/training8.jpg", text: "Training 3" },
+//       { src: "/images/summertraining/training1.jpg", text: "Training 2" },
+//     ],
+//     summerTraining: [
+//       { src: "/images/summertraining/training10.jpg", text: "Summer Camp 1" },
+//       { src: "/images/summertraining/training5.jpg", text: "Summer Camp 2" },
+//       { src: "/images/summertraining/training7.jpg", text: "Summer Camp 3" },
+//       { src: "/images/summertraining/training3.jpg", text: "Summer Camp 4" },
+//       { src: "/images/summertraining/training4.jpg", text: "Summer Camp 2" },
+//       { src: "/images/summertraining/training8.jpg", text: "Summer Camp 3" },
+//     ],
+//     techfest2024: [
+//       { src: "/images/jtf/jtf-17.jpg", text: "Registration Table" },
+//       { src: "/images/jtf/jtf-26.jpg", text: "Tech Event 2" },
+//       { src: "/images/jtf/jtf-56.jpg", text: "Tech Event 3" },
+//       { src: "/images/jtf/jtf-44.jpg", text: "Tech Event 1" },
+//       { src: "/images/jtf/jtf-40.jpg", text: "Tech Event 2" },
+//       { src: "/images/jtf/jtf-51.jpg", text: "Tech Event 3" },
+//     ],
+//   };
+
+//   return (
+//     <div className="container mx-auto p-4 mt-32 max-w-screen-xl overflow-hidden">
+//       <div className="text-center">
+//         <h2 className="mb-4 text-3xl font-bold md:text-4xl">Achievements at a Glance</h2>
+//       </div>
+//       <div className="relative">
+//         <div className="flex justify-center mb-6">
+//           <div
+//             className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
+//             aria-hidden="true"
+//           >
+//             <Image className="max-w-none" src={Stripes} alt="Stripes" />
+//           </div>
+//           {["training", "summerTraining", "techfest2024"].map((tab) => (
+//             <button
+//               key={tab}
+//               onClick={() => setActiveTab(tab as "training" | "summerTraining" | "techfest2024")}
+//               className={`px-4 py-2 mx-2 text-sm font-medium rounded-lg transition-all ${
+//                 activeTab === tab
+//                   ? "bg-blue-600 text-white"
+//                   : "bg-white shadow-md text-gray-700 hover:bg-blue-400 hover:text-white"
+//               }`}
+//             >
+//               {tab === "training" && "Training"}
+//               {tab === "summerTraining" && "Summer Training"}
+//               {tab === "techfest2024" && "TechFest 2024"}
+//             </button>
+//           ))}
+//         </div>
+
+//         <motion.div
+//           key={activeTab}
+//           initial={{ opacity: 0, y: 30 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           exit={{ opacity: 0, y: -30 }}
+//           transition={{ duration: 0.5 }}
+//         >
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+//             {eventImages[activeTab].map((image, index) => (
+//               <motion.div
+//                 key={index}
+//                 className="relative group overflow-hidden rounded-lg shadow-lg w-full h-[250px]"
+//                 initial={{ opacity: 0, scale: 0.9 }}
+//                 animate={{ opacity: 1, scale: 1 }}
+//                 transition={{ duration: 0.5, delay: index * 0.2 }}
+//               >
+//                 <Image
+//                   src={image.src}
+//                   alt={image.text}
+//                   layout="fill"
+//                   objectFit="cover"
+//                   className="transition-transform duration-1000 group-hover:scale-105"
+//                 />
+//                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+//                   <p className="text-white text-center text-lg">{image.text}</p>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default EventGallery;
+
+
+
+
+
 
