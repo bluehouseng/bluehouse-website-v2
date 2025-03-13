@@ -19,7 +19,7 @@ export default function BusinessCategories() {
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-20">
         <div className="text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Core Offerings</h2>
