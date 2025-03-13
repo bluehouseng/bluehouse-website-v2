@@ -1,18 +1,17 @@
 
-
-
 "use client";
 
 import useMasonry from "@/utils/useMasonry";
 import Image from "next/image";
 
+
 const testimonials = [
-  { img: "/images/testimonial-01.png", name: "" },
-  { img: "/images/testimonial-02.png", name: "" },
-  { img: "/images/testimonial-03.png", name: "" },
-  { img: "/images/testimonial-04.png", name: "" },
-  { img: "/images/testimonial-05.png", name: "" },
-  { img: "/images/testimonial-06.png", name: "" },
+  { img: "/images/testimonial/testimonial-01.png", name: "" },
+  { img: "/images/testimonial/testimonial-02.png", name: "" },
+  { img: "/images/testimonial/testimonial-03.png", name: "" },
+  { img: "/images/testimonial/testimonial-04.png", name: "" },
+  { img: "/images/testimonial/testimonial-05.png", name: "" },
+  { img: "/images/testimonial/testimonial-06.png", name: "" },
 ];
 
 export default function WallOfLove() {

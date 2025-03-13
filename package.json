@@ -33,6 +33,7 @@
     "sharp": "^0.33.5",
     "shiki": "^1.7.0",
     "swiper": "^9.4.1",
+    "swr": "^2.3.2",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
