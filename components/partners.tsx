@@ -38,7 +38,7 @@ export default function Partners() {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="text-center ">
         <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Partners</h2>
       </div>
