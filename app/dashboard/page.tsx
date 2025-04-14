@@ -92,13 +92,13 @@ function StatCard({ title, value, icon, color }: StatCardProps) {
 function CourseCard({ course }: CourseCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-      <div className="relative h-40">
+      <div className="relative h-72">
         <Image 
           src={course.image} 
           alt={course.title} 
           layout="fill"
           objectFit="cover"
-          className="w-full h-full"
+          className=""
         />
       </div>
       <div className="p-4">
