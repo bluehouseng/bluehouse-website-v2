@@ -5,9 +5,10 @@ import {
   FaCode, FaServer, FaChartLine, FaDatabase, FaShieldAlt, 
   FaPaintBrush, FaBullhorn, FaTasks, FaUsers, FaFileAlt, 
   FaUsersCog, FaPencilRuler, FaBars, FaHome, FaBook, 
-  FaGraduationCap, FaUser, FaCog 
+  FaGraduationCap, FaUser, FaHandSparkles, FaCog 
 } from 'react-icons/fa';
 import { StaticImageData } from 'next/image';
+
 
 
 import Backend from '@/public/images/backend.jpeg';
@@ -92,7 +93,7 @@ function StatCard({ title, value, icon, color }: StatCardProps) {
 function CourseCard({ course }: CourseCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-      <div className="relative h-72">
+      <div className="relative h-80">
         <Image 
           src={course.image} 
           alt={course.title} 
@@ -174,7 +175,12 @@ export default function DashboardPage() {
             <StatCard title="Active Learners" value="1,240" icon={<FaUsers />} color="bg-green-100 text-green-800" />
             <StatCard title="Completion Rate" value="87%" icon={<FaChartLine />} color="bg-purple-100 text-purple-800" />
           </div> */}
-
+          
+<div className="mb-8 text-4xl font-bold  p-6 bg-white rounded-lg shadow-sm flex items-center space-x-2  text-gray-800">
+<h1>Welcome</h1>
+  <FaHandSparkles className="text-yellow-500" />
+  
+</div>
           {/* Courses Section */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-6">
