@@ -1,4 +1,4 @@
-// app/course/graphics-design/page.tsx
+
 'use client';
 
 import { useState } from 'react';

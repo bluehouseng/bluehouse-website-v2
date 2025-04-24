@@ -1,4 +1,4 @@
-// app/course/cybersecurity/page.tsx
+
 'use client';
 
 import { useState } from 'react';
