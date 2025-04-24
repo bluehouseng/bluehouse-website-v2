@@ -1,4 +1,4 @@
-// app/course/community-management/page.tsx
+
 'use client';
 
 import { useState } from 'react';
