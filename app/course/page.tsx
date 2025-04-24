@@ -1,3 +1,8 @@
+
+
+
+
+
 'use client'
 
 import { useState } from 'react'
@@ -259,143 +264,143 @@ export default function TechBootcamp() {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar - Part of document flow */}
-      <aside className={` bg-white flex-shrink-0 transition-all duration-300 ${sidebarCollapsed ? 'w-20' : 'w-52'}`}>
+      {/* Fixed Sidebar */}
+      <aside className={`bg-white flex-shrink-0 transition-all duration-300 fixed h-full ${sidebarCollapsed ? 'w-20' : 'w-52'}`}>
         <div className="h-full flex flex-col">
           {/* Sidebar Header */}
-          <div className="p-4 border-b border-gray-700 flex items-center justify-between">
+          <div className="p-4 border-b border-gray-200 flex items-center justify-between">
             {!sidebarCollapsed && <h1 className="text-xl font-bold">Tech Career Bootcamp</h1>}
             <button 
               onClick={toggleSidebar}
-              className="text-gray-700 hover:text-gray-300 p-1 rounded-md"
+              className="text-gray-700 hover:text-gray-500 p-1 rounded-md"
             >
               {sidebarCollapsed ? <FaBars /> : <FaTimes />}
             </button>
           </div>
 
-          {/* Sidebar Navigation */}
-          <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
-            <div className={`text-gray-400 text-xs uppercase mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>HOME</div>
-            <a href="dashboard" className="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-              <FaHome className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-400`} />
+          {/* Scrollable Navigation Area */}
+          <nav className="flex-1 overflow-y-auto p-4 space-y-1 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
+            <div className={`text-gray-500 text-xs uppercase mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>HOME</div>
+            <a href="dashboard" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
+              <FaHome className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-500`} />
               {!sidebarCollapsed && "Dashboard"}
             </a>
-            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-              <FaGraduationCap className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-400`} />
+            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
+              <FaGraduationCap className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
               {!sidebarCollapsed && "Certifications"}
             </a>
-            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-              <FaProjectDiagram className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-400`} />
+            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
+              <FaProjectDiagram className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-500`} />
               {!sidebarCollapsed && "My Projects"}
             </a>
             
-            <div className={`text-gray-400 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>TECH SPECIALIZATIONS</div>
+            <div className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>TECH SPECIALIZATIONS</div>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'frontend-development' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'frontend-development' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('frontend-development') }}
             >
-              <FaCode className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-500`} />
+              <FaCode className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-600`} />
               {!sidebarCollapsed && "Frontend Development"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'backend-development' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'backend-development' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('backend-development') }}
             >
-              <FaServer className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
+              <FaServer className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-600`} />
               {!sidebarCollapsed && "Backend Development"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-science' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-science' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('data-science') }}
             >
-              <FaChartLine className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-purple-500`} />
+              <FaChartLine className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-purple-600`} />
               {!sidebarCollapsed && "Data Science"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'cybersecurity' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'cybersecurity' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('cybersecurity') }}
             >
-              <FaShieldAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-red-500`} />
+              <FaShieldAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-red-600`} />
               {!sidebarCollapsed && "Cybersecurity"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'product-management' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'product-management' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('product-management') }}
             >
-              <FaTasks className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-500`} />
+              <FaTasks className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-600`} />
               {!sidebarCollapsed && "Product Management"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'digital-marketing' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'digital-marketing' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('digital-marketing') }}
             >
-              <FaBullhorn className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-pink-500`} />
+              <FaBullhorn className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-pink-600`} />
               {!sidebarCollapsed && "Digital Marketing"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'developer-relations' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'developer-relations' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('developer-relations') }}
             >
-              <FaUsers className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-teal-500`} />
+              <FaUsers className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-teal-600`} />
               {!sidebarCollapsed && "Developer Relations"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'technical-writing' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'technical-writing' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('technical-writing') }}
             >
-              <FaFileAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-orange-500`} />
+              <FaFileAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-orange-600`} />
               {!sidebarCollapsed && "Technical Writing"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'ui-ux-design' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'ui-ux-design' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('ui-ux-design') }}
             >
-              <FaPencilRuler className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-amber-500`} />
+              <FaPencilRuler className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-amber-600`} />
               {!sidebarCollapsed && "UI/UX Design"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'community-management' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'community-management' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('community-management') }}
             >
-              <FaUsersCog className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-emerald-500`} />
+              <FaUsersCog className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-emerald-600`} />
               {!sidebarCollapsed && "Community Management"}
             </a>
             <a 
               href="#" 
-              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-analysis' ? 'bg-blue-600' : 'hover:bg-gray-700'}`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-analysis' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={(e) => { e.preventDefault(); setActiveMenu('data-analysis') }}
             >
-              <FaDatabase className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-500`} />
+              <FaDatabase className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-600`} />
               {!sidebarCollapsed && "Data Analysis"}
             </a>
             
-            <div className={`text-gray-400 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>COMMUNITY</div>
-            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-              <FaDiscord className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-400`} />
+            <div className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>COMMUNITY</div>
+            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
+              <FaDiscord className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-500`} />
               {!sidebarCollapsed && "Discord Community"}
             </a>
             
-            <div className={`text-gray-400 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>SUPPORT</div>
-            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-              <FaCommentAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-400`} />
+            <div className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>SUPPORT</div>
+            <a href="#" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
+              <FaCommentAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
               {!sidebarCollapsed && "Feedback & Help"}
             </a>
           </nav>
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main className="flex-1 min-w-0">
+      {/* Main Content with padding to account for fixed sidebar */}
+      <main className={`flex-1 min-w-0 transition-all duration-300 ${sidebarCollapsed ? 'ml-20' : 'ml-52'}`}>
         {/* Mobile Toggle Button */}
         <div className="md:hidden p-4">
           <button 
