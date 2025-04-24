@@ -23,7 +23,7 @@
     "@types/react-dom": "19.0.1",
     "aos": "^3.0.0-beta.6",
     "date-fns": "^4.1.0",
-    "framer-motion": "^12.0.3",
+    "framer-motion": "^12.9.1",
     "next": "^15.2.0",
     "next-mdx-remote": "^5.0.0",
     "react": "19.0.0",
