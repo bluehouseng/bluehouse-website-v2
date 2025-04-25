@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -77,9 +76,8 @@ export default function ProductManagementPage() {
     <div className="flex h-screen overflow-hidden">
       {/* Sidebar */}
       <aside
-        className={`bg-white flex-shrink-0 transition-all duration-300 h-full ${
-          sidebarCollapsed ? 'w-20' : 'w-52'
-        }`}
+        className={`bg-white flex-shrink-0 transition-all duration-300 h-full ${sidebarCollapsed ? 'w-20' : 'w-52'
+          }`}
       >
         <div className="h-full flex flex-col border-r border-gray-200">
           {/* Sidebar Header */}
@@ -98,9 +96,8 @@ export default function ProductManagementPage() {
           {/* Scrollable Navigation Area */}
           <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
             <div
-              className={`text-gray-500 text-xs uppercase mb-2 ${
-                sidebarCollapsed ? 'hidden' : 'block'
-              }`}
+              className={`text-gray-500 text-xs uppercase mb-2 ${sidebarCollapsed ? 'hidden' : 'block'
+                }`}
             >
               HOME
             </div>
@@ -109,9 +106,8 @@ export default function ProductManagementPage() {
               className="flex items-center py-2 px-3 rounded hover:bg-gray-100"
             >
               <FaHome
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-yellow-500`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-yellow-500`}
               />
               {!sidebarCollapsed && 'Dashboard'}
             </Link>
@@ -120,9 +116,8 @@ export default function ProductManagementPage() {
               className="flex items-center py-2 px-3 rounded hover:bg-gray-100"
             >
               <FaGraduationCap
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-blue-500`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-blue-500`}
               />
               {!sidebarCollapsed && 'Certifications'}
             </Link>
@@ -131,226 +126,216 @@ export default function ProductManagementPage() {
               className="flex items-center py-2 px-3 rounded hover:bg-gray-100"
             >
               <FaProjectDiagram
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-green-500`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-green-500`}
               />
               {!sidebarCollapsed && 'My Projects'}
             </Link>
 
             <div
-              className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${
-                sidebarCollapsed ? 'hidden' : 'block'
-              }`}
+              className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'
+                }`}
             >
               TECH SPECIALIZATIONS
             </div>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'frontend-development'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'frontend-development'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('frontend-development');
               }}
             >
               <FaCode
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-green-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-green-600`}
               />
               {!sidebarCollapsed && 'Frontend Development'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'backend-development'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'backend-development'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('backend-development');
               }}
             >
               <FaServer
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-blue-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-blue-600`}
               />
               {!sidebarCollapsed && 'Backend Development'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'data-science' ? 'bg-blue-100' : 'hover:bg-gray-100'
-              }`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-science' ? 'bg-blue-100' : 'hover:bg-gray-100'
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('data-science');
               }}
             >
               <FaChartLine
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-purple-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-purple-600`}
               />
               {!sidebarCollapsed && 'Data Science'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'cybersecurity' ? 'bg-blue-100' : 'hover:bg-gray-100'
-              }`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'cybersecurity' ? 'bg-blue-100' : 'hover:bg-gray-100'
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('cybersecurity');
               }}
             >
               <FaShieldAlt
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-red-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-red-600`}
               />
               {!sidebarCollapsed && 'Cybersecurity'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'product-management'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'graphic-design' ? 'bg-blue-100' : 'hover:bg-gray-100'
+                }`}
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveMenu('Graphic-design');
+              }}
+            >
+              <FaPaintBrush
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-green-600`}
+              />
+              {!sidebarCollapsed && 'Graphic Design'}
+            </Link>
+            <Link
+              href="#"
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'product-management'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('product-management');
               }}
             >
               <FaTasks
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-indigo-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-indigo-600`}
               />
               {!sidebarCollapsed && 'Product Management'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'digital-marketing'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'digital-marketing'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('digital-marketing');
               }}
             >
               <FaBullhorn
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-pink-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-pink-600`}
               />
               {!sidebarCollapsed && 'Digital Marketing'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'developer-relations'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'developer-relations'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('developer-relations');
               }}
             >
               <FaUsers
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-teal-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-teal-600`}
               />
               {!sidebarCollapsed && 'Developer Relations'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'technical-writing'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'technical-writing'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('technical-writing');
               }}
             >
               <FaFileAlt
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-orange-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-orange-600`}
               />
               {!sidebarCollapsed && 'Technical Writing'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'ui-ux-design' ? 'bg-blue-100' : 'hover:bg-gray-100'
-              }`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'ui-ux-design' ? 'bg-blue-100' : 'hover:bg-gray-100'
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('ui-ux-design');
               }}
             >
               <FaPencilRuler
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-amber-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-amber-600`}
               />
               {!sidebarCollapsed && 'UI/UX Design'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'community-management'
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'community-management'
                   ? 'bg-blue-100'
                   : 'hover:bg-gray-100'
-              }`}
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('community-management');
               }}
             >
               <FaUsersCog
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-emerald-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-emerald-600`}
               />
               {!sidebarCollapsed && 'Community Management'}
             </Link>
             <Link
               href="#"
-              className={`flex items-center py-2 px-3 rounded ${
-                activeMenu === 'data-analysis' ? 'bg-blue-100' : 'hover:bg-gray-100'
-              }`}
+              className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-analysis' ? 'bg-blue-100' : 'hover:bg-gray-100'
+                }`}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveMenu('data-analysis');
               }}
             >
               <FaDatabase
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-yellow-600`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-yellow-600`}
               />
               {!sidebarCollapsed && 'Data Analysis'}
             </Link>
 
             <div
-              className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${
-                sidebarCollapsed ? 'hidden' : 'block'
-              }`}
+              className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'
+                }`}
             >
               COMMUNITY
             </div>
@@ -359,17 +344,15 @@ export default function ProductManagementPage() {
               className="flex items-center py-2 px-3 rounded hover:bg-gray-100"
             >
               <FaDiscord
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-indigo-500`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-indigo-500`}
               />
               {!sidebarCollapsed && 'Discord Community'}
             </Link>
 
             <div
-              className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${
-                sidebarCollapsed ? 'hidden' : 'block'
-              }`}
+              className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'
+                }`}
             >
               SUPPORT
             </div>
@@ -378,9 +361,8 @@ export default function ProductManagementPage() {
               className="flex items-center py-2 px-3 rounded hover:bg-gray-100"
             >
               <FaCommentAlt
-                className={`${
-                  sidebarCollapsed ? 'mx-auto' : 'mr-3'
-                } text-blue-500`}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                  } text-blue-500`}
               />
               {!sidebarCollapsed && 'Feedback & Help'}
             </Link>
@@ -390,64 +372,64 @@ export default function ProductManagementPage() {
 
       {/* Main Content */}
       <div className="flex-1 overflow-y-auto p-8">
-        
 
 
-         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-                   
-         <h1 className="text-3xl font-bold text-gray-800 mb-2">
-          {productManagementCourse.title}
-        </h1>
-        <p className="text-gray-600 mb-8">{productManagementCourse.description}</p>
-        
-                       <div className="flex items-center mb-6">
-                         <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mr-4">
-                           8-12 weeks per specialization
-                         </span>
-                       </div>
-           
-                       <p className="text-lg text-gray-700 mb-8">
-                         Launch your tech career with our intensive bootcamps. Build job-ready skills through hands-on projects and personalized mentorship from industry professionals.
-                       </p>
-           
-                       <p className="text-lg text-gray-700 mb-8">
-                         Each specialization combines fundamental concepts with real-world applications, culminating in a professional portfolio project that demonstrates your expertise to employers.
-                       </p>
-           
-                       <div className="mb-10">
-                         <h2 className="text-xl font-semibold text-gray-900 mb-4">WHAT YOU&apos;LL ACHIEVE</h2>
-                         <div className="flex flex-wrap gap-4">
-                           <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
-                             Job-Ready Skills
-                           </span>
-                           <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">
-                             Professional Portfolio
-                           </span>
-                           <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-medium">
-                             Industry Certification
-                           </span>
-                           <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
-                             1:1 Career Coaching
-                           </span>
-                         </div>
-           
-                         {/* Enhanced Start Course Button */}
-                         <motion.div 
-                           initial={{ opacity: 0, y: 20 }}
-                           animate={{ opacity: 1, y: 0 }}
-                           transition={{ duration: 0.5 }}
-                           className="flex justify-center my-8"
-                         >
-                           <Link 
-                             href="#course-modules"
-                             scroll={false}
-                             className="px-16 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-lg shadow-md hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                           >
-                             Start course
-                           </Link>
-                         </motion.div>
-                       </div>
-                     </div>
+
+        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
+            {productManagementCourse.title}
+          </h1>
+          <p className="text-gray-600 mb-8">{productManagementCourse.description}</p>
+
+          <div className="flex items-center mb-6">
+            <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mr-4">
+              8-12 weeks per specialization
+            </span>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Launch your tech career with our intensive bootcamps. Build job-ready skills through hands-on projects and personalized mentorship from industry professionals.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Each specialization combines fundamental concepts with real-world applications, culminating in a professional portfolio project that demonstrates your expertise to employers.
+          </p>
+
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">WHAT YOU&apos;LL ACHIEVE</h2>
+            <div className="flex flex-wrap gap-4">
+              <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
+                Job-Ready Skills
+              </span>
+              <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">
+                Professional Portfolio
+              </span>
+              <span className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-medium">
+                Industry Certification
+              </span>
+              <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
+                1:1 Career Coaching
+              </span>
+            </div>
+
+            {/* Enhanced Start Course Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex justify-center my-8"
+            >
+              <Link
+                href="#course-modules"
+                scroll={false}
+                className="px-16 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-lg shadow-md hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              >
+                Start course
+              </Link>
+            </motion.div>
+          </div>
+        </div>
 
         <div className="space-y-6">
           {productManagementCourse.modules.map((module, index) => (
@@ -466,16 +448,14 @@ export default function ProductManagementPage() {
                   <p className="text-gray-500 text-sm">{module.description}</p>
                 </div>
                 <FaChevronDown
-                  className={`w-4 h-4 transition-transform ${
-                    expandedCourse === module.title ? 'rotate-180' : ''
-                  }`}
+                  className={`w-4 h-4 transition-transform ${expandedCourse === module.title ? 'rotate-180' : ''
+                    }`}
                 />
               </div>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  expandedCourse === module.title ? 'max-h-96' : 'max-h-0'
-                }`}
+                className={`overflow-hidden transition-all duration-300 ${expandedCourse === module.title ? 'max-h-96' : 'max-h-0'
+                  }`}
               >
                 <div className="p-6 pt-0">
                   <ul className="space-y-3">
