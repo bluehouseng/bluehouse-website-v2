@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -15,6 +14,7 @@ import {
     FaFileAlt,
     FaGraduationCap,
     FaHome,
+    FaPaintBrush,
     FaPencilRuler,
     FaProjectDiagram,
     FaServer,
@@ -136,8 +136,8 @@ export default function CommunityManagementPage() {
                         <Link
                             href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'frontend-development'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();
@@ -153,8 +153,8 @@ export default function CommunityManagementPage() {
                         <Link
                             href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'backend-development'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();
@@ -199,9 +199,24 @@ export default function CommunityManagementPage() {
                         </Link>
                         <Link
                             href="#"
+                            className={`flex items-center py-2 px-3 rounded ${activeMenu === 'graphic-design' ? 'bg-blue-100' : 'hover:bg-gray-100'
+                                }`}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setActiveMenu('Graphic-design');
+                            }}
+                        >
+                            <FaPaintBrush
+                                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'
+                                    } text-green-600`}
+                            />
+                            {!sidebarCollapsed && 'Graphic Design'}
+                        </Link>
+                        <Link
+                            href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'product-management'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();
@@ -217,8 +232,8 @@ export default function CommunityManagementPage() {
                         <Link
                             href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'digital-marketing'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();
@@ -234,8 +249,8 @@ export default function CommunityManagementPage() {
                         <Link
                             href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'developer-relations'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();
@@ -251,8 +266,8 @@ export default function CommunityManagementPage() {
                         <Link
                             href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'technical-writing'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();
@@ -283,8 +298,8 @@ export default function CommunityManagementPage() {
                         <Link
                             href="#"
                             className={`flex items-center py-2 px-3 rounded ${activeMenu === 'community-management'
-                                    ? 'bg-blue-100'
-                                    : 'hover:bg-gray-100'
+                                ? 'bg-blue-100'
+                                : 'hover:bg-gray-100'
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();

@@ -12,7 +12,8 @@ import {
   FaChartLine, FaShieldAlt, FaTasks, FaBullhorn,
   FaUsers, FaFileAlt, FaPencilRuler, FaUsersCog,
   FaDatabase, FaChevronDown, FaChevronRight,
-  FaBars, FaTimes
+  FaBars, FaTimes,
+  FaPaintBrush
 } from 'react-icons/fa'
 
 export default function TechBootcamp() {
@@ -327,6 +328,14 @@ export default function TechBootcamp() {
               <FaShieldAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-red-600`} />
               {!sidebarCollapsed && "Cybersecurity"}
             </a>
+             <a 
+                          href="#"
+                          className={`flex items-center py-2 px-3 rounded ${activeMenu === 'frontend-development' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
+                          onClick={(e) => { e.preventDefault(); setActiveMenu('frontend-development') }}
+                        >
+                          <FaPaintBrush  className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-600`} />
+                          {!sidebarCollapsed && "Graphics Design"}
+                        </a>
             <a 
               href="#" 
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'product-management' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
