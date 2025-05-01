@@ -15,6 +15,14 @@ export interface UserProfile {
     checkInLongitude?: number;
     checkOutLatitude?: number;
     checkOutLongitude?: number;
+    checkInLocation?: {
+      latitude: number;
+      longitude: number;
+    };
+    checkOutLocation?: {
+      latitude: number;
+      longitude: number;
+    };
   }
   
   export type OfficeLocation = {

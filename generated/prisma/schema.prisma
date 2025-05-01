@@ -12,7 +12,7 @@ model User {
   id         String       @id @default(auto()) @map("_id") @db.ObjectId
   name       String
   email      String       @unique
-  password   String
+  password   String?
   stack      String
   image      String?
   attendance Attendance[] @relation("UserAttendance")

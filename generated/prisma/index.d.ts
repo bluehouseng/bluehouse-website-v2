@@ -1087,7 +1087,7 @@ export namespace Prisma {
     id: string
     name: string
     email: string
-    password: string
+    password: string | null
     stack: string
     image: string | null
     _count: UserCountAggregateOutputType | null
@@ -1146,7 +1146,7 @@ export namespace Prisma {
       id: string
       name: string
       email: string
-      password: string
+      password: string | null
       stack: string
       image: string | null
     }, ExtArgs["result"]["user"]>
@@ -3133,7 +3133,7 @@ export namespace Prisma {
     id?: StringFilter<"User"> | string
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
-    password?: StringFilter<"User"> | string
+    password?: StringNullableFilter<"User"> | string | null
     stack?: StringFilter<"User"> | string
     image?: StringNullableFilter<"User"> | string | null
     attendance?: AttendanceListRelationFilter
@@ -3156,7 +3156,7 @@ export namespace Prisma {
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
     name?: StringFilter<"User"> | string
-    password?: StringFilter<"User"> | string
+    password?: StringNullableFilter<"User"> | string | null
     stack?: StringFilter<"User"> | string
     image?: StringNullableFilter<"User"> | string | null
     attendance?: AttendanceListRelationFilter
@@ -3181,7 +3181,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"User"> | string
     name?: StringWithAggregatesFilter<"User"> | string
     email?: StringWithAggregatesFilter<"User"> | string
-    password?: StringWithAggregatesFilter<"User"> | string
+    password?: StringNullableWithAggregatesFilter<"User"> | string | null
     stack?: StringWithAggregatesFilter<"User"> | string
     image?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
@@ -3267,7 +3267,7 @@ export namespace Prisma {
     id?: string
     name: string
     email: string
-    password: string
+    password?: string | null
     stack: string
     image?: string | null
     attendance?: AttendanceCreateNestedManyWithoutUserInput
@@ -3277,7 +3277,7 @@ export namespace Prisma {
     id?: string
     name: string
     email: string
-    password: string
+    password?: string | null
     stack: string
     image?: string | null
     attendance?: AttendanceUncheckedCreateNestedManyWithoutUserInput
@@ -3286,7 +3286,7 @@ export namespace Prisma {
   export type UserUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     stack?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
     attendance?: AttendanceUpdateManyWithoutUserNestedInput
@@ -3295,7 +3295,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     stack?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
     attendance?: AttendanceUncheckedUpdateManyWithoutUserNestedInput
@@ -3305,7 +3305,7 @@ export namespace Prisma {
     id?: string
     name: string
     email: string
-    password: string
+    password?: string | null
     stack: string
     image?: string | null
   }
@@ -3313,7 +3313,7 @@ export namespace Prisma {
   export type UserUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     stack?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -3321,7 +3321,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateManyInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     stack?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -3850,7 +3850,7 @@ export namespace Prisma {
     id?: string
     name: string
     email: string
-    password: string
+    password?: string | null
     stack: string
     image?: string | null
   }
@@ -3859,7 +3859,7 @@ export namespace Prisma {
     id?: string
     name: string
     email: string
-    password: string
+    password?: string | null
     stack: string
     image?: string | null
   }
@@ -3883,7 +3883,7 @@ export namespace Prisma {
   export type UserUpdateWithoutAttendanceInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     stack?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -3891,7 +3891,7 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutAttendanceInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
     stack?: StringFieldUpdateOperationsInput | string
     image?: NullableStringFieldUpdateOperationsInput | string | null
   }

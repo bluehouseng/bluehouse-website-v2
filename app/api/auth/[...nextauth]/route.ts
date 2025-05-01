@@ -1,7 +1,9 @@
+// app/api/auth/[...nextauth]/route.ts
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GitHubProvider from "next-auth/providers/github";
 import bcrypt from "bcryptjs";
-import { PrismaClient } from "@/generated/prisma/client"; // adjust if needed
+import { PrismaClient } from "@/generated/prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -25,7 +27,6 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Email and password are required");
         }
 
-        // Fetch user from DB
         const user = await prisma.user.findUnique({
           where: { email: credentials.email },
         });
@@ -34,7 +35,6 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Invalid email or password");
         }
 
-        // Compare hashed password
         const isValid = await bcrypt.compare(credentials.password, user.password);
 
         if (!isValid) {
@@ -48,11 +48,40 @@ export const authOptions: NextAuthOptions = {
         };
       },
     }),
+    GitHubProvider({
+      clientId: process.env.GITHUB_CLIENT_ID!,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+    }),
   ],
   pages: {
     signIn: "/signin",
   },
   callbacks: {
+    async signIn({ user, account, profile }) {
+      if (account?.provider === "github" && profile?.email) {
+        // Check if user exists, create if not
+        let dbUser = await prisma.user.findUnique({
+          where: { email: profile.email },
+        });
+
+        if (!dbUser) {
+          dbUser = await prisma.user.create({
+            data: {
+              name: profile.name || user.name || "GitHub User",
+              email: profile.email,
+              stack: "Unknown", // Default value, as GitHub doesn't provide this
+              image: user.image || null,
+              password: null, 
+            },
+          });
+        }
+        
+
+        // Update user ID for the session
+        user.id = dbUser.id;
+      }
+      return true;
+    },
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
@@ -66,6 +95,13 @@ export const authOptions: NextAuthOptions = {
         session.user.email = token.email as string;
       }
       return session;
+    },
+    async redirect({ url, baseUrl }) {
+      // Allow client-side handling for relative URLs
+      if (url.startsWith("/")) {
+        return `${baseUrl}${url}`;
+      }
+      return baseUrl;
     },
   },
   session: {

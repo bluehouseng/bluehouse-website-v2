@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     );
 
     if (!record) {
-      record = { userId, date, checkInTime: time, checkInLocation: { latitude, longitude } };
+        record = { userId, date, checkInTime: time, checkInLatitude: latitude, checkInLongitude: longitude };
       attendanceRecords.push(record);
     } else if (!record.checkInTime) {
       record.checkInTime = time;

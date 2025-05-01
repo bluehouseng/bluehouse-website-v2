@@ -1,23 +1,31 @@
 // app/api/signup/route.ts
-
-import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
-import bcrypt from 'bcryptjs';
-import { PrismaClient } from '@/generated/prisma/client'; // Adjust if your prisma client path differs
+import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+import { PrismaClient } from "@/generated/prisma/client";
 
 const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { email, password, name, stack, image } = body;
+    const formData = await request.formData();
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const stack = formData.get("stack") as string;
+    const password = formData.get("password") as string;
+    const image = formData.get("image") as File | null;
 
     // Basic validation
-    if (!email || !password || !name || !stack) {
+    if (!name || !email || !stack || !password) {
       return NextResponse.json(
-        { error: 'All fields are required: name, email, stack, password' },
+        { error: "All fields are required: name, email, stack, password" },
         { status: 400 }
       );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: "Invalid email format" }, { status: 400 });
     }
 
     // Check if user already exists
@@ -27,7 +35,7 @@ export async function POST(request: Request) {
 
     if (existingUser) {
       return NextResponse.json(
-        { error: 'User already exists with this email' },
+        { error: "User already exists with this email" },
         { status: 409 }
       );
     }
@@ -35,24 +43,29 @@ export async function POST(request: Request) {
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create the user in MongoDB
+    // Handle image (use Cloudinary/S3 in production)
+    let imageData: string | null = null;
+    if (image) {
+      const arrayBuffer = await image.arrayBuffer();
+      imageData = Buffer.from(arrayBuffer).toString("base64");
+      imageData = `data:${image.type};base64,${imageData}`;
+    }
+
+    // Create the user
     const newUser = await prisma.user.create({
       data: {
-        email,
-        password: hashedPassword,
         name,
+        email,
         stack,
-        image,
+        password: hashedPassword,
+        image: imageData,
       },
     });
 
-    // Create a session token (for demonstration only; use secure token generation in production)
-    const sessionToken = 'signup-session-token-' + Date.now();
-
-    const response = NextResponse.json(
+    return NextResponse.json(
       {
         success: true,
-        message: 'User registered successfully',
+        message: "User registered successfully",
         user: {
           id: newUser.id,
           email: newUser.email,
@@ -62,21 +75,10 @@ export async function POST(request: Request) {
       },
       { status: 201 }
     );
-
-    // Set cookie
-    response.cookies.set('session_token', sessionToken, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      path: '/',
-    });
-
-    return response;
   } catch (error) {
-    console.error('Sign up error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
+    console.error("Sign up error:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  } finally {
+    await prisma.$disconnect();
   }
 }
