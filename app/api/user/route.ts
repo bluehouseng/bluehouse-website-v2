@@ -68,6 +68,7 @@ export async function POST(request: Request) {
 }
 
 export async function GET(request: Request) {
+  await dbConnect();
   const url = new URL(request.url);
   // Access query parameters
   const email = url.searchParams.get("email");
