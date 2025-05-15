@@ -80,7 +80,7 @@ export default function DashboardPage() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className={`bg-white flex-shrink-0 transition-all duration-300 ${sidebarCollapsed ? 'w-20' : 'w-52'}`}>
+      <aside className={`bg-white flex-shrink-0 transition-all duration-300 ${sidebarCollapsed ? 'w-20' : 'w-62'}`}>
         <div className="h-full flex flex-col">
           {/* Sidebar Header */}
           <div className="p-4 border-b border-gray-200 flex items-center justify-between">
@@ -97,15 +97,24 @@ export default function DashboardPage() {
           <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
             <div className={`text-gray-500 text-xs uppercase mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>HOME</div>
             <Link href="/dashboard" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
-              <FaHome className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-500`} />
+              {/* <FaHome className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'}  text-yellow-500`} /> */}
+              <FaHome
+                size={30}
+                className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-500`}
+              />
+
               {!sidebarCollapsed && "Dashboard"}
             </Link>
             <Link href="/certifications" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
-              <FaGraduationCap className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
+              <FaGraduationCap
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
               {!sidebarCollapsed && "Certifications"}
             </Link>
             <Link href="/projects" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
-              <FaProjectDiagram className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-500`} />
+              <FaProjectDiagram
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-500`} />
               {!sidebarCollapsed && "My Projects"}
             </Link>
 
@@ -115,7 +124,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'frontend-development' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('frontend-development')}
             >
-              <FaCode className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-600`} />
+              <FaCode
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-600`} />
               {!sidebarCollapsed && "Frontend Development"}
             </Link>
             <Link
@@ -123,7 +134,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'backend-development' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('backend-development')}
             >
-              <FaServer className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-600`} />
+              <FaServer
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-600`} />
               {!sidebarCollapsed && "Backend Development"}
             </Link>
             <Link
@@ -131,7 +144,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-science' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('data-science')}
             >
-              <FaChartLine className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-purple-600`} />
+              <FaChartLine
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-purple-600`} />
               {!sidebarCollapsed && "Data Science"}
             </Link>
             <Link
@@ -139,7 +154,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'cybersecurity' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('cybersecurity')}
             >
-              <FaShieldAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-red-600`} />
+              <FaShieldAlt
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-red-600`} />
               {!sidebarCollapsed && "Cybersecurity"}
             </Link>
             <Link
@@ -147,7 +164,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'graphic-design' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('graphic-design')}
             >
-              <FaPaintBrush className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-600`} />
+              <FaPaintBrush
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-green-600`} />
               {!sidebarCollapsed && "Graphics Design"}
             </Link>
             <Link
@@ -155,7 +174,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'product-management' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('product-management')}
             >
-              <FaTasks className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-600`} />
+              <FaTasks
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-600`} />
               {!sidebarCollapsed && "Product Management"}
             </Link>
             <Link
@@ -163,7 +184,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'digital-marketing' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('digital-marketing')}
             >
-              <FaBullhorn className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-pink-600`} />
+              <FaBullhorn
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-pink-600`} />
               {!sidebarCollapsed && "Digital Marketing"}
             </Link>
             <Link
@@ -171,7 +194,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'developer-relations' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('developer-relations')}
             >
-              <FaUsers className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-teal-600`} />
+              <FaUsers
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-teal-600`} />
               {!sidebarCollapsed && "Developer Relations"}
             </Link>
             <Link
@@ -179,7 +204,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'technical-writing' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('technical-writing')}
             >
-              <FaFileAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-orange-600`} />
+              <FaFileAlt
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-orange-600`} />
               {!sidebarCollapsed && "Technical Writing"}
             </Link>
             <Link
@@ -187,7 +214,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'ui-ux-design' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('ui-ux-design')}
             >
-              <FaPencilRuler className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-amber-600`} />
+              <FaPencilRuler
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-amber-600`} />
               {!sidebarCollapsed && "UI/UX Design"}
             </Link>
             <Link
@@ -195,7 +224,9 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'community-management' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('community-management')}
             >
-              <FaUsersCog className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-emerald-600`} />
+              <FaUsersCog
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-emerald-600`} />
               {!sidebarCollapsed && "Community Management"}
             </Link>
             <Link
@@ -203,19 +234,25 @@ export default function DashboardPage() {
               className={`flex items-center py-2 px-3 rounded ${activeMenu === 'data-analysis' ? 'bg-blue-100' : 'hover:bg-gray-100'}`}
               onClick={() => setActiveMenu('data-analysis')}
             >
-              <FaDatabase className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-600`} />
+              <FaDatabase
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-yellow-600`} />
               {!sidebarCollapsed && "Data Analysis"}
             </Link>
 
             <div className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>COMMUNITY</div>
             <Link href="/community" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
-              <FaDiscord className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-500`} />
+              <FaDiscord
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-indigo-500`} />
               {!sidebarCollapsed && "Discord Community"}
             </Link>
 
             <div className={`text-gray-500 text-xs uppercase mt-6 mb-2 ${sidebarCollapsed ? 'hidden' : 'block'}`}>SUPPORT</div>
             <Link href="/support" className="flex items-center py-2 px-3 rounded hover:bg-gray-100">
-              <FaCommentAlt className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
+              <FaCommentAlt
+              size={30}
+              className={`${sidebarCollapsed ? 'mx-auto' : 'mr-3'} text-blue-500`} />
               {!sidebarCollapsed && "Feedback & Help"}
             </Link>
           </nav>
