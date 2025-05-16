@@ -1,10 +1,9 @@
-// models/User.js
 import mongoose from "mongoose";
-
 /*
   Check if the User model is already defined to prevent
   the "Cannot overwrite model once compiled" error during hot reloading
 */
+
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -14,6 +13,9 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "Please provide an email"],
+  },
+  password: {
+    type: String,
   },
   stack: {
     type: String,
@@ -28,7 +30,7 @@ const UserSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-  },
+  }
 });
 
 export default mongoose.models.User || mongoose.model("User", UserSchema);
