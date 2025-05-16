@@ -80,7 +80,7 @@ export default function DashboardPage() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className={`bg-white flex-shrink-0 transition-all duration-300 ${sidebarCollapsed ? 'w-20' : 'w-62'}`}>
+      <aside className={`bg-white flex-shrink-0 transition-all duration-300 ${sidebarCollapsed ? 'w-24' : 'w-62'}`}>
         <div className="h-full flex flex-col">
           {/* Sidebar Header */}
           <div className="p-4 border-b border-gray-200 flex items-center justify-between">
