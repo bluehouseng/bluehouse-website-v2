@@ -414,13 +414,12 @@ export default function CommunityManagementPage() {
                             transition={{ duration: 0.5 }}
                             className="flex justify-center my-8"
                         >
-                            <Link
-                                href="#course-modules"
-                                scroll={false}
-                                className="px-16 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-lg shadow-md hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                            >
-                                Start course
-                            </Link>
+                        <Link
+  href="#"
+  className="px-16 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-lg shadow-md hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+>
+  Start course
+</Link>
                         </motion.div>
                     </div>
                 </div>

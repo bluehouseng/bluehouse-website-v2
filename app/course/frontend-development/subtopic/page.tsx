@@ -31,14 +31,24 @@ export default function TechBootcamp() {
       description: 'Build interactive user interfaces',
       modules: [
         {
+          path: '/course/frontend-development/subtopic/html', 
           title: 'HTML & CSS Fundamentals',
           description: 'Core web development technologies',
-          topics: ['HTML5 Semantics', 'CSS Flexbox/Grid', 'Responsive Design']
+          topics: [
+            { name: 'HTML5 Semantics', path: '/course/frontend-development/subtopic/html' },
+            { name: 'CSS Flexbox/Grid', path: '/course/frontend-development/subtopic/css' },
+            { name: 'Responsive Design', path: '/course/frontend-development/subtopic/responsive' }
+          ]
         },
         {
+          path: '/course/frontend-development/subtopic/javascript', 
           title: 'JavaScript Mastery',
           description: 'The language of the web',
-          topics: ['ES6+ Features', 'DOM Manipulation', 'Async Programming']
+          topics: [
+            { name:  'ES6+ Features', path: '/course/frontend-development/subtopic/javascript' },
+            { name:  'DOM Manipulation', path: '/course/frontend-development/subtopic/dom' },
+            { name:  'Async Programming', path: '/course/frontend-development/subtopic/async' },
+          ]
         },
         {
           title: 'React Framework',
@@ -443,16 +453,24 @@ export default function TechBootcamp() {
                     
                     <div className={`overflow-hidden transition-all duration-300 ${expandedCourse === module.title ? 'max-h-96' : 'max-h-0'}`}>
                       <div className="p-6 pt-0">
-                        <ul className="space-y-3">
-                          {module.topics.map((topic, idx) => (
-                            <li key={idx} className="border-b border-dashed border-gray-100 pb-2 last:border-0">
-                              <a href="#" className="text-blue-600 hover:text-blue-800 flex items-center">
-                                <FaChevronRight className="w-3 h-3 mr-2" />
-                                {topic}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
+                      <ul className="space-y-3">
+  {module.topics.map((topic, idx) => (
+    <li key={idx} className="border-b border-dashed border-gray-100 pb-2 last:border-0">
+      <a 
+        href={topic.path} 
+        className="text-blue-600 hover:text-blue-800 flex items-center"
+        onClick={(e) => {
+          // You might want to handle navigation here if using client-side routing
+          // e.preventDefault();
+          // router.push(topic.path);
+        }}
+      >
+        <FaChevronRight className="w-3 h-3 mr-2" />
+        {topic.name}
+      </a>
+    </li>
+  ))}
+</ul>
                       </div>
                     </div>
                   </div>
