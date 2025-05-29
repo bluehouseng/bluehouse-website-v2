@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Editor from '@monaco-editor/react';
+import { useState, useEffect } from "react";
+import Editor from "@monaco-editor/react";
 
 const Javascript = () => {
   const [jsCode, setJsCode] = useState(
-`// Welcome to JavaScript Editor!
+    `// Welcome to JavaScript Editor!
 // Try these examples or write your own code
 
 // Basic Output
@@ -32,7 +32,7 @@ const user = {
   email: 'charlie@example.com',
   isAdmin: false
 };
-console.log('User:', user);`
+console.log('User:', user);`,
   );
 
   const [consoleOutput, setConsoleOutput] = useState([]);
@@ -42,21 +42,23 @@ console.log('User:', user);`
     try {
       // Clear previous output
       setConsoleOutput([]);
-      
+
       // Override console.log to capture output
       const originalConsoleLog = console.log;
       console.log = (...args) => {
-        setConsoleOutput(prev => [...prev, args.join(' ')]);
+        // @ts-ignore
+        setConsoleOutput((prev) => [...prev, args.join(" ")]);
         originalConsoleLog(...args);
       };
 
       // Execute the code
       new Function(jsCode)();
-      
+
       // Restore original console.log
       console.log = originalConsoleLog;
     } catch (error) {
-      setConsoleOutput(prev => [...prev, `Error: ${error.message}`]);
+      // @ts-ignore
+      setConsoleOutput((prev) => [...prev, `Error: ${error.message}`]);
     }
   };
 
@@ -69,12 +71,16 @@ console.log('User:', user);`
     <div className="flex h-screen bg-gray-50">
       {/* Left Side - JavaScript Examples (40%) */}
       <div className="w-2/5 p-6 overflow-auto">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">JavaScript Examples</h2>
-        
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">
+          JavaScript Examples
+        </h2>
+
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">Variables & Data Types</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-700">
+            Variables & Data Types
+          </h3>
           <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`// Number
+            {`// Number
 const age = 30;
 
 // String
@@ -93,11 +99,13 @@ const person = {
 };`}
           </pre>
         </div>
-        
+
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">Functions</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-700">
+            Functions
+          </h3>
           <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`// Function declaration
+            {`// Function declaration
 function add(a, b) {
   return a + b;
 }
@@ -111,11 +119,13 @@ const multiply = (a, b) => a * b;
 });`}
           </pre>
         </div>
-        
+
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-2 text-gray-700">DOM Manipulation</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-700">
+            DOM Manipulation
+          </h3>
           <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`// Select element
+            {`// Select element
 const btn = document.querySelector('#myButton');
 
 // Add event listener
@@ -137,7 +147,7 @@ document.body.appendChild(div);`}
         <div className="h-[60%] flex flex-col">
           <div className="bg-gray-800 text-white p-2 flex justify-between items-center">
             <span className="font-mono text-sm">script.js</span>
-            <button 
+            <button
               onClick={executeCode}
               className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs"
             >
@@ -154,8 +164,8 @@ document.body.appendChild(div);`}
               options={{
                 minimap: { enabled: false },
                 fontSize: 14,
-                wordWrap: 'on',
-                automaticLayout: true
+                wordWrap: "on",
+                automaticLayout: true,
               }}
             />
           </div>
@@ -169,7 +179,9 @@ document.body.appendChild(div);`}
           <div className="flex-1 overflow-auto bg-black text-green-400 p-4 font-mono text-sm">
             {consoleOutput.length > 0 ? (
               consoleOutput.map((line, index) => (
-                <div key={index} className="mb-1">{line}</div>
+                <div key={index} className="mb-1">
+                  {line}
+                </div>
               ))
             ) : (
               <div className="text-gray-500">// Output will appear here...</div>
