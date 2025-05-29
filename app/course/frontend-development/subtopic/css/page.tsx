@@ -5,7 +5,7 @@ import Editor from '@monaco-editor/react';
 
 const Css = () => {
   const [cssCode, setCssCode] = useState(
-`/* Add your CSS here */
+    `/* Add your CSS here */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f5f5;
@@ -60,16 +60,22 @@ h1 {
 </body>
 </html>`;
 
+
+
+  const handleCssChange = (value: string | undefined) => {
+    setCssCode(value || '');
+  };
+
   return (
     <div className="flex h-screen bg-gray-50">
       {/* Left Side - CSS Examples (50%) */}
       <div className="w-1/2 p-6 overflow-auto">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">CSS Examples</h2>
-        
+
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
           <h3 className="text-lg font-semibold mb-2 text-gray-700">Basic Selectors</h3>
           <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`/* Element selector */
+            {`/* Element selector */
 p {
   color: blue;
 }
@@ -90,11 +96,11 @@ h1, h2, h3 {
 }`}
           </pre>
         </div>
-        
+
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
           <h3 className="text-lg font-semibold mb-2 text-gray-700">Box Model</h3>
           <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`div {
+            {`div {
   width: 300px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -103,11 +109,11 @@ h1, h2, h3 {
 }`}
           </pre>
         </div>
-        
+
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-700">Flexbox</h3>
           <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto">
-{`.flex-container {
+            {`.flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,7 +141,8 @@ h1, h2, h3 {
               language="css"
               theme="vs-light"
               value={cssCode}
-              onChange={setCssCode}
+              // onChange={setCssCode}
+              onChange={handleCssChange}
               options={{
                 minimap: { enabled: false },
                 fontSize: 14,
