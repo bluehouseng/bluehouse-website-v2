@@ -262,7 +262,7 @@ export default function TechBootcamp() {
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Fixed Sidebar */}
-      <aside className={`bg-white flex-shrink-0 transition-all duration-300 fixed h-full ${sidebarCollapsed ? 'w-20' : 'w-52'}`}>
+      <aside className={`bg-white flex-shrink-0 transition-all duration-300 fixed h-full ${sidebarCollapsed ? 'w-24' : 'w-66'}`}>
         <div className="h-full flex flex-col">
           {/* Sidebar Header */}
           <div className="p-4 border-b border-gray-200 flex items-center justify-between">
@@ -405,7 +405,7 @@ export default function TechBootcamp() {
       </aside>
 
       {/* Main Content with padding to account for fixed sidebar */}
-      <main className={`flex-1 min-w-0 transition-all duration-300 ${sidebarCollapsed ? 'ml-20' : 'ml-52'}`}>
+      <main className={`flex-1 min-w-0 transition-all duration-300 ${sidebarCollapsed ? 'ml-24' : 'ml-72'}`}>
         {/* Mobile Toggle Button */}
         <div className="md:hidden p-4">
           <button 
