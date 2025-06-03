@@ -19,13 +19,12 @@ export interface UserProfile {
   };
   
   export const OFFICE_LOCATION: OfficeLocation = {
-    latitude: 6.5244,
-    longitude:  3.3792,
-    // latitude: 9.8845,
-    // longitude: 8.8766,
+   
+    latitude: 9.8845,
+    longitude: 8.8766,
   };
   
-  export const GEOFENCE_RADIUS = 100; // meters
+  export const GEOFENCE_RADIUS = 1000; // meters
   
   export const calculateDistance = (
     lat1: number,
