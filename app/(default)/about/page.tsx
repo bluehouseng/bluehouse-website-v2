@@ -9,31 +9,31 @@ export default function About() {
       </h2>
       <div className="mt-8 items-center px-4 md:px-16">
         <p className="text-xl text-center font-light flex justify-center p-8 leading-relaxed">
-          At Bluehouse, innovation is driven by collaboration, diversity, and a
+          At Bluehouse Technologies, innovation is driven by collaboration, diversity, and a
           commitment to excellence. The company emphasizes fostering a creative
           workplace where ideas flourish, and employees are empowered to make
-          meaningful contributions. Bluehouse has made significant strides in
+          meaningful contributions. Bluehouse Technologies has made significant strides in
           helping businesses adopt modern technologies, streamline operations,
           and achieve their goals. Its commitment to sustainability and
           forward-thinking technology positions it as a company of the future.
         </p>
       </div>
-      <div className="flex -space-x-32 flex-col-reverse md:flex-row md:items-center px-4 md:px-16  space-y-8 md:space-y-0">
+      <div className="flex -space-x-24 flex-col-reverse md:flex-row md:items-center px-4 md:px-16  space-y-8 md:space-y-0">
   {/* Text Section */}
   <div className="flex-1  bg-gray-900/25 mb-8 h-auto md:h-[495px] rounded-md p-8 md:p-20 md:w-1/2">
     <h1 className="text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
       Innovating the Future Through Collaboration and Technology
     </h1>
     <p className="font-medium leading-relaxed">
-      Bluehouse fosters an environment where ideas flourish, diversity is
+      Bluehouse Technologies fosters an environment where ideas flourish, diversity is
       celebrated, and meaningful contributions are made. Positioned as a
-      company of the future, Bluehouse is shaping industries and creating
+      company of the future, Bluehouse Technologies is shaping industries and creating
       impactful solutions that leave a lasting legacy.
     </p>
   </div>
 
   {/* Image Section */}
-  <div className="flex-1 flex justify-center md:justify-end md:pt-24 md:w-1/2">
+  <div className="flex-1 justify-center md:justify-end md:pt-24  md:w-1/2">
     <Image
       src={aboutImage}
       alt="Descriptive Alt Text"

@@ -25,7 +25,7 @@ export default function Blog() {
         <div className="mx-auto max-w-3xl pb-12 pt-32 md:pb-20 md:pt-40">
           {/* Section header */}
           <div className="pb-16">
-            <h1 className="mb-4 text-5xl font-bold">Bluehouse blog</h1>
+            <h1 className="mb-4 text-5xl font-bold">Bluehouse Technologies blog</h1>
             <p className="text-lg text-gray-700">
               Content for developers, product, and digital experts.
             </p>

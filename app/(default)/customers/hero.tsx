@@ -236,7 +236,7 @@ export default function Hero() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p className="mb-8 text-lg text-gray-700">
-                Read and listen to what our customers are saying about Bluehouse.
+                Read and listen to what our customers are saying about Bluehouse Technologies.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                 <a
