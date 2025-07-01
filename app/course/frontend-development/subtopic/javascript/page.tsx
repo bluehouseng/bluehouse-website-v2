@@ -155,7 +155,7 @@ document.body.appendChild(div);`}
             </button>
           </div>
           <div className="flex-1">
-            <Editor
+            {/* <Editor
               height="100%"
               language="javascript"
               theme="vs-light"
@@ -167,7 +167,20 @@ document.body.appendChild(div);`}
                 wordWrap: "on",
                 automaticLayout: true,
               }}
-            />
+            /> */}
+            <Editor
+  height="100%"
+  language="javascript"
+  theme="vs-light"
+  value={jsCode}
+  onChange={(value) => setJsCode(value || "")}
+  options={{
+    minimap: { enabled: false },
+    fontSize: 14,
+    wordWrap: "on",
+    automaticLayout: true,
+  }}
+/>
           </div>
         </div>
 

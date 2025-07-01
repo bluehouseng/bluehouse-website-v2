@@ -456,18 +456,25 @@ export default function TechBootcamp() {
                       <ul className="space-y-3">
   {module.topics.map((topic, idx) => (
     <li key={idx} className="border-b border-dashed border-gray-100 pb-2 last:border-0">
-      <a 
-        href={topic.path} 
-        className="text-blue-600 hover:text-blue-800 flex items-center"
-        onClick={(e) => {
-          // You might want to handle navigation here if using client-side routing
-          // e.preventDefault();
-          // router.push(topic.path);
-        }}
-      >
-        <FaChevronRight className="w-3 h-3 mr-2" />
-        {topic.name}
-      </a>
+      {typeof topic === 'object' && 'path' in topic ? (
+        <a 
+          href={topic.path} 
+          className="text-blue-600 hover:text-blue-800 flex items-center"
+          onClick={(e) => {
+            // You might want to handle navigation here if using client-side routing
+            // e.preventDefault();
+            // router.push(topic.path);
+          }}
+        >
+          <FaChevronRight className="w-3 h-3 mr-2" />
+          {topic.name}
+        </a>
+      ) : (
+        <span className="text-gray-700 flex items-center">
+          <FaChevronRight className="w-3 h-3 mr-2" />
+          {typeof topic === 'string' ? topic : ''}
+        </span>
+      )}
     </li>
   ))}
 </ul>
