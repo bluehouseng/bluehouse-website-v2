@@ -13,7 +13,7 @@ export default function Apps() {
       <Hero />
       <AppList />
       <Cta
-        heading="Create you next project with Bluehouse"
+        heading="Create you next project with Bluehouse Technologies"
         buttonText="Start Free Trial"
         buttonLink="#0"
       />

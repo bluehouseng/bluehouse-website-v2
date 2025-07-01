@@ -13,7 +13,7 @@ export default function Customers() {
       <Hero />
       <WallOfLove />
       <Cta
-        heading="Join us at Bluehouse"
+        heading="Join us at Bluehouse Technologies"
         buttonText="Start Free Trial"
         buttonLink="#0"
       />

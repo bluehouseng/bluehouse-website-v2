@@ -34,7 +34,7 @@ const frontendDevelopmentCourse = {
     {
       title: 'HTML & CSS Fundamentals',
       description: 'Learn the building blocks of web development',
-      topics: ['HTML5 Semantic Elements', 'CSS Selectors & Box Model', 'Flexbox & Grid Layout'],
+      topics: [ "History of the wweb", 'HTML5 Semantic Elements', 'CSS Selectors & Box Model', 'Flexbox & Grid Layout'],
     },
     {
       title: 'JavaScript Essentials',

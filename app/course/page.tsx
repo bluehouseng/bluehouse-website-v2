@@ -33,7 +33,7 @@ export default function TechBootcamp() {
         {
           title: 'HTML & CSS Fundamentals',
           description: 'Core web development technologies',
-          topics: ['HTML5 Semantics', 'CSS Flexbox/Grid', 'Responsive Design']
+          topics: ['HTML5 Semantics', 'CSS Flexbox/Grid', 'Responsive Design', 'History of the web',]
         },
         {
           title: 'JavaScript Mastery',
