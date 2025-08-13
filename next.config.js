@@ -4,7 +4,11 @@ const withMDX = require("@next/mdx")();
 const nextConfig = {
   // Configure `pageExtensions` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  // Optionally, add any other Next.js config below
+
+  // Explicitly configure Turbopack (new stable syntax)
+  turbopack: {
+    // Add any Turbopack-specific config here if needed
+  }
 };
 
 module.exports = withMDX(nextConfig);
