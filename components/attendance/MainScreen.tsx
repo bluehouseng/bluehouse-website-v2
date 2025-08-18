@@ -68,49 +68,99 @@ export const MainScreen = ({
     fetchAttendanceHistory();
   }, [userProfile.email]);
 
+
+  
   const handleCheckInOut = async () => {
+    if (!isInOffice) {
+      alert('You must be in the office to check in/out');
+      return;
+    }
+  
     setIsLoading(true);
     try {
       const currentTime = new Date();
       const response = await apiClient.get(`/user?email=${userProfile.email}`);
-      const history = response.data?.history?.reverse() || [];
-      const latestItem = history[0];
-
-      if (!latestItem) {
-        // First time user
-        await apiClient.post('/user', {
+      const history = response.data?.history || [];
+      
+      // Find today's record
+      const today = currentTime.toDateString();
+      const todayRecord = history.find((record: AttendanceRecord) => 
+        new Date(record.date).toDateString() === today
+      );
+  
+      let payload;
+      
+      if (!todayRecord) {
+        // First check-in of the day (or first time user)
+        payload = {
           email: userProfile.email,
           name: userProfile.name,
           stack: userProfile.stack,
-          checkInTime: currentTime,
-        });
+          checkInTime: currentTime.toISOString(),
+          checkOutTime: null,
+        };
+        
+        await apiClient.post('/user', payload);
         setAttendanceStatus({ hasCheckedIn: true, hasCheckedOut: false });
+        
+      } else if (!todayRecord.checkInTime) {
+        // User needs to check in
+        payload = {
+          email: userProfile.email,
+          name: userProfile.name,
+          stack: userProfile.stack,
+          checkInTime: currentTime.toISOString(),
+          checkOutTime: todayRecord.checkOutTime,
+        };
+        
+        await apiClient.post('/user', payload);
+        setAttendanceStatus({ hasCheckedIn: true, hasCheckedOut: !!todayRecord.checkOutTime });
+        
+      } else if (!todayRecord.checkOutTime) {
+        // User needs to check out
+        payload = {
+          email: userProfile.email,
+          name: userProfile.name,
+          stack: userProfile.stack,
+          checkInTime: todayRecord.checkInTime,
+          checkOutTime: currentTime.toISOString(),
+        };
+        
+        await apiClient.post('/user', payload);
+        setAttendanceStatus({ hasCheckedIn: true, hasCheckedOut: true });
+      } else {
+        // Already completed attendance for today
+        alert('You have already completed your attendance for today');
         return;
       }
-
-      const isToday = new Date(latestItem.checkInTime).toDateString() === currentTime.toDateString();
-
-      const payload = {
-        email: userProfile.email,
-        name: userProfile.name,
-        stack: userProfile.stack,
-        checkInTime: !isToday ? currentTime : latestItem.checkInTime,
-        checkOutTime: !latestItem.checkInTime ? null : currentTime,
-      };
-
-      await apiClient.post('/user', payload);
-      setAttendanceStatus({
-        hasCheckedIn: true,
-        hasCheckedOut: !!latestItem.checkInTime,
-      });
+  
+      // Refresh the attendance history after successful update
+      setTimeout(async () => {
+        try {
+          const updatedResponse = await apiClient.get(`/user?email=${userProfile.email}`);
+          const updatedHistory = updatedResponse.data?.history || [];
+          
+          const sortedHistory = [...updatedHistory]
+            .reverse()
+            .map((record) => ({
+              ...record,
+              checkInTime: record.checkInTime ? formatTime(record.checkInTime) : '--:--',
+              checkOutTime: record.checkOutTime ? formatTime(record.checkOutTime) : '--:--',
+            }));
+  
+          setAttendanceHistory(sortedHistory);
+        } catch (refreshError) {
+          console.error('Error refreshing attendance history:', refreshError);
+        }
+      }, 100);
+  
     } catch (error) {
       console.error('Error updating attendance:', error);
-      alert('Failed to update attendance');
+      alert('Failed to update attendance. Please try again.');
     } finally {
       setIsLoading(false);
     }
   };
-
   const formatTime = (isoString: string) => {
     return format(parseISO(isoString), 'h:mm a');
   };
