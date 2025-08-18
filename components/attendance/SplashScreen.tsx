@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from "../../public/images/bluehouse-logo.png"
+import logo from "../../public/bluehouse-logo.png"
 
 export const SplashScreen = () => (
   <div className="flex flex-col items-center justify-center h-screen bg-white">
