@@ -6,15 +6,19 @@ import { DeviceRegistrationModal } from "@/components/attendance/DeviceRegistrat
 import { OutsideOfficeScreen } from "@/components/attendance/OutsideOfficeScreen";
 import { MainScreen } from "@/components/attendance/MainScreen";
 import { UserProfile } from "./types";
-import { getUserProfile, setUserProfile, clearUserProfile } from "../../lib/auth";
-import { 
-  checkOfficeLocation, 
-  checkLocationPermission, 
+import {
+  getUserProfile,
+  setUserProfile,
+  clearUserProfile,
+} from "../../lib/auth";
+import {
+  checkOfficeLocation,
+  checkLocationPermission,
   requestLocationPermission,
-  watchOfficeLocation 
+  watchOfficeLocation,
 } from "../../lib/location";
 
-type AppState = 'loading' | 'registration' | 'outside-office' | 'main';
+type AppState = "loading" | "registration" | "outside-office" | "main";
 
 interface LocationState {
   isInOffice: boolean;
@@ -23,186 +27,200 @@ interface LocationState {
 }
 
 export default function AttendancePage() {
-  const [appState, setAppState] = useState<AppState>('loading');
+  const [appState, setAppState] = useState<AppState>("loading");
   const [userProfile, setUserProfileState] = useState<UserProfile | null>(null);
   const [locationState, setLocationState] = useState<LocationState>({
     isInOffice: false,
     location: undefined,
-    error: undefined
+    error: undefined,
   });
   const [watchId, setWatchId] = useState<number | null>(null);
   const [isCheckingLocation, setIsCheckingLocation] = useState<boolean>(false);
 
-  // Memoized location check function
-  const checkLocation = useCallback(async (showLoading = true) => {
-    if (showLoading) setIsCheckingLocation(true);
-    
-    try {
-      // Check if we have location permission first
-      const hasPermission = await checkLocationPermission();
-      
-      if (!hasPermission) {
-        // Try to request permission
-        const permissionGranted = await requestLocationPermission();
-        if (!permissionGranted) {
-          setLocationState({
-            isInOffice: false,
-            error: 'Location permission is required to verify your office presence'
-          });
-          return;
+  /**
+   * Check location with permission handling
+   */
+  const checkLocation = useCallback(
+    async (showLoading = true) => {
+      if (showLoading) setIsCheckingLocation(true);
+
+      try {
+        // Check for location permission
+        let hasPermission = await checkLocationPermission();
+        if (!hasPermission) {
+          hasPermission = await requestLocationPermission();
+          if (!hasPermission) {
+            setLocationState((prev) => ({
+              ...prev,
+              isInOffice: false,
+              error: "Location permission is required to verify your office presence",
+            }));
+            return;
+          }
         }
+
+        // Verify office location
+        const locationResult = await checkOfficeLocation();
+        setLocationState((prev) => ({
+          ...prev,
+          ...locationResult,
+        }));
+
+        if (userProfile) {
+          setAppState(locationResult.isInOffice ? "main" : "outside-office");
+        }
+      } catch (error) {
+        console.error("Location check error:", error);
+        setLocationState((prev) => ({
+          ...prev,
+          isInOffice: false,
+          error:
+            error instanceof Error
+              ? error.message
+              : "Failed to verify location",
+        }));
+
+        if (userProfile) {
+          setAppState("outside-office");
+        }
+      } finally {
+        if (showLoading) setIsCheckingLocation(false);
       }
+    },
+    [userProfile]
+  );
 
-      // Get current location and check if in office
-      const locationResult = await checkOfficeLocation();
-      setLocationState({
-        isInOffice: locationResult.isInOffice,
-        location: locationResult.location,
-        error: locationResult.error
-      });
-
-      // Update app state based on location
-      if (userProfile) {
-        setAppState(locationResult.isInOffice ? 'main' : 'outside-office');
-      }
-
-    } catch (error) {
-      console.error("Location check error:", error);
-      setLocationState({
-        isInOffice: false,
-        error: error instanceof Error ? error.message : "Failed to verify location"
-      });
-      
-      if (userProfile) {
-        setAppState('outside-office');
-      }
-    } finally {
-      if (showLoading) setIsCheckingLocation(false);
-    }
-  }, [userProfile]);
-
-  // Initialize app
+  /**
+   * Initialize app on mount
+   */
   useEffect(() => {
+    let isMounted = true;
+
     const initializeApp = async () => {
       try {
-        // Check for existing user profile
         const profile = await getUserProfile();
-        
+        if (!isMounted) return;
+
         if (profile) {
           setUserProfileState(profile);
-          // Check location for existing user
+          setAppState("loading");
           await checkLocation(false);
         } else {
-          setAppState('registration');
+          setAppState("registration");
         }
       } catch (error) {
         console.error("Initialization error:", error);
-        setLocationState({
-          isInOffice: false,
-          error: "Failed to initialize app"
-        });
-        setAppState('registration');
-      } finally {
-        setAppState(prev => prev === 'loading' ? 'registration' : prev);
+        if (isMounted) {
+          setLocationState({
+            isInOffice: false,
+            error: "Failed to initialize app",
+          });
+          setAppState("registration");
+        }
       }
     };
 
     initializeApp();
+
+    return () => {
+      isMounted = false;
+    };
   }, [checkLocation]);
 
-  // Set up location watching when user is logged in and in office
+  /**
+   * Watch office location when user is active in main screen
+   */
   useEffect(() => {
-    if (userProfile && appState === 'main' && !watchId) {
-      const id = watchOfficeLocation((result) => {
-        setLocationState({
-          isInOffice: result.isInOffice,
-          location: result.location,
-          error: result.error
-        });
+    if (!userProfile) return;
+    if (appState !== "main") return;
+    if (watchId) return; // prevent duplicate watchers
 
-        // If user moves out of office while in main screen, update state
-        if (!result.isInOffice) {
-          setAppState('outside-office');
-        }
-      });
+    const id = watchOfficeLocation((result) => {
+      setLocationState((prev) => ({
+        ...prev,
+        ...result,
+      }));
 
-      if (id !== null) {
-        setWatchId(id);
+      if (!result.isInOffice) {
+        setAppState("outside-office");
       }
-    }
+    });
 
-    // Cleanup watch when component unmounts or user logs out
+    if (id !== null) setWatchId(id);
+
     return () => {
-      if (watchId !== null) {
-        navigator.geolocation?.clearWatch(watchId);
+      if (id !== null) {
+        navigator.geolocation?.clearWatch(id);
         setWatchId(null);
       }
     };
   }, [userProfile, appState, watchId]);
 
-  // Handle registration completion
+  /**
+   * Handle registration completion
+   */
   const handleRegistrationComplete = async (profile: UserProfile) => {
     try {
       await setUserProfile(profile);
       setUserProfileState(profile);
-      setAppState('loading');
-      
-      // Check location after registration
+      setAppState("loading");
+
       await checkLocation();
     } catch (error) {
       console.error("Registration completion error:", error);
-      setLocationState({
+      setLocationState((prev) => ({
+        ...prev,
         isInOffice: false,
-        error: "Failed to complete registration"
-      });
+        error: "Failed to complete registration",
+      }));
     }
   };
 
-  // Handle logout
+  /**
+   * Handle logout
+   */
   const handleLogout = async () => {
     try {
-      // Clear location watch
       if (watchId !== null) {
         navigator.geolocation?.clearWatch(watchId);
         setWatchId(null);
       }
 
-      // Clear user data
       await clearUserProfile();
       setUserProfileState(null);
       setLocationState({
         isInOffice: false,
         location: undefined,
-        error: undefined
+        error: undefined,
       });
-      setAppState('registration');
+      setAppState("registration");
     } catch (error) {
       console.error("Logout error:", error);
-      // Force logout even if there's an error
       setUserProfileState(null);
-      setAppState('registration');
+      setAppState("registration");
     }
   };
 
-  // Handle location retry
+  /**
+   * Handle retry location
+   */
   const handleRetryLocation = async () => {
     await checkLocation();
   };
 
-  // Render based on app state
-  if (appState === 'loading' || isCheckingLocation) {
+  /**
+   * Render by app state
+   */
+  if (appState === "loading" || isCheckingLocation) {
     return <SplashScreen />;
   }
 
-  if (appState === 'registration') {
+  if (appState === "registration") {
     return (
-      <>
-        <SplashScreen />
-        <DeviceRegistrationModal 
-          isOpen={true} 
-          onRegister={handleRegistrationComplete} 
-        />
-      </>
+      <DeviceRegistrationModal
+        isOpen={true}
+        onRegister={handleRegistrationComplete}
+      />
     );
   }
 
@@ -210,28 +228,27 @@ export default function AttendancePage() {
     return <SplashScreen />;
   }
 
-  if (appState === 'outside-office') {
+  if (appState === "outside-office") {
     return (
-      <OutsideOfficeScreen 
-        locationError={locationState.error} 
+      <OutsideOfficeScreen
+        locationError={locationState.error}
         onRetry={handleRetryLocation}
         isRetrying={isCheckingLocation}
       />
     );
   }
 
-  if (appState === 'main') {
+  if (appState === "main") {
     return (
-      <MainScreen 
-        userProfile={userProfile} 
-        isInOffice={locationState.isInOffice} 
-        locationError={locationState.error} 
-        location={locationState.location} 
+      <MainScreen
+        userProfile={userProfile}
+        isInOffice={locationState.isInOffice}
+        locationError={locationState.error}
+        location={locationState.location}
         onLogout={handleLogout}
       />
     );
   }
 
-  // Fallback
   return <SplashScreen />;
 }

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Button from '../buttons';
-import { AttendanceStatus } from '@/app/attendance/types';
 
 interface CheckInOutButtonProps {
   isInOffice: boolean;
@@ -17,36 +16,38 @@ export const CheckInOutButton = ({
   hasCheckedOut,
   onClick,
 }: CheckInOutButtonProps) => {
-  const getButtonState = () => {
+  const buttonState = useMemo(() => {
     if (hasCheckedOut) {
       return {
         text: 'Attendance Completed',
         disabled: true,
-        className: 'bg-gray-400 text-white',
+        className: 'bg-gray-400 text-white cursor-not-allowed',
       };
     }
     if (hasCheckedIn) {
       return {
         text: 'Check Out',
         disabled: !isInOffice || isLoading,
-        className: 'bg-red-500 hover:bg-red-600 text-white',
+        className: !isInOffice || isLoading
+          ? 'bg-red-300 text-white cursor-not-allowed'
+          : 'bg-red-500 hover:bg-red-600 text-white',
       };
     }
     return {
       text: 'Check In',
       disabled: !isInOffice || isLoading,
-      className: 'bg-green-500 hover:bg-green-600 text-white',
+      className: !isInOffice || isLoading
+        ? 'bg-green-300 text-white cursor-not-allowed'
+        : 'bg-green-500 hover:bg-green-600 text-white',
     };
-  };
-
-  const buttonState = getButtonState();
+  }, [isInOffice, isLoading, hasCheckedIn, hasCheckedOut]);
 
   return (
     <Button
       text={buttonState.text}
       onClick={onClick}
       disabled={buttonState.disabled}
-      className={`w-full py-3 rounded-lg ${buttonState.className}`}
+      className={`w-full py-3 rounded-lg transition-colors duration-200 ${buttonState.className}`}
     />
   );
 };
